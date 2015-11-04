@@ -1,0 +1,3557 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html lang="jp" class="ie ie8" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9]><html lang="jp" class="ie ie9" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if gte IE 10]><html lang="jp" class="ie ie-edge" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if !IE]><!--> <html lang="jp" xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwcPUFJXGwEBUlJSDgc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"8c32ed8b53","agent":"js-agent.newrelic.com/nr-768.min.js","transactionName":"ZwdbZkpZXENVWxZbDF5Nf0dWW0ZZW1ZNRQZSA1dTVEFGWVdLTEUGUkxdV0xZW1xHAiBTEFUmXEZZUV5DYlEHRU1XB00=","applicationID":"2163096","errorBeacon":"bam.nr-data.net","applicationTime":417}</script>
+<meta name="robots" content="noarchive">
+<meta name="viewport" content="width=980"/>
+<title>
+
+iCatcher! Podcast Player - iOS Store ストアトップアプリ
+
+ | App Annie</title>
+<meta name="description" content="
+
+iOS StoreのiCatcher! Podcast Playerなど、デイリーアプリランキング、ランク履歴、トップベストセラーアプリの特徴とレビューをご確認ください。
+
+" />
+<meta name="keywords" content="app annie analytics store stats intelligence rankings reviews statistics market data ios apple google android" />
+<meta name="google-site-verification" content="ivCYuhXzy549wGxwC7WBt3xK68o8CBxXAmt0tWt-ork" />
+
+<meta name="apple-itunes-app" content="app-id=660004961"/>
+<meta name="google-play-app" content="app-id=com.appannie.app">
+
+
+
+    
+        <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@appannie">
+<meta name="twitter:creator" content="@appannie">
+
+    <meta name="twitter:title" content="iCatcher! Podcast Player">
+    <meta property="og:title" content="iCatcher! Podcast Player">
+
+
+
+    <meta name="twitter:image:src" content="https://static-s.aa-cdn.net/img/ios/414419105/04fcff9e1df32baf1c4bf260770e6537">
+    <meta property="og:image" content="https://static-s.aa-cdn.net/img/ios/414419105/04fcff9e1df32baf1c4bf260770e6537">
+
+
+    
+
+
+<link rel="alternate" type="application/rss+xml" title="App Annie - App Tracking &amp; Analytics" href="http://feeds.feedburner.com/askannie" />
+<link rel="apple-touch-icon-precomposed" href="https://static-s.aa-cdn.net/media/pictures/favicon-60.v-ff775b28.png" />
+<link rel="icon" type="image/png" href="https://static-s.aa-cdn.net/media/pictures/favicon.v-83fca9a0.png" />
+
+<script>
+AA_MEDIA_URL = 'https://static-s.aa-cdn.net/media/';
+AA_CMS_CONTENT_URL = 'https://static-c.aa-cdn.net/wp-content/';
+AA_BLOG_CONTENT_URL = 'https://static-s.aa-cdn.net/media/blog-content/';
+</script>
+<script>
+/* quick $ step 1/3 */
+(function() {
+var fns = __aa_fns = [];
+$ = jQuery = function(fn) {
+  if (fn.call && fn.apply) { fns.push(fn); return;
+  } else if (fn === document) {
+    return { ready: function(fn) {
+        if (fn.call && fn.apply) { fns.push(fn); }
+    } };
+  }
+  throw 'dont use $ other than ready';
+};
+$.extend = function(obj) {
+  var i=1,srcs=arguments,l=srcs.length,src,key;
+  for(;i<l;++i) { src=srcs[i];
+    for (key in src) { obj[key] = src[key]; }
+  }
+  return obj;
+};
+
+window.__lang = 'ja';
+})();
+</script>
+
+
+
+
+    <link type="text/css" rel="stylesheet" href="https://static-s.aa-cdn.net/media/css/c/base.min.v-2abe22a1.css" />
+    
+        <link type="text/css" rel="stylesheet" href="https://static-s.aa-cdn.net/media/css/c/prod.min.v-061a0160.css" />
+
+        
+    
+
+
+
+
+
+<!-- TradeDoubler site verification 2289284 -->
+</head>
+<body class="customize-bs fix-for-bs lang-noop lang-jp section-storestats  body-page-app-details "
+    >
+
+
+<div id="container" class="">
+<!--[if lt IE 10]>
+<div id="no_old_ie">
+    <h3>ブラウザのバージョンが最新ではありません。</h3>
+    <p>より速くて安全なブラウジングができるよう、以下のブラウザから選んでアップグレードしてください。</p>
+    <div id="browser_upgrade">
+        <a href="http://www.google.com/chrome" title="Google Chrome"><img src="https://static-s.aa-cdn.net/media/pictures/browser/chrome.v-8f9bd35a.jpg" alt="Google Chrome" /></a>
+        <a href="http://www.mozilla.org/" title="Mozilla Firefox"><img src="https://static-s.aa-cdn.net/media/pictures/browser/firefox.v-fd4ea3bb.jpg" alt="Mozilla Firefox" /></a>
+        <a href="http://windows.microsoft.com/en-hk/internet-explorer/ie-11-worldwide-languages" title="Internet Explorer 11"><img src="https://static-s.aa-cdn.net/media/pictures/browser/ie11.v-fb7889f9.jpg" alt="Internet Explorer 11" /></a>
+    </div>
+</div>
+<![endif]-->
+    
+
+    
+<div class="header-v2-old">
+    <div class="header-v2-old-main-nav-wrap">
+        <div class="inner">
+            <div class="brand pull-left">
+                <a class="navbar-brand pull-left" href="/">
+                    <img src="https://static-s.aa-cdn.net/media/pictures/appannie-logo.v-64ae5eec.png" alt="App Annie"/>
+                </a>
+            </div>
+
+            <ul class="main-nav prod-main-nav pull-left" id="J-main-nav">
+                <li class="nav-item">
+                    <a href="#subnav-market-data" onclick="return false;" class="aa-nav-toggle">市場データ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#subnav-analytics" onclick="return false;" class="aa-nav-toggle">分析ツール</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/indexes/all-stores/report/" class="aa-nav-link">インサイト</a>
+                </li>
+            </ul>
+
+            <div class="pull-right right-nav">
+                
+                <ul class="main-nav mkt-main-nav pull-left" id="J-main-nav-r">
+                    <li class="nav-item">
+                        <a href="#subnav-tours" onclick="return false;" class="aa-nav-toggle">製品紹介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/jp/pricing/" class="aa-nav-link">価格</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#subnav-about" onclick="return false;" class="aa-nav-toggle">企業情報</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="http://jp.blog.appannie.com/" class="aa-nav-link">ブログ</a>
+                    </li>
+                    <li class="nav-item hide">
+                        <a target="_blank" href="http://support.appannie.com" class="aa-nav-link">サポート</a>
+                    </li>
+                </ul>
+                
+
+                <div class="search-box-wrap pull-left">
+                    <form action="/search/" name="search">
+                    <ul class="search-box">
+                        <li class="dropdown selector">
+                            <span class="dropdown-toggle" role="button" data-toggle="dropdown"><span data-value="apps">アプリ</span><i class="fa fa-chevron-up icon-chevron-up"></i><i class="fa fa-chevron-down icon-chevron-down"></i></span>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"
+                                    data-placeholder=""
+                                    data-value=""
+                                    data-vertical=""
+                                    data-market=""
+                                    data-label="">
+                                    <a role="menuitem" href="#">
+                                        
+                                        <i class="icon-aa-check"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="vertical" value="apps">
+                        </li>
+                        <li>
+                            <input name="q" class="search-box-input"
+                                placeholder="アプリ、 パブリッシャー"
+                                value="">
+                        </li>
+                        <li class="search-icon"><i class="icon-search fa fa-search"></i></li>
+                    </ul>
+                    </form>
+                </div>
+
+                <ul class="user-nav pull-left pull-left-space">
+
+                    <li class="nav-item dropdown nav-item-user-prefs">
+                        <a href="#" class="aa-user-prefs-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="user-display-name">奥山 博史</span>
+                            <span class="user-email">okuyama@se.cs.titech.ac.jp</span>
+                            <i class="fa fa-chevron-up icon-chevron-up"></i><i class="fa fa-chevron-down icon-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            
+
+    <li class="head head-for-analytics">
+        Analytics &amp; Advertising
+    </li>
+    
+        <li><a href="/account/list/">接続済みアカウント</a></li>
+    
+        <li><a href="/account/apps/">アプリ</a></li>
+    
+        <li><a href="/account/sharing/">データ共有</a></li>
+    
+        <li><a href="/account/export/">バックアップデータ</a></li>
+    
+
+    <li class="head head-for-account">
+        App Annieアカウント
+    </li>
+    
+        <li><a href="/account/teams/">チームシェア</a></li>
+    
+        <li><a href="/account/settings/">ユーザー設定</a></li>
+    
+        <li><a href="/account/api/key/">APIキー</a></li>
+    
+
+
+                            <li class="spacer"></li>
+                            <li class="support"><a target="_blank" href="http://support.appannie.com">サポート</a></li>
+                            <li class="logout"><a href="/account/logout/">ログアウト</a></li>
+                        </ul>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-v2-old-sub-nav-wrap"><div class="header-v2-old-sub-nav-inner">
+        <div id="subnav-analytics" class="sub-nav-drawer">
+            <div class="inner">
+                <ul class="sub-nav-item">
+                    <li class="">
+                        <a href="/comparator/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            App Analytics</a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item">
+                    <li class="">
+                        <a href="/ad_dashboard/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Advertising Analytics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="subnav-market-data" class="sub-nav-drawer">
+            <div class="inner">
+                <ul class="sub-nav-item nav-for-analytics">
+                    <li class="">
+                        <a href="/top/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Store Stats</a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item nav-for-analytics">
+                    <li class="">
+                        <a href="/indexes/all-stores/rank/overall/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Index</a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item sub-nav-item-sep nav-for-analytics">
+                    <li class="">
+                        <a href="/ssp_dashboard/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Store Stats Pro
+                        </a>
+                        <span class="sub-nav-item-label">月額$59から</span>
+                    </li>
+                </ul>
+                
+                <ul class="sub-nav-item sub-nav-item-sep nav-for-market-data">
+                    <li class="">
+                        <a href="/intelligence/dashboard/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Store Intelligence
+                        </a>
+                        <span class="sub-nav-item-label">PREMIUM</span>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item nav-for-market-data">
+                    <li class="">
+                        <a href="/intelligence/dashboard/usage/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Usage Intelligence
+                        </a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item nav-for-market-data">
+                    <li class="">
+                        <a href="/intelligence/audience/top/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Audience Intelligence
+                        </a>
+                     </li>
+                 </ul>
+            </div>
+        </div>
+        
+        <div id="subnav-tours" class="sub-nav-drawer">
+            <div class="inner">
+                
+<ul class="sub-nav-item nav-for-analytics">
+    <li class=" as-header">
+        <a href="/tours/market-data/">
+            
+            市場データ
+        </a>
+    </li><li class="">
+        <a href="/tours/store-stats/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Store Stats
+        </a>
+    </li><li class="">
+        <a href="/tours/store-stats-pro/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Store Stats Pro
+            <i class="nav-special-dot">月額$59から</i>
+        </a>
+    </li><li class="">
+        <a href="/tours/aso/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            ASO
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item nav-for-market-data">
+    <li class=" as-header">
+        <a href="/tours/enterprise-market-data/">
+            
+            法人向けアプリ市場データ
+            <i class="nav-special-dot">PREMIUM</i>
+        </a>
+    </li><li class="">
+        <a href="/tours/store-intelligence/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Store Intelligence
+        </a>
+    </li><li class="">
+        <a href="/tours/usage-intelligence/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Usage Intelligence
+        </a>
+    </li><li class="">
+        <a href="/tours/audience-intelligence/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Audience Intelligence
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item nav-for-analytics">
+    <li class=" as-header">
+        <a href="/tours/app-analytics-platform/">
+            
+            分析ツール
+        </a>
+    </li><li class="">
+        <a href="/tours/app-store-analytics/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            App Store Analytics
+        </a>
+    </li><li class="">
+        <a href="/tours/advertising-analytics/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Advertising Analytics
+        </a>
+    </li><li class="">
+        <a href="/tours/in-app-analytics/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            In-App Analytics
+            <i class="nav-special-dot">BETA</i>
+        </a>
+    </li>
+</ul>
+
+
+            </div>
+        </div>
+        <div id="subnav-about" class="sub-nav-drawer">
+            <div class="inner">
+                
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            企業情報
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/leadership/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            経営陣
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/jobs/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            採用
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/customers/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            導入企業例
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/partnerships/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            パートナーシップ
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/press/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            メディア向け情報
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/contact/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            連絡先・所在地
+        </a>
+    </li>
+</ul>
+
+
+            </div>
+        </div>
+        
+    </div></div>
+</div>
+
+<script>
+
+(function(){var mainNav=document.getElementById("J-main-nav");if(mainNav){proc(mainNav)}mainNav=document.getElementById("J-main-nav-r");if(mainNav){proc(mainNav)}function proc(mainNav){var navItems=mainNav.getElementsByTagName("li");var currentNavItem;var hasClass=function(element,className){var classNames=element.className.split(/\s+/);for(var i=0;i<classNames.length;i++){if(className===classNames[i]){return true}}return false};for(var i=0,len=navItems.length;i<len;i++){var nav=navItems[i];if(hasClass(nav,"current")){currentNavItem=nav}}if(!currentNavItem){return}var currentNavLink=currentNavItem.getElementsByTagName("a")[0];if(!hasClass(currentNavLink,"aa-nav-toggle")){return}currentNavItem.className+=" active";var targetSubNavId=currentNavLink.href.split("#")[1];var targetSubNav=document.getElementById(targetSubNavId);if(!targetSubNav){return}var inner=targetSubNav.getElementsByTagName("div")[0];var wrapper=targetSubNav.parentElement.parentElement;targetSubNav.className+=" aa-nav-in";targetSubNav.style.display="block";inner.style.top="0";inner.style.display="block";wrapper.style.minHeight=inner.offsetHeight+"px"}})();
+
+</script>
+
+  
+
+    <div class="main storestats_wrapper page_app-details">
+    
+    <div class="inner" 
+itemscope itemtype="http://schema.org/MobileSoftwareApplication"
+>
+      <!-- AddThis Button BEGIN -->
+      <div class="aa-widget-addthis">
+        <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+        </div>
+      </div>
+      <!-- AddThis Button END -->
+      
+
+<script>
+    var pageVal = pageVal || {};
+    pageVal.app_show_mode = 'public'; 
+    pageVal.app_market = 'itc';
+    pageVal.market_langid = 'ITC';
+    pageVal.app_device = ''; 
+</script>
+
+<!-- app picker -->
+<!--  -->
+<!-- app picker end -->
+<div class="frame frame-app">
+    <div class="aa-sidebar aa-sidebar-large">
+        <div class="sidebar-inner">
+            
+            <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <span itemprop="price" content="2.99 USD"></span>
+                <span itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+                  <span itemprop="name" content="iOS Store"></span>
+                </span>
+            </span>
+            <span itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
+                <span itemprop="ratingValue" content=""></span>
+                <span itemprop="ratingCount" content=""></span>
+            </span>
+            
+            <div class="app_name entity-profile">
+                <div class="entity-icon">
+                    <img itemprop="image" class="itc" src="https://static-s.aa-cdn.net/img/ios/414419105/04fcff9e1df32baf1c4bf260770e6537"  alt="iCatcher! Podcast Player - iOS StoreのアプリランキングとアプリのStore Stats" />
+                </div>
+                <div class="entity-name" itemprop="name">iCatcher! Podcast Player</div>
+            </div>
+            
+<ul class="menu" data-category="analytics">
+    
+    <li class="current">
+        
+        <a  href="/apps/ios/app/414419105/"  target="">
+            
+            
+            <i class="icon-info-sign fa fa-info-circle"></i><span>アプリ詳細</span>
+            
+            
+            
+        </a>
+    </li>
+    
+</ul>
+
+<ul class="menu" data-category="intelligence">
+    
+    <li class="">
+        
+            <i class="ui-icon prem-small"></i>
+        
+        <a  href="/apps/ios/app/414419105/intelligence/"  target="">
+            
+            
+            <i class="aaicon-store"></i><span>Store<br>Intelligence</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/414419105/usage/"  target="">
+            
+            
+            <i class="aaicon-usage"></i><span>Usage<br>Intelligence</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/414419105/audience/"  target="">
+            
+            
+            <i class="icon-male fa fa-male"></i><span>Audience<br>Intelligence</span>
+            
+            
+            
+        </a>
+    </li>
+    
+</ul>
+
+<ul class="menu" data-category="rank">
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/414419105/ssp/"  target="">
+            
+            
+            <i class="aaicon-sspro_icon"></i><span>Store Stats Pro</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/414419105/app-ranking/"  target="">
+            
+            
+            <i class="icon-calendar fa fa-calendar"></i><span>デイリーランク</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/414419105/rank-history/"  target="">
+            
+            
+            <i class="icon-arrow-up fa fa-arrow-up"></i><span>ランキング推移</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/414419105/keywords/"  target="">
+            
+            
+            <i class="aaicon-keywords"></i><span>キーワード/ ASO</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/414419105/features/"  target="">
+            
+            
+            <i class="aaicon-featured"></i><span>フィーチャー</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/414419105/ratings/"  target="">
+            
+            
+            <i class="icon-star-half"></i><i class="icon-star-empty"></i><i class="fa fa-star-half-o"></i><span>評価</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/414419105/reviews/"  target="">
+            
+            
+            <i class="icon-comments fa fa-comments"></i><span>レビュー</span>
+            
+            
+            
+        </a>
+    </li>
+    
+</ul>
+
+
+
+            <img class="sidebar-logo" src="https://static-s.aa-cdn.net/media/pictures/logo/sidebar_stencil.v-6b37ae6b.png" alt="AppAnnie.com" width="141" height="97"/>
+        </div>
+    </div>
+
+    <div class="content content-app app-details">
+        <div class=" content-container aa-popup-container">
+            
+
+            
+
+<div class="app-info-top aa-info-columns aa-info-columns-app">
+    
+    <div class="name">
+        <h2 class="asset-name" js-expandable >iCatcher! Podcast Player</h2><label class="asset-type">[アプリ]</label>
+        
+<div class="aa-sharing-link">
+
+
+</div>
+
+    </div>
+    <div class="row-control-group clearfix summary-container">
+    <div class="left-align-controls invisible summary">
+    
+        
+
+<div class="summary-item">
+    <label  >ストア</label>
+    <div class="value">
+
+    
+
+
+    
+    
+        <a class="summary-item-text" title="iOS Store" href="https://itunes.apple.com/app/id414419105" target="_blank">iOS Store</a>
+        <i class="fa fa-external-link"></i>
+        
+    
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label  >価格</label>
+    <div class="value">
+
+    
+    2.99 USD
+    
+
+
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label  >互換性</label>
+    <div class="value">
+
+    
+    ユニバーサル
+    
+
+
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label  >パブリッシャー</label>
+    <div class="value">
+
+    
+
+
+    
+    
+        <a class="summary-item-text" title="Joeisanerd.com" href="/apps/ios/publisher/joeisanerd.com" >Joeisanerd.com</a>
+        
+        
+    
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label data-helptip="ストア全体における、あるアプリの異なるバージョンに対する一貫した名前。データはApp Annieが管理・所有するものです。"  >ユニファイド・アプリ</label>
+    <div class="value">
+
+    
+
+
+    
+
+
+    
+
+
+    
+        
+        <a class="summary-item-link" href="/apps/all-stores/app/icatcher/">
+            <span class="summary-item-text" title="iCatcher">iCatcher</span><span> (1アプリ)</span>
+        </a>
+        
+        <div class="btn btn-mini click-to-show" data-type="app" ><i class="fa fa-caret-down"></i></div>
+        
+        
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label data-helptip="同じ知的財産を共有するアプリのグループ。メディアミックスのようなもの。データはApp Annieが管理・所有するものです。"  >アプリフランチャイズ</label>
+    <div class="value">
+
+    
+
+
+    
+
+
+    
+
+
+    
+        
+        <label data-helptip="まだデータがありません">N/A</label>
+        
+    
+
+    </div>
+</div>
+
+    
+    </div>
+
+    <div class="right-align-controls">
+    
+    </div>
+</div>
+
+    
+    
+</div>
+
+            <div class="main-app-content">
+            
+            <div class="ss-report-note">
+                
+                データは2015年10月29日にアプリストアから収集されたものです。 
+                
+                App Annieは、アプリストアで提供されている内容について責任を負いませんのでご注意ください。</div>
+            
+
+            
+<div>
+  
+    
+    <div class="x-clear app-screenshots">
+      
+        
+          
+<div class="None">
+    
+    <div id="screenshots" class="">
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/afd3148f68eca263125ee6265a2a72d0"><img src="https://static-s.aa-cdn.net/img/ios/414419105/afd3148f68eca263125ee6265a2a72d0" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/e81a57e95b003fd4ad72f170b33e3071"><img src="https://static-s.aa-cdn.net/img/ios/414419105/e81a57e95b003fd4ad72f170b33e3071" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/179a0b531e74c58342b3b0696d9fa839"><img src="https://static-s.aa-cdn.net/img/ios/414419105/179a0b531e74c58342b3b0696d9fa839" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/47def98a7f090431ea2c0192885313e3"><img src="https://static-s.aa-cdn.net/img/ios/414419105/47def98a7f090431ea2c0192885313e3" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/87b4372672b1a96e1a431241b5e1a43c"><img src="https://static-s.aa-cdn.net/img/ios/414419105/87b4372672b1a96e1a431241b5e1a43c" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/7e045d046e0aa7ce7804b43038484df0"><img src="https://static-s.aa-cdn.net/img/ios/414419105/7e045d046e0aa7ce7804b43038484df0" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/e40900321573a489ff506933d7e25c97"><img src="https://static-s.aa-cdn.net/img/ios/414419105/e40900321573a489ff506933d7e25c97" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/20a42465b15a20c883b1197202fa5648"><img src="https://static-s.aa-cdn.net/img/ios/414419105/20a42465b15a20c883b1197202fa5648" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/02d816fc0c49cc23f408b23b33984787"><img src="https://static-s.aa-cdn.net/img/ios/414419105/02d816fc0c49cc23f408b23b33984787" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/414419105/bd61af13988f26862c9a2934320d662f"><img src="https://static-s.aa-cdn.net/img/ios/414419105/bd61af13988f26862c9a2934320d662f" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+    </div>
+</div>
+
+        
+      
+    </div>
+    
+
+    <!-- ******************* contents ******************* -->
+    <div id="app_content">
+      
+      
+<div class="app_content_section">
+<h3>説明</h3>
+<div class="desc" itemprop="description">
+<p><p>Download, listen, watch and enjoy your favorite podcasts all from your device. Now with support for Apple
+Watch!</p>
+
+<p>Updated for iOS 9! Support for split screen and slide over on devices that support that feature (newer iPads).</p>
+
+<p>FEATURES<br />• Background Refresh (iOS 7 and up only) <br />• Subscribe to your favorite podcasts in the app and
+manage them in the app<br />• Download episodes over WiFi or Cellular (on devices that have cellular).<br />• Download
+in the background on devices running iOS 7+<br />• Download multiple episodes at once (up to 3 on WiFi and 2 on
+cellular).<br />• Support for Password Protected feeds<br />• Sync subscriptions, episode playback positions and
+playlists between your devices with iCloud<br />• Universal App<br />• Full retina display support<br />• Search in all
+views to find that podcast or episode you are looking for<br />• Play audio in the background<br />• Custom playlists
+with filtering options by podcast, episodes and more.<br />• Support for continuous playback (toggle it on now playing
+screen just below time elapsed).<br />• All device orientations supported with configurable option in the settings<br
+/>• You can unsubscribe to podcasts and still have them on your device. Use that for those less than stellar
+podcasts!<br />• Full VoiceOver support</p>
+
+<p>PLAYBACK<br />• Variable playback speed 0.75x, 1x, 1.25x, 1.5x, 2x <br />• Playback speed remembered per podcast<br
+/>• Support for podcasts with chapters and chapter images (MP3 and M4A)<br />• Use your headset controls including
+Bluetooth car controls (when paired) to play/pause, jump forward or back 30 seconds<br />• Sleep timer<br />•
+Beautifully rendered show notes<br />• Onscreen controls for jumping ahead 30 seconds, or jump back 30.<br />• Gesture
+Support on the now playing screen (when the podcast logo is showing) to aid in hands free use<br />    • Double-tap to
+play/pause<br />    • Swipe up to toggle playback speed<br />    • Swipe left/right to rewind/fast-forward <br />    •
+Home of the L gesture for the 2 minute Leo jump.<br />• See Settings and Gestures for more and for customizing
+rewind/fast-forward gestures<br />• Support for AirPlay, watch or listen to those podcasts on your big screen<br />•
+Support for external display of videos for devices that support an external display (get the Apple HDMI adapter)<br />•
+Watch or listen to your favorite podcasts with a familiar layout<br />• Customizable options like Auto-Play on connect
+to start playing the last playing podcast when you plug your headphones in (some restrictions, settings, playback,
+general).</p>
+
+<p>FIND NEW PODCASTS QUICK<br />• Find your podcasts by title, keyword or by author<br />• Browse the top podcasts by
+category<br />• Manually add podcasts with a URL<br />    • Support for Password Protected feeds <br />• Option to
+download a single episode<br />• Browse the web in the app to find podcasts to add. Browser will prompt if you tap a
+link that is podcast feed.<br />• Import Podcast subscriptions for episodes that are already in your device from
+iTunes<br />• Import your OPML file from iTunes or other iOS podcast app<br />• Import media by using iTunes File
+Sharing feature<br />• Add your existing audiobooks (non-password protected ones) using iTunes File Sharing feature<br
+/>• Add previously downloaded podcasts from your computer using iTunes file sharing feature (see settings and import
+media for details).</p>
+
+<p>MORE <br />• Completely customizable to meet your podcasts needs.<br />• Swipe across a podcast or episode to access
+additional options<br />• Podcast settings allow you to set the days the podcast typically comes out or the number of
+days between.<br />• Specify the number of episodes to download when new ones are available<br />• Share the podcast
+information via email with your friends<br />• Post to Twitter or Facebook from the now playing screen</p>
+
+<p>CONTACT<br />Email: tap Help tab and tap Email Support<br />Twitter: @Joeisanerd</p>
+
+<p>PLEASE NOTE: The app does NOT sync with iTunes. Like other podcast apps it is standalone app meant to subscribe and
+download on the device.</p>
+
+<p>* If a feed doesn't work, then let me know so I can take a look at it</p>
+
+<p>Requires iOS 7.1 or higher.</p></p>
+</div>
+</div>
+
+      
+      
+
+<div class="app_content_section app-version-block">
+  <h3>新着情報</h3>
+  <div class="desc">
+  
+  <h5>バージョン 2.7.2 (2015年10月29日)</h5>
+  <div class="app-version-note">
+  <p><p>Please take a moment to update your app store review. Without those reviews users won’t notice the app. So if you
+feel I add value, then please update your review.  Thank you to all of those that continue to update their reviews.</p>
+
+<p>Now what changed<br />▷Bug fixes for crashing MP3's that have chapters<br />▷Bug fix for iOS 8 devices while changing
+playback speeds.<br />▷Bug fix for sluggish iOS 7 devices (iPhone 4)</p>
+
+<p>See whats new under help to see other recent updates</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.7.1 (2015年10月16日)</h5>
+  <div class="app-version-note">
+  <p><p>Please take a moment to update your app store review. Without those reviews users won’t notice the app. So if you
+feel I add value, then please update your review.  Thank you to all of those that continue to update their reviews.</p>
+
+<p>Now what changed<br />▷Additional iOS 9 support added (handoff, initial support at least)<br />▷ 3D touch on the app
+icon for supported devices.<br />▷Bug fix for crashes that happen when an episode doesn't have a publish date.<br
+/>▷Improved email show notes option. When sharing an episode see the other actions and Email Show Notes<br />▷Bug fix
+for slide over and split-screen when you have the show notes showing on episodes in a playlist<br />▷Bug fix for podcast
+import (from opml files or using the podcasts on device feature) process crashing.<br />▷Bug fix for settings display
+messed up when text size is larger via accessibility options.<br />▷More URL schemes added. See the URL Schemes under
+help topics</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.7 (2015年10月2日)</h5>
+  <div class="app-version-note">
+  <p><p>Please take a moment to update your app store review. Without those reviews users won’t notice the app. So if you
+feel I add value, then please update your review. </p>
+
+<p>Now what changed<br />▷Support for iOS 9 multitasking on iPad. Including slide over, picture in picture and split
+screen (for devices that support those features).<br />▷Added a Cellular section in the settings tab (where applicable).
+This consolidates the cellular settings for podcast refresh, auto download and streaming over cellular.<br />▷New option
+to enable/disable refreshing over cellular. The default is off so if you want the app to continue refreshing over
+cellular, then check settings tab, Cellular and enable refresh over cellular<br />▷Bug fix for the black screen for
+video playback when coming back to the app (paused).<br />▷Added sleep timer to the apple watch force touch on the now
+playing view<br />▷Bug fix for crashes that seem to occur when devices disconnects from WiFi and the iCloud sync
+settings are set to WiFi Only<br />▷Slight color changes and Updated show notes look.<br />▷Added support for the pause
+Spoken Audio in the default Maps app (iOS 9+ only) and other apps that properly implemented this iOS 9 feature.<br
+/>▷New behavior when tapping links in show notes. It will ask if you want to open in the app or in safari or other
+browser if installed.</p>
+
+<p>If you notice problems with this update or any update please feel free to send feedback from within the app under the
+Help tab. That is the best way for me to know when there is a problem in the app.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.6.2 (2015年6月30日)</h5>
+  <div class="app-version-note">
+  <p><p>Please take a moment to update your app store review. Without those reviews users won’t notice the app. So if you
+feel I add value, then please update your review. </p>
+
+<p>Now what changed<br />▷Bug fix for iPhone 6+ devices showing sleep timer and volume control in landscape mode.<br
+/>▷Bug fix for slow scrolling on Podcasts tab for iPhone/iPod touch devices.<br />▷Bug fix for Enhanced podcasts
+(chapters) where it would pause when going to the background. Also improvements to the chapter artwork on iOS 8
+devices.<br />▷Support added for importing xpff (Instacast bookmarks) iOS 8+ devices only</p>
+
+<p>If you notice problems with this update or any update please feel free to send feedback from within the app under the
+Help tab. That is the best way for me to know when there is a problem in the app.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.6.1 (2015年6月13日)</h5>
+  <div class="app-version-note">
+  <p><p>2.6.1<br />▷Bug fix for enhanced podcasts showing the artwork to larger initially on iOS 8 devices<br />▷Bug fix
+for the fast-forwarding and rewinding actions on iOS 8 devices (holding down the fast-forward or reverse buttons in the
+app).<br />▷Apple Watch behavior change. Tapping the playback speed when it is at its highest will now reset back to 1x
+or 0.75x depending on your settings for playback speed.<br />▷Bug fix to put the play button back in the downloaded area
+of the downloads tab<br />▷Bug fix for playlist filters for when you simply excluded some podcasts, but then also
+including some episodes from those excluded podcasts.<br />▷Bug fix that was preventing some podcasts from refreshing
+(errored out)</p>
+
+<p>2.6<br />▷Updates to the Apple Watch interface.<br />   •You can now view show notes as well as jump to the
+next/previous episode in a playlist from the now playing view on the Apple Watch. Just scroll down on that view<br />  
+•New Apple Watch settings area in the settings tab. Will only show once your apple watch launches the iCatcher! watch
+app at least once.</p>
+
+<p>▷Slightly updated App Icon for iPhone/iPad/iPod touch and simplier icon on the Apple Watch<br />▷Playlists logic
+updated to better handle all of the include/exclude options. Depending on how you have created your playlists, this
+could change some of them as the underlying logic has changed. See Playlists Include/Exclude explained in the help
+topics for more information<br />▷Updated graphics in some areas of the app<br />▷Updated layout in landscape view for
+now playing on iOS 8+ devices<br />▷Swipe menu on Podcasts tab now more like standard swipe options in iOS<br />▷Bug fix
+for resuming audio after a long delay<br />▷Bug fix for multi-selecting episodes and showing the proper options<br
+/>▷Bug fix to properly handle a lost connection when streaming.<br />▷Bug fix to stop app from skimming the audio after
+holding the next button down and then releasing (it should stop)</p>
+
+<p>If you notice problems with this update or any update please feel free to send feedback from within the app under the
+Help tab. That is the best way for me to know when there is a problem in the app.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.6 (2015年6月5日)</h5>
+  <div class="app-version-note">
+  <p><p>▷Updates to the Apple Watch interface.<br />   •You can now view show notes as well as jump to the next/previous
+episode in a playlist from the now playing view on the Apple Watch. Just scroll down on that view<br />   •New Apple
+Watch settings area in the settings tab. Will only show once your apple watch launches the iCatcher! watch app at least
+once.</p>
+
+<p>▷Slightly updated App Icon for iPhone/iPad/iPod touch and simplier icon on the Apple Watch<br />▷Playlists logic
+updated to better handle all of the include/exclude options. Depending on how you have created your playlists, this
+could change some of them as the underlying logic has changed. See Playlists Include/Exclude explained in the help
+topics for more information<br />▷Updated graphics in some areas of the app<br />▷Updated layout in landscape view for
+now playing on iOS 8+ devices<br />▷Swipe menu on Podcasts tab now more like standard swipe options in iOS<br />▷Bug fix
+for resuming audio after a long delay<br />▷Bug fix for multi-selecting episodes and showing the proper options<br
+/>▷Bug fix to properly handle a lost connection when streaming.<br />▷Bug fix to stop app from skimming the audio after
+holding the next button down and then releasing (it should stop)</p>
+
+<p>If you notice problems with this update or any update please feel free to send feedback from within the app under the
+Help tab. That is the best way for me to know when there is a problem in the app.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.5 (2015年4月28日)</h5>
+  <div class="app-version-note">
+  <p><p>2.5<br />▷Apple Watch support. Control playback for now playing. Browse playlists and start a new episode.<br
+/>▷Updated bug fix for downloading when tapping an episode in the download queue and selecting download.<br />▷UI for
+Search results updated<br />▷When watching videos in portrait mode if you tap the show notes icon (upper-right) it will
+now slide the video up so you can still see the video playing and read the show notes.<br />▷New option in the Settings
+&gt; Playback &gt; Playback speed area. True Time Remaining. When enabled the time remaining that shows in the app on
+the now playing view will be based on the playback speed.</p>
+
+<p>2.4<br />▷Updated more of the app to work with Night Mode<br />▷Bug fix for downloading when tapping an episode in
+the download queue and selecting download.<br />▷Bug fix for searching within a podcast and then trying to mark that
+episode as played<br />▷Sleep Timer improvements for devices running iOS 7 and higher. Including:<br /> • The sound will
+fade out during the last 20 seconds.<br /> • 2 finger double-tap on the now playing screen to activate sleep timer.<br
+/> • 2 finger double-tap will also reset the sleep timer.<br /> • 2 finger tap on the now playing screen to see
+remaining sleep time.</p>
+
+<p>If you notice problems with this update or any update please feel free to send feedback from within the app under the
+Help tab. That is the best way for me to know when there is a problem in the app.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.4 (2015年4月20日)</h5>
+  <div class="app-version-note">
+  <p><p>2.4<br />▷Updated more of the app to work with Night Mode<br />▷Bug fix for downloading when tapping an episode in
+the download queue and selecting download.<br />▷Bug fix for searching within a podcast and then trying to mark that
+episode as played<br />▷Sleep Timer improvements for devices running iOS 7 and higher. Including:<br /> • The sound will
+fade out during the last 20 seconds.<br /> • 2 finger double-tap on the now playing screen to activate sleep timer.<br
+/> • 2 finger double-tap will also reset the sleep timer.<br /> • 2 finger tap on the now playing screen to see
+remaining sleep time.</p>
+
+<p>There will be another update soon that will add support for the Apple Watch.</p>
+
+<p>If you notice problems with this update or any update please feel free to send feedback from within the app under the
+Help tab. That is the best way for me to know when there is a problem in the app.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.3.4 (2015年4月8日)</h5>
+  <div class="app-version-note">
+  <p><p>+Small change to the podcast defaults at app level and at the podcast level.<br />+Bug fix for airplay video as
+well as playing video with an HDMI cable (via adapter)<br />+New Go To Playlist. While in a playlist if you select some
+episodes and tap the Headphone icon you can set a go to playlist. After that if you have some episodes selected and tap
+that headphone icon the first option will be Add to 'Your Go To playlist'<br />+Jump Back and Jump Ahead amounts
+increased to allow up to 5 minutes either way. That's under settings, playback and controls.<br />+Bug fix for URL
+Scheme for playing a podcast<br />+Other bug fixes and minor improvements</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.3.3 (2015年2月18日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fix for the start offset not working in some scenarios<br />+Bug fix for the now playing lock screen
+updating<br />+Bug fix for airplay video and audio<br />+Other minor fixes</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.3.2 (2015年1月26日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fix for now playing icon (upper right corner) not showing when the podcast has no artwork.<br />+Bug fixes
+for some crashing that was happening on launch.<br />+Bug fix for some instances where the podcast might continue during
+a phone call.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.3.1 (2015年1月6日)</h5>
+  <div class="app-version-note">
+  <p><p>Version 2.3.1<br />+Bug fix for iOS 6 devices crashing when trying to play anything</p>
+
+<p>Version 2.3<br />+Improvements to streaming<br />+Bug fix for starting downloads while on cellular when you have
+Allow Cellular disable in the download options<br />+Added 1.75x speed for iOS 7+ devices. Finally found a way for that
+to work correctly.<br />+New notification alert for when a new episode is found and it is set to streaming. This is
+similar to when an episode finishes downloading. You will see the notification on the lock screen.<br />+Bug fix to skip
+over certain unplayable media elements.<br />+For those that accidentally tap the artwork for an episodes, causing it to
+go into edit mode, you can now disable that under settings and default actions. The settings is labeled "Tapping Artwork
+toggles Edit"</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.3 (2015年1月5日)</h5>
+  <div class="app-version-note">
+  <p><p>**For iOS 6 users, skip this update. Wait for 2.3.1 to fix a crashing issue that is in 2.3**</p>
+
+<p>+Improvements to streaming<br />+Bug fix for starting downloads while on cellular when you have Allow Cellular
+disable in the download options<br />+Added 1.75x speed for iOS 7+ devices. Finally found a way for that to work
+correctly.<br />+New notification alert for when a new episode is found and it is set to streaming. This is similar to
+when an episode finishes downloading. You will see the notification on the lock screen.<br />+Bug fix to skip over
+certain unplayable media elements.<br />+For those that accidentally tap the artwork for an episodes, causing it to go
+into edit mode, you can now disable that under settings and default actions. The settings is labeled "Tapping Artwork
+toggles Edit"</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.2.6 (2014年11月20日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fix that for some video podcasts that are only playing audio.<br />+Bug fix for importing media<br />+Other
+minor updates</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.2.5 (2014年11月14日)</h5>
+  <div class="app-version-note">
+  <p><p>**There is another update coming to fix an issue with this update for video podcasts only playing audio.</p>
+
+<p>+Bug fix for the night mode not shutting off when it is supposed to.<br />+Numerous other bug fixes.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.2.4 (2014年11月4日)</h5>
+  <div class="app-version-note">
+  <p><p>+More bug fixes<br />+Bug fix that was causing an alert when tapping a streaming episode<br />+Bug fix for iOS 6
+devices<br />+Bug fix that was preventing some headphones from toggling playback on iOS 6 and 7 devices.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.2.3 (2014年10月30日)</h5>
+  <div class="app-version-note">
+  <p><p>Note: if you stream episodes you'll want to skip this update. I have another one coming. There is an issue with
+update that is causing a popup to show when tapping a streaming episode.</p>
+
+<p>+More bug fixes<br />+Bug fix for the restore from database backup feature<br />+Bug fix for marking episodes in a
+podcast as streaming and it wouldn't remove them from the download queue<br />+Bug fixes for some small UI issues</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.2.2 (2014年10月24日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fixes for iPads running iOS 8<br />+iPhone 6/6+ support for larger screens<br />+Bug fix for resuming audio
+when connected to a Bluetooth hands-free device.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.2.1 (2014年10月13日)</h5>
+  <div class="app-version-note">
+  <p><p>Note: Next update will add support for the iPhone 6/6+ larger screens.</p>
+
+<p>+Changes made a playlists settings to hopefully make it easier<br />+Bug fix for certain headsets when you using the
+advance next/prev actions to change playback speed and/or go to next episode while marking as played. See settings tab
+and playback and controls for those advanced settings+<br />+Fix for an issue with streaming enhanced podcasts (M4A
+files) that would cause them to pause when the app goes to the background.<br />+Bug fix for when marking a playing
+episode as played when back-to-back playback is not enabled it wouldn't clear the now playing screen.<br />+VoiceOver
+corrections on certain buttons<br />+iOS 8 compatibility bug fixes</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.2 (2014年9月15日)</h5>
+  <div class="app-version-note">
+  <p><p>+Big change in how the keywords feature works in the app. Playlists can now be filtered for episodes that have
+keywords in their title or show notes. If you were using it the way it used to work, it has changed.<br />+Bug fix for
+setting a custom image for a podcast. Previously it was saving the image with too low of a resolution making it appear
+blurry on larger devices.<br />+Bug fix for larger downloads.<br />+Bug fix for invalid downloads that were treated like
+valid downloads.<br />+Updated night mode color scheme.<br />+New option under settings, playback, and playlists. You
+can now specify the next episode method. The default is next in line. If you want the next episode to be the top of the
+list or the top of the list when sorted by priority, you can now do that. If your playlist contains played episodes it
+and you have the top of the list option set it will attempt to instead grab the next unplayed episode. <br />+Under
+download options the Approved WiFi Networks has been modified to allow for easily adding your currently connected
+network. Setting approved wifi networks allows you restrict which wifi networks auto-downloading occurs and optionally
+podcast refreshes (if podcast refresh connection type is set to WiFi)<br />+Now if you unsubscribe to a podcast (swipe
+on the podcast and tap the button on the left) it will change the episodes to auto download/stream to none. Switching it
+to subscribed will change it back to apps default (usually All). If you want to delete a podcast swipe on the podcast
+and tap the trash icon.<br />+Small fix for AirPlay videos</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1.6 (2014年7月11日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fix for downloading PDF files<br />+Bug fix for episode cleanup (episodes to keep). After marking a playing
+episode as played and then refreshing that podcast it wouldn't delete the played episode (if that's what your settings
+were set to do).<br />+Bug fix: if you are listening to a podcast via bluetooth and you get interrupted by a phone call,
+then disable the bluetooth headset during that call it should not resume playback after the call<br />+Downloader fix
+when manually starting the downloader when there are alot of episodes to download (iOS 7+)<br />+Bug fix for downloader
+not properly handling an error condition.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1.5 (2014年6月22日)</h5>
+  <div class="app-version-note">
+  <p><p>+Added a sleep timer setting under settings and playback. You can now select if it pauses (easy to resume) or stop
+(have to open the app and tap episode to resume). <br />+The night mode (added in 2.1.3) can now be set to turn on
+between certain hours. See the settings tab and appearance. If enabled, then the default will be 10 pm to 4 am<br />+Bug
+fixes<br />+Color scheme modified</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1.4 (2014年5月27日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fix for freezing on iOS 6 devices<br />+Other Bug fixes</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews.<br />Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1.3 (2014年5月19日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fixes<br />+New Night Mode setting in Appearance. More options to come for this<br />+Adjustments made to
+dynamic text to work better (iOS 7+). Dynamic text is not used through out the app. Only when the default layout is used
+for the appearance setting "Podcasts &amp; Episodes Layout". +Dynamic text support has been added to the show notes as
+well (iOS 7+).</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1.2 (2014年5月2日)</h5>
+  <div class="app-version-note">
+  <p><p>Note: Rating has updated to 17+ due to the embedded web browser capability and updated guidelines for app
+ratings</p>
+
+<p>2.1.2<br />+New playback speed section in settings and playback. New setting allows you to pick which playback speeds
+you would like the app to allow when cycling through playback speeds.<br />+Fix for AAC podcasts not downloading
+correctly<br />+Bug fix for refreshing podcasts that are marked as not subscribed<br />+Bug fix for VoiceOver delete
+action not working<br />+Bug fix that was causing some crashing during background refreshes<br />+Added bookmark
+capability to the Browse the Web feature so you can save your commonly visited sites<br />+Added two sorts to the
+podcasts tab. Podcast Refreshed (Recent First), Podcast Refreshed (Oldest first). This way you can see at the top which
+podcasts have been refresh most recently or not.<br />+The orange oval with the number on it for a podcast will now
+represent new unplayed downloads and new unplayed streaming episodes</p>
+
+<p>2.1<br />+UI changes in a number of areas of the app<br />+New cleaner look for podcasts and episodes lists.<br
+/>+Multi-select options updated to use more standard controls for easier use.<br />+On the podcasts tab you can now edit
+and select multiple podcasts and take action on those selected podcasts all at once.<br />+New setting under Playback
+and Controls for Remote Control Playback Speed. When enabled it allows you to change the playback speed of the playing
+podcast. Simply pause the podcast and tap (or use headset with next/previous buttons) the &gt;&gt; button that is on the
+lock screen controls. Tapping/pressing the next (&gt;&gt;) button while paused with increase speed and tapping previous
+(</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1.1 (2014年4月21日)</h5>
+  <div class="app-version-note">
+  <p><p>2.1.1</p>
+
+<p>+Bug fix for the 2.1 update that is causing the app to crash for some users. Episodes that have no published date are
+causing the app to crash.<br />+Bug fix for AirPlay video not working on newer devices</p>
+
+<p>2.1<br />+UI changes in a number of areas of the app<br />+New cleaner look for podcasts and episodes lists.<br
+/>+Multi-select options updated to use more standard controls for easier use.<br />+On the podcasts tab you can now edit
+and select multiple podcasts and take action on those selected podcasts all at once.<br />+New setting under Playback
+and Controls for Remote Control Playback Speed. When enabled it allows you to change the playback speed of the playing
+podcast. Simply pause the podcast and tap (or use headset with next/previous buttons) the &gt;&gt; button that is on the
+lock screen controls. Tapping/pressing the next (&gt;&gt;) button while paused with increase speed and tapping previous
+(</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1 (2014年4月18日)</h5>
+  <div class="app-version-note">
+  <p><p>PLEASE NOTE: There is a small bug that is causing the app to crash for some users. This happens when there are
+episodes with no publish date. I'll have a fix submitted shortly.</p>
+
+<p>+UI changes in a number of areas of the app<br />+New cleaner look for podcasts and episodes lists.<br
+/>+Multi-select options updated to use more standard controls for easier use.<br />+On the podcasts tab you can now edit
+and select multiple podcasts and take action on those selected podcasts all at once.<br />+New setting under Playback
+and Controls for Remote Control Playback Speed. When enabled it allows you to change the playback speed of the playing
+podcast. Simply pause the podcast and tap (or use headset with next/previous buttons) the &gt;&gt; button that is on the
+lock screen controls. Tapping/pressing the next (&gt;&gt;) button while paused with increase speed and tapping previous
+(</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.0.3 (2014年3月5日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fix for the download now option within a podcast.<br />+For devices running iOS 7 or higher, options to now
+set the hours you want the auto downloader to start downloading. This only affects auto-downloading. If you choose
+download now or manually start the downloader it will go ahead and download.<br />+Back to back playback within a
+podcast and within the builtin playlists will now be remembered if you enable or disable it. That was always true for
+custom playlists.<br />+Now when you go into a podcast you should see the amount of space used by that podcast if it has
+episodes downloaded. It will show as part of the header like X episodes downloaded  100MB<br />+New appearance setting
+added to the Device Orientation support. Allow upside down. Turn off if you want the device to support portrait upside
+down. Think phone upside in cup holder so you charge it and look at the screen</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.0.2 (2014年2月7日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fix to resume playback after receiving a phone call.<br />+Bug fix for crash when deleting the podcast that
+are listening to.<br />+Bug fix to delete a played episode when you have episodes to keep set to unplayed and some other
+episodes management settings are set.<br />+When viewing episodes in a podcast if the episode is in the download queue
+and it is not downloading it will either say Queued or it will show it's size in red with brackets [12MB]<br />+Bug fix
+for auto downloader</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.0.1 (2014年1月26日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fix for auto-download scenario that was causing it to not start after a refresh<br />+Bug fix for downloading
+PDF's and other document type<br />+New option under settings tab, Podcast Defaults called Podcast Extras. Allows you to
+hide extra items that appear in a podcast like blog posts and PDF documents<br />+Bug fixes for downloader<br />+Bug fix
+for when you disable cellular data for the app in the settings application. Show notes were still attempting to show
+images, thus causing the "your data is turned off" message<br />+Bug fix for importing media from a url (Settings,
+Import Media)</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.0 (2014年1月10日)</h5>
+  <div class="app-version-note">
+  <p><p>Calling it version 2.0 because it's changed so much since version 1, so it's time to just call it what it is</p>
+
+<p>+Dropped support for iOS 5.1 and lower<br />+If a download finishes while the app is not active (like middle of the
+night) it should no longer make the download completed noise<br />+Did some clean-up of the settings tab<br />+Bug
+fixes</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.12.3 (2013年12月18日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fixes</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.12.2 (2013年12月13日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fixes<br />+Bug fix for imported media that was causing duplicate episodes to be created when iCloud is
+enabled.<br />+Re-enabled the Simultaneous downloads option so you can turn it off when using the background downloader.
+See the Download Options settings in the Settings tab.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.12.1 (2013年12月1日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fix that was causing the app to crash when attempting to download an episode with an invalid URL.<br />+Bug
+fix for downloading while on Cellular, but you have the auto download set to Don't Auto Download.<br />+Bug fix for
+iCloud first time setup<br />+Bug fix for downloads to keep setting not properly deleting downloads.<br />+Fix for
+downloading Reuters video podcasts. Dear Reuters, fix your podcasts. You're the only ones that do it wrong<br />+Fixed
+issue where episodes that were downloading and then stopped would not properly delete their temp space</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.12 (2013年11月16日)</h5>
+  <div class="app-version-note">
+  <p><p>Please Note: with the background downloader enabled, it will always attempt to download up to 3 at a time. The
+Simultaneous downloads setting has no affect when the background downloader is enabled.</p>
+
+<p>**This is an issue with this update where if you are on Cellular and you have the auto download new episodes set to
+Don't Auto Download, it won't let you download. Change that auto download new episodes to wifi and it will work. Update
+for this will be coming soon.<br />***There is also an issue where the app can crash if it attempts to download an
+episode with an invalid URL. If the app crashes right away, turn Airplane mode on, then open the app and disable the
+background downloader in the Download Options area. Bug fix coming</p>
+
+<p>+Added support for the iOS7 Background Downloader (see settings tab and Download Options)<br />+Bug fixes for many of
+the recent crashes<br />+Enhanced podcasts (M4A) will now show the thumbnail artwork when viewing the chapter list.<br
+/>+New notification (enabled by default) that will alert for episodes downloaded. You can change this in the settings
+tab and Notifications.<br />+Bug fix for back-to-back streaming episodes<br />+Removed the Connectivity &amp; Downloads
+item in the settings tab. Replaced with Podcast Refresh and Download Options.<br />+New option in the Download Options,
+Allow Cellular. View the Cellular help topic for more information on restricting iCatcher from using Cellular (for
+devices that have cellular).</p>
+
+<p>If you experience issues with the iCloud, then it is best to shut the device off completely and turn it back on.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.11.3 (2013年10月22日)</h5>
+  <div class="app-version-note">
+  <p><p>+Fixed some issues with the time slider for older devices<br />+Fixed bug where the time would stop updating in
+some scenarios<br />+New option added to the Refresh Completed under settings and notifications. Setting to On will post
+a notification even if no new episodes were found helpful to know that a background refresh (iOS 7+) has occurred<br
+/>+Adjustments made to try and avoid the playback error when streaming episodes<br />+For iOS 7+ users, Allow Auto
+Refresh From and To setting added to the Connectivity &amp; Downloads, Podcast Refresh settings area. This allows you to
+specify the time frame for auto refreshes to occur.<br />+Potential bug fix for episodes downloaded media disappearing
+in certain instances (manually imported media)<br />+Potential bug fix for Bluetooth issues where after disconnecting it
+would continue playing.<br />+For podcasts with chapters and iOS7 the current chapter will be shown in control
+center.<br />+Renamed Keep Download to Protect Download. This only applies to protecting an individual episodes media
+when you access that episodes options, not the podcasts settings.<br />+Slight re-design of the playlists settings
+view</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.11.2 (2013年9月26日)</h5>
+  <div class="app-version-note">
+  <p><p>+Better background support<br />+Updated icon and slight color change<br />+Better support for sharing a podcast
+via AirDrop.<br />+Bug fix for crash during podcast search when VoiceOver is on<br />+Other bug fixes</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.11.1 (2013年9月20日)</h5>
+  <div class="app-version-note">
+  <p><p>+Bug fixes for iOS 7</p>
+
+<p>If you experience issues with playback controls on the lock screen, then try rebooting the device. This seems to be a
+common issue especially right after updating to the latest iOS.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.11 (2013年9月17日)</h5>
+  <div class="app-version-note">
+  <p><p>**There is a bug in this update for iOS 7 devices if you try to manually add a podcast feed or are prompted for a
+username and password. I am working to get a minor update posted as quickly as i can**</p>
+
+<p>+Added MP3 chapter images support for those podcasts that publish MP3's with chapters. Currently MP3 chapter support
+is only for downloaded episodes, not streaming<br />+Updated for iOS 7<br />+Now requires iOS 5.1 and higher<br
+/>+Background Refresh support added for devices running iOS 7. For more informaiton and how to disable it, look at the
+Background Refresh topic in the help tab under Help Topics<br />+Slight changes to the podcast search<br />+When viewing
+show notes on the now playing view you can swipe left or right to rewind/fast forward like you could when the artwork is
+showing<br />+Url Scheme added for playback for podcast. See URL schemes for more info<br />+Video on secondary screen
+setting moved to Playback and Video. Also added option "Ask". When set to Ask, if you play video with an external
+adapter or use mirroring on an AirPlay compatible receiver it will ask if you want to display the video on that
+display.<br />+Bug fixes</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.10.4 (2013年9月3日)</h5>
+  <div class="app-version-note">
+  <p><p>-Bug fixes for the sort settings within a podcast<br />-Other bug fixes<br />-Within a playlist if you use the
+multi-select (tap the episodes artwork) the time remaining will now reflect just those episodes selected. Could be
+useful when making a playlist of a certain length.<br />-New help topic added, URL schemes.<br />-Last scheduled update
+for iOS 4.3 devices</p>
+
+<p>This is last update for iOS 4 users. If you are using iOS 4, then make sure you download the update to your computer
+through iTunes and hold on to it.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.10.3.1 (2013年8月21日)</h5>
+  <div class="app-version-note">
+  <p><p>-Bug fix for please wait indicator showing for too long when trying to search for another podcast.<br />-Bug fix
+for MP3 Chapters with different encodings<br />-Other Bug fixes</p>
+
+<p>This is last update for iOS 4 users. If you are using iOS 4, then make sure you download the update to your computer
+through iTunes and hold on to it.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.10.3 (2013年7月31日)</h5>
+  <div class="app-version-note">
+  <p><p>-Bug fixes<br />-Fix for showing embedded artwork when the embedded artwork is too small<br />-Expanded the
+episodes to ignore option (podcast settings) to allow for setting episodes to include or ignore. This is an either or
+but not both.<br />-Local search of your podcasts, playlist and a podcasts episodes now allows you to search for
+podcasts/episodes that have a bookmark with that search term in it<br />-New low free space warning when the device
+doesn't have enough space to safely download an episode<br />-New Episode sort options within a podcast. You can now
+choose to show downloaded episodes inline with the other episodes instead of having them in their own section. Episode
+sort has also been added as a podcast default that you can set (and reset all of your podcats to use).<br />-Sync
+changes/bug fix<br />-Support for another encoding<br />-Compatibility fixes</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.10.2.2 (2013年7月1日)</h5>
+  <div class="app-version-note">
+  <p><p>-Bug fix for podcasts tab</p>
+
+<p>-Tap the help tab and what's new to see what changed in 1.10.2 and 1.10.2.1</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.10.2.1 (2013年6月28日)</h5>
+  <div class="app-version-note">
+  <p><p>**Please note, there is an issue with this update where the podcasts tab may get messed up so that it looks
+strange. I am submitting a new fix so if you can, wait for the next update 1.10.2.2. You can force quit the app by
+tapping the help tab and tapping the close button and choosing force close. To avoid the issue for now you can change
+your podcast sort to Title A-Z.***</p>
+
+<p>-Bug fix for crash when selecting a chapter<br />-Bug fix for search</p>
+
+<p>-Tap the help tab and what's new to see what changed in 1.10.2.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.10.2 (2013年6月17日)</h5>
+  <div class="app-version-note">
+  <p><p>-Fix for episodes that have chapters and you add a bookmark which causes a crash when trying to view the
+bookmark</p>
+
+<p>-Indicator on episodes that have bookmarks</p>
+
+<p>-You can now add bookmarks/notes to any episode by swiping across the episode and tapping the bookmark button</p>
+
+<p>-Bookmarks have been added to sync so if you have episode sync enabled already, then bookmark sync will be enabled
+for you. See settings and iCloud sync</p>
+
+<p>+Please Note there is a bug in this update for those podcasts with chapters. Tapping the chapters icon and selecting
+a chapter will crash the app. I fix is coming shortly.</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.10.1.5 (2013年5月24日)</h5>
+  <div class="app-version-note">
+  <p><p>-Bug fix for double sound when going to the next episode with the sound effect enabled for next episode<br />-Bug
+fix for some voice over actions while in a playlist<br />-Bug fix for album artwork on lock screen setting<br />-Added
+VoiceOver support for the rotor actions to delete episodes and/or subscriptions faster</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.10.1 (2013年5月19日)</h5>
+  <div class="app-version-note">
+  <p><p>-Bug fixes</p>
+
+<p>-Playback end offset added to individual podcast settings to compliment the playback start offset</p>
+
+<p>-Bug fix for episodes that wouldn't finish downloading</p>
+
+<p>- Tap help tab, then what's new to see previous updates</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.10 (2013年5月10日)</h5>
+  <div class="app-version-note">
+  <p><p>-Post to Facebook now uses the same starter text that posting to Twitter has<br />-Bug fix for the Larger font
+option (non-iPad)<br />-Ability to make notes/bookmarks during a podcast (tag icon)<br />-Import Media now supports
+processing multiple media files to a single podcast at once.<br />-New Playlists settings (not the built-in playlists).
+Limit episodes to x days back or limit to episodes older than x days. Limit to episodes shorter than x minutes or
+episodes older than x minutes<br />-Fix for some feeds hosted through box.com<br />-Fix for podcast where the video
+download would only play audio and misreport the duration<br />-New Tools area in settings tab. This includes the
+ability to delete everything, indicate that you the app to check for new artwork for your podcasts and more to come.<br
+/>- Tap help tab, then what's new to see previous updates</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.14 (2013年4月18日)</h5>
+  <div class="app-version-note">
+  <p><p>Note: there an issue with this update for those using the Larger Font option (settings and appearance). Currently
+it doesn't work and will be fixed in the next update.</p>
+
+<p>- Improvement made to podcast refreshes for devices running iOS 6.0+ (multiple subscriptions checked at once)</p>
+
+<p>- Bug fix for issue where episode options would not work on search results within a playlist (voice over)</p>
+
+<p>- Added support for another published date format</p>
+
+<p>- Fix for issue where streaming an episode and then tapping a link to watch a video from within the show notes would
+not correctly stop the audio.</p>
+
+<p>- Tap help tab, then what's new to see previous updates</p>
+
+<p>**If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!**</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.13 (2013年4月1日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Fix to allow for import media to download/add media that is on a site that requires a username and password</p>
+
+<p>✓ Fix for issue with certain podcats due to a recent change. This was causing duplicate episodes found and
+re-downloaded.</p>
+
+<p>✓ Removed the @joeisanerd from the Twitter posts.</p>
+
+<p>✓ New Database Backup option. Use this option to transfer your existing subscriptions and episode history to a new
+device. See Database Backup in the help for more info.</p>
+
+<p>✓ Tap help tab, then what's new to see previous updates</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.12 (2013年3月15日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Fix for a podcast that wasn't downloading<br />✓ Fix for some podcasts that would show a corrupted artwork image
+on the now playing screen</p>
+
+<p>✓ New Playback option "Back-to-Back playlist" for the playlists you created. Once a playlist has no episodes left it
+will move to the next playlist and start playing that one. See Back-to-Back Playlists in the help for more info. This
+option is off by default and can be set under Settings, Playback, Playlists.</p>
+
+<p>✓ New playback controls option (Settings, Playback, Controls) for jumping to the next/previous episode in a playlist
+when you perform a fast-forward (holding down on the next indicator) or a rewind (holding down on the back indicator)
+using the controls from a headset/headphones or the now playing lock screen controls. Off by default. Some vehicles that
+have the next/previous buttons could benefit from this option being turned on to jump to the next episode</p>
+
+<p>✓ New Playback option "Auto Play on Connect". Plugging headphones in or enabling a bluetooth output device will cause
+the loaded podcast to start playing. This option is off by default and can be set under Settings, Playback, General.</p>
+
+<p>✓ Tap help tab, then what's new to see previous updates</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.11 (2013年2月23日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ New podcast feature, playback start offset. Access the podcasts settings and scroll to the bottom to set the
+playback start offset. Setting this will cause an episode to start at that offset when it begins playing from the
+beginning.</p>
+
+<p>✓ Accessibility update. Playback time slider will now annouce the elapsed time when the value is changed with voice
+over on. The value while now change in much smaller increments rather than large percentages (default in iOS).  It is
+set so that if you change the value fast (multiple slide gestures in short timeframe) it will increment in larger
+amounts up to a minute at a time. If you use voiceover and this is not a good solution, please email me via the contact
+support link on the help tab.</p>
+
+<p>✓ Another fix for manually creating podcasts for imported media. Manually created podcasts without a url will not
+sync across devices via iCloud.</p>
+
+<p>✓ Tap help tab, then what's new to see previous updates</p>
+
+<p>✓ Fixed an issue where undeleting episodes would not sync over to the device when sync was enabled.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.10 (2013年2月13日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Bug fix for manually refreshing a feed would sometimes not work, but viewing the feed like you were going to
+subscribe to it again would show the episodes.<br />✓ Bug fix where episodes that were marked Keep Download would get
+deleted if you choose to mark all as played or delete downloads while multiple episodes were selected.</p>
+
+<p>✓ Show notes adjustment. Moved the newly added Author and Copyright info to the bottom.<br />✓ Default changed for
+supported orientations setting (new installs) to be all orientations during video playback on non-iPad devices and all
+orientations by default on iPad devices<br />✓ Episodes in the downloads queue will now show their download size (if
+provided in the the podcast feed) before downloading.<br />✓ If you have the Appearance setting for Show File Size
+enabled, then episodes listed within a podcast that are not downloaded, but the media file size is known, will be shown
+in blue.<br /> ✓ Downloads queue will now show the approximate download size ≈. Not all podcasts include the file size
+with each episode.<br />✓ Free space amount adjusted to better match what is reported by the device under the settings
+app and general.<br />✓ Fix for podcasts that would be deleted but then come back due to sync. This affected podcasts
+that were manually created for already downloaded media.<br />✓ Tap help tab, then what's new to see previous
+updates</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.9 (2013年1月22日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ The customiziable jump forward and back options added in 1.9.8 now affect the lock screen next and previous
+buttons as well as buttons on headsets that have next and previous options.<br />✓ Fix for the now playing lock screen
+information<br />✓ Bug fix for the case where if a podcast didn't have a title it wouldn't download an episodes media
+correctly. It would delete it as soon as it finished downloading.<br /> ✓ Individual podcast settings look and feel
+cleaned up. Some terms renamed to make better sense. Podcast Schedule changed to Frequency of Episodes<br />✓ Bug fix
+for delete selected while in a podcast<br />✓ Fix for landscape lock (Settings, Playback) where it wasn't locking into
+landscape<br />✓ Changes to the playlists view<br />✓ Moved the Used Space and Free Space info to the Downloads tab<br
+/>✓ New appearance setting for Larger Font (non-iPad devices) for the list of episodes and podcasts. Try it out see you
+if you like the larger layout<br />✓ For iOS 6 users there is a new playback setting, Mono Headset. Enabling that allows
+the audio to go through you bluetooth phone headset or speaker. Not something you would likely want on all the time<br
+/>✓ Tap help tab, then what's new to see previous updates</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.8.5 (2012年12月24日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Bug fix for rare iCloud issue.<br />✓ Added approximate download time to downloads<br />✓ Tap help tab, then
+what's new to see previous updates</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.8 (2012年12月15日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Bug Fixes<br />✓ Fixed an issue where the built-in playlists were not advancing to the next episode correctly<br
+/>✓ Multi-select added to episodes within a podcast<br />✓ 30 second jump back/ahead buttons can now be customized from
+0 to 60 seconds. See settings, playback and Jump Back Amount and Jump Ahead Amount. <br />✓ New settings in the playback
+section of the settings tab. "Use Embedded Artwork" on by default. "Send Playback Times" on by default, used for car
+stereos (that have it) and Apple TV to know the current playback time for audio podcasts.</p>
+
+<p>What's new 1.9.7<br />✓ New icons and look when swiping on an episode.<br />✓ Help page to clarify what each icon
+actually means called Icons<br />✓ New playlist setting for Included Episodes. Kept Downloads. Create a playlist of just
+those episodes you have indicated "Keep Download"<br />✓ New option added to the Connectivity and Downloads section in
+settings tab. Prevent screen dimming. This is enabled by default now and it will prevent the screen from
+dimming/auto-locking if the app is currently downloading media</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.7 (2012年12月7日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ More bug fixes<br />✓ New icons and look when swiping on an episode.<br />✓ Help page to clarify what each icon
+actually means called Icons<br />✓ Bug fixes<br />✓ New playlist setting for Included Episodes. Kept Downloads. Create a
+playlist of just those episodes you have indicated "Keep Download"<br />✓ New option added to the Connectivity and
+Downloads section in settings tab. Prevent screen dimming. This is enabled by default now and it will prevent the screen
+from dimming/auto-locking if the app is currently downloading media</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.6.2 (2012年11月25日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ More bug fixes<br />✓ Added playback time support for users connecting iCatcher to their vehicles (iOS 5+). For
+those vehicles that support it (plugs into the bottom of the device.<br />✓ Fixed an issue where the app was refreshing
+more often than it is supposed to.<br />✓ Added action within podcast 'Add Missing Episodes'. This will add any episodes
+currently not listed that are in the podcasts feed. Also undeletes any deleted episodes that are still in the podcasts
+feed.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.6.1 (2012年11月15日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Critical update for users affected by the last update 1.9.6 that caused their database to become corrupted. In
+most cases it is recommend that those users delete the app and reinstall it with this latest version.</p>
+
+<p>1.9.6 <br />✓ UI changes on the Now Playing screen<br />✓ Dedicated button on now playing screen to toggle
+back-to-back playback. See help and What's new<br />✓ Redirect detection fixes<br />✓ Fixes to the Location+Background
+updates<br />✓ Numerous bug fixes.<br />✓ Sync fixes for episodes that have future publish dates<br />✓ Fixes for the
+dates shown on episodes when the date is in the future</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.6 (2012年11月3日)</h5>
+  <div class="app-version-note">
+  <p><p>PLEASE READ: Users that have their Region Format set to certain regions (Settings app, General, International)
+such as Japan and Russia the DB will get corrupted and lose their podcast information. I have removed the app from the
+app store for all regions except United States until i can get an updated posted to address the issue. </p>
+
+<p>If you wish to play it safe, then you can avoid this update and wait for 1.9.6.1</p>
+
+<p>If you running iOS 4.3, then don't update at this time. I am getting reports that it is not working on 4.3.2 and
+4.3.3 devices.</p>
+
+<p>✓ UI changes on the Now Playing screen<br />✓ Dedicated button on now playing screen to toggle back-to-back playback.
+See help and What's new<br />✓ Redirect detection fixes<br />✓ Fixes to the Location+Background updates<br />✓ Numerous
+bug fixes.<br />✓ Sync fixes for episodes that have future publish dates<br />✓ Fixes for the dates shown on episodes
+when the date is in the future</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.5 (2012年10月18日)</h5>
+  <div class="app-version-note">
+  <p><p>** There is still an issue with the redirect code. Another update will be coming. In the meantime if you have
+older 5by5  podcasts that you subscribed to that don't work, i would delete them and search and resubscribe. If you need
+to change a feed manually you can go into that podcast and tap the settings icon and then under the Internet Information
+section you can tap the blue arrow next to the feed address to change it (if you have the updated address).</p>
+
+<p>✓ Support for feed redirects (feedburner)<br />✓ More sync fixes<br />✓ Support for multiple sync files to be saved
+to iCloud. Useful if you share your iCloud account, but want to keep the sync data seperate.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.4.1 (2012年10月5日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ iOS 6 compatibility fixes<br />✓ New minimum iOS version set to 4.3<br />✓ Bug fixes<br />✓ Option added to the
+appearance settings to disable the new fullscreen controls. Set to Off to revert to old behavior.<br />✓ Improved
+fullscreen controls. Added the familiar buttons back.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.4 (2012年9月19日)</h5>
+  <div class="app-version-note">
+  <p><p>**Please note, if you are restoring from backup to a new device, then the downloaded media will not be transferred
+by default. See blog.joeisanerd.com for a post on this issue.</p>
+
+<p>✓ iOS 6 compatibility &amp; iOS 5 larger screen support<br />✓ Bug fixes<br />✓ New option for Simultaneous
+Downloads. Up to 3 episodes at a time (Settings and Connectivity &amp; Downloads) when on WiFi and 2 on cellular.<br
+/>✓ New option, Download After (Settings and Connectivity &amp; Downloads). When off, downloads will start when they are
+added to the queue instead of waiting until all podcasts are refreshed.<br />✓ New fullscreen controls<br />✓ VoiceOver
+fixes on the new Import Podcasts page to notify how many podcasts remain to be imported<br />✓ Change to notifications
+to not include the downloads count if it is 0, but the stream is greater than 0 and vice versa.<br />✓ New playlist
+badge setting to have it show only unplayed episode count. See the settings tab and appearance and playlist badge<br
+/>✓ New Default Actions setting for Disable Streaming After Playing. Default is On. </p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.3 (2012年8月29日)</h5>
+  <div class="app-version-note">
+  <p><p>1.9.3.<br />✓ Bug fixes that were introduced in 1.9.2 that caused older episodes to reappear into the downloads
+queue. Please watch your download queue for unwanted episodes.<br />✓ Fixed playlist sync. Broke in the 1.9.2
+updated.</p>
+
+<p>1.9.2<br />✓ Bug fixes<br />✓ Chapter support for download MP3's that have chapters.<br />✓ Improvements to iCloud
+sync.<br />✓ New sort option for podcasts tab, Downloads, then Priority<br />✓ Location based background updates<br
+/>✓ Refresh completed notification will not show if there is 0 to download and 0 to stream.<br />✓ New iCloud sync
+option for WiFi only.<br />✓ Changes were made to allow for 4.2.1 devices to receive this update.<br />✓ Improvements
+made to import process when importing OPML files (multiple podcasts).<br />✓ Changed the default for import to not
+download latest episode upon import.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.2 (2012年8月23日)</h5>
+  <div class="app-version-note">
+  <p><p>## Please note, there is a bug in this update for those that have their regional format (Settings app, General,
+International and Region Format) set to something other than United States. Update to fix this is coming (1.9.3). </p>
+
+<p>To play it safe you can just skip this update and wait for 1.9.3 to be released. ###</p>
+
+<p>✓ Bug fixes<br />✓ Chapter support for download MP3's that have chapters.<br />✓ Improvements to iCloud sync.<br
+/>✓ New sort option for podcasts tab, Downloads, then Priority<br />✓ Location based background updates<br />✓ Refresh
+completed notification will not show if there is 0 to download and 0 to stream.<br />✓ New iCloud sync option for WiFi
+only.<br />✓ Changes were made to allow for 4.2.1 devices to receive this update.<br />✓ Improvements made to import
+process when importing OPML files (multiple podcasts).<br />✓ Changed the default for import to not download latest
+episode upon import.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.1 (2012年8月2日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Dropped support for older devices running 4.2.1 (iPhone 3G, older iPod touch)<br />✓ Bug fix for cloud syncing
+that was causing older played episodes to reappear<br />✓ Bug fix for cloud syncing when podcast title is the same but
+different url<br />✓ Bug fix for issue where an episode would end and not finish.<br />✓ Bug fix for enhanced podcasts
+where there is changing artwork but not chapter titles<br />✓ Added Appearance setting to set the behavior when a
+secondary display is detected. For devices that mirror, it will just mirror. You have to option to have it show video on
+the second screen.<br />✓ Added a notifications settings area to disable the new refresh and downloads notifications.<br
+/>✓ Added option to revert back to the previous delete behavior. See the default actions settings.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9 (2012年7月18日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Bug fixes<br />✓ Fix for downloads issue with some podcasts. If a podcast is having download isues, then email
+support with the podcast information.<br />✓ Fix for older devices and the sleep timer<br />✓ Fixed an issue with dar.fm
+feeds<br />✓ Fixed issue where a podcast would not refresh on a cellular network if you had the refresh podcasts on WiFi
+only setting set.<br />✓ Downloads tab split into two sections. Queued and Downloaded. Queued will contain the items
+queued for download and the downloaded section allows you to manage all your downloaded content in one spot.<br
+/>✓ Swiping across an episode and choosing delete will now be context aware. If you are in a podcast and attempt to
+delete an episode it will aks if you want to delete the download if it is downloaded and delete the episode completely
+if it is not. For playlists if you delete it will ask delete download, delete episode or exclude/remove from
+playlist.<br />✓ Added voiceover text to episodes to announce the name of podcast when in the download queue and
+playlists.<br />✓ New appearance setting to show file size for downloaded episodes (under settings and appearance).<br
+/>✓ The podcasts tab now has its own sort option.<br />✓ Re-organized the settings tab<br />✓ New option to restrict
+access to the web browser in the app as well as podcast that have indicated they are explicit.<br />✓ Added
+notifications for when a refresh is finished and when downloads finish downloading and the app is not active.</p>
+
+<p>✓ The next update (1.9.1) will not work on devices running 4.2.1 (iPhone 3Gs and older iPod touches)</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.8.5 (2012年6月18日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Bug fixes<br />✓ Sync fixes<br />✓ Sync settings area simplified<br />✓ Fix for background downloader alert<br
+/>✓ Fix for out of memory issue (crashes the app). Some podcasts were affected by this.<br />✓ New option to refresh
+podcasts if on WiFi only.<br />✓ Application Events (settings tab) split into two separate areas. Connectivity &amp;
+Downloads and Default Actions.<br />✓ Fixed issue with gestures where performing some gestures after a gesture would not
+recognize.<br />✓ When voiceover is on and you choose to email show notes or email the episode (on the now playing
+screen) it will now pause what's playing.</p>
+
+<p>There is a download bug in this update and I have an update coming to fix this issue.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.8.4 (2012年5月29日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ fix for premium subscriptions (broke in last update)<br />✓ Playlist sync<br />✓ More adjustments made for
+sync<br />✓ Episodes will now show a shorter publish date based on when the episode was release (current year, won't
+show the year, same week, shows the day of the week).</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.8.3 (2012年5月18日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Fix for when you are watching a streaming video and also have it downloading the file. When it would finish
+downloading it would go black.<br />✓ Bug fixes<br />✓ Fix for downloading media when the webserver doesn't support
+partial/resuming downloads.<br />✓ Added duration to the podcast search when viewing list of episodes. Not all podcast
+feeds have their duration.<br />✓ Fix for voice over users on the iPad. Were not able to select an episode within a
+podcast.<br />✓ Memory cleanup to help reduce memory usage<br />✓ Fix for when you add your first podcast and it doesn't
+show in the list.<br />✓ Fix for artwork not showing after initially subscribing to a podcast.<br />✓ Slight change to
+the show notes look<br />✓ Fix for iOS 4.2.1 and 4.3.3 users that was causing a strange slow animation effect.<br
+/>✓ Sync fixes. If you mark an episode for download on one device it should do the same on the other devices unless it
+has been previously played.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.8.2 (2012年5月5日)</h5>
+  <div class="app-version-note">
+  <p><p>General<br />✓ Bug fix for devices not on iOS 5.0<br />✓ Support to send M4A files to iCatcher<br />✓ New gesture
+for marking an episode as played. Upside down Leo jump. Swipe up then right to mark an episode as played and move to the
+next episode if in a custom playlist. Off by default<br />✓ Swipe down gesture to get back to 1x playback no longer
+requires the 2 quick swipes, just 1<br />✓ Pull to refresh added for the podcasts tab and within a podcast.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.8.1 (2012年4月20日)</h5>
+  <div class="app-version-note">
+  <p><p>General<br />✓ Bug fixes<br />✓ Added Facebook connect support to share podcasts on Facebook<br />✓ Time remaining
+will now show on the lock screen when you double-tap for the play controls<br />✓ Moved the after playing application
+setting to the Podcast Defaults section (was in the Playback settings previously)<br />✓ iCloud Sync fixes. Podcast
+setting changes will now be sync'd for most settings.<br />✓ When viewing an episode if you tap and hold for 1/2 second
+on the artwork you will see a couple of options. One of them is Mark as played. That will allow you to indicate you are
+done listening/watching the episode and to move to the next one</p>
+
+<p>Podcasts<br />✓ Modified the episode list when viewing a podcast to reduce clutter<br />✓ Podcasts can now be sorted
+4 ways. Newest to oldest, oldest to newest, title A-Z or title Z-A. Check the podcasts settings and look under the
+subscription details<br />✓ Within a podcast, selecting the Older Episodes option will no longer undelete deleted
+episodes. It will only look to pull in older episodes from the podcast feed if they are available.<br />✓ New option
+added within a podcast under the trash icon to view deleted episodes. This will show a list of the deleted episodes so
+you can undelete them if you want to.<br />✓ Refresh option is now activated by tap the header with the podcast title
+(has a refresh icon).</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.8 (2012年4月6日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Fixed issue where some downloads where not playing<br />✓ Fixed issue where episodes could repeat when the sleep
+timer was enabled.<br />✓ Option added for playlists to only show episodes that are partially played<br />✓ Option added
+for playlists to limit episodes published X days back.<br />✓ Added option to restrict auto-downloading to certain WiFi
+networks (SSID's).<br />✓ Quick Rewind and Quick Jump Ahead now only requires a single swipe.  No 2-quick swipes
+anymore.<br />✓ 2-finger swipe left/right 30 seconds removed and replaced with customizable amounts like the single
+finger swipes.<br />✓ New multi-select option to add individual episodes to a playlist. While in a playlist you can tap
+the artwork on an episode to start multi-select.<br />✓ Tapping the header while in a custom playlist will give you the
+option to edit that playlists settings.<br />✓ Added support for itpc links when browsing the web. Just hold your finger
+on the link to get the open in "iCatcher!". If another app already shows for Open in , then iCatcher will not show.<br
+/>✓ New Application level setting to indicate if episodes should be downloaded or streamed or both when new episodes are
+found.</p>
+
+<p>✓ Subscription sync is now available in the settings area under sync.<br />✓ Episode sync works better now as
+well</p>
+
+<p>I have been working hard to address a crashing scenario that has affected some users. I believe I have found the
+issue and addressed it in this update.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.7.6.5 (2012年3月21日)</h5>
+  <div class="app-version-note">
+  <p><p>1.7.6.5<br />Bug fix that was causing the app to freeze up completely.</p>
+
+<p>1.7.6<br />✓ Option to disable playlist badge count. See settings tab and appearance<br />✓ New setting for downloads
+to keep at the podcast and global settings level. See help and Downloads to Keep<br />✓ Fix for the episodes to keep
+when set at the app level. The setting wasn't working<br />✓ Episodes to Grab can now be set at the podcast level to use
+the global setting.<br />✓ Fixes for cloud sync and new option in the cloud Sync settings to Re-Sync playback times<br
+/>✓ New option to keep the download for an episode. This will prevent the download from being deleted after playing and
+protect during episode/download cleanup.<br />✓ Episodes within a podcast will now show some of the show notes below the
+episode title for easier identification of what the episode is. <br />✓ Improved experience for streaming episodes<br
+/>✓ Updated graphics for iPad retina display</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.7.6 (2012年3月14日)</h5>
+  <div class="app-version-note">
+  <p><p>***There is an issue with this update that can cause the app to lock up. Please wait for the next update
+(1.7.6.5). That update fixes this bug. If you do update and the app freezes, then please email me
+support@joeisanerd.com***</p>
+
+<p>✓ Option to disable playlist badge count. See settings tab and appearance<br />✓ New setting for downloads to keep at
+the podcast and global settings level. See help and Downloads to Keep<br />✓ Fix for the episodes to keep when set at
+the app level. The setting wasn't working<br />✓ Episodes to Grab can now be set at the podcast level to use the global
+setting.<br />✓ Fixes for cloud sync and new option in the cloud Sync settings to Re-Sync playback times<br />✓ New
+option to keep the download for an episode. This will prevent the download from being deleted after playing and protect
+during episode/download cleanup.<br />✓ Episodes within a podcast will now show some of the show notes below the episode
+title for easier identification of what the episode is. <br />✓ Improved experience for streaming episodes<br
+/>✓ Updated graphics for iPad retina display</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.7.5 (2012年2月16日)</h5>
+  <div class="app-version-note">
+  <p><p>✓ Bug fix for search results on iPad and early iOS devices that was not showing the release date and category.<br
+/>✓ Bug fix for app badge count not working with the Total Episodes Downloaded<br />✓ Fix for issue where after using
+sleep timer the episode would reset back to the beginning<br />✓ Fix for the streaming problems.<br />✓ Fix for the
+issue where downloads where not finishing.</p>
+
+<p>★★If you like iCatcher! and use it everyday, then please take a moment and share on the app store reviews. Your
+reviews help others to know about iCatcher!★★</p>
+
+<p>Follow me on twitter @joeisanerd </p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.7.4 (2012年2月3日)</h5>
+  
+  
+  <h5>バージョン 1.7.3 (2012年1月29日)</h5>
+  
+  
+  <h5>バージョン 1.7.2 (2012年1月19日)</h5>
+  
+  
+  <h5>バージョン 1.7.1 (2012年1月9日)</h5>
+  
+  
+  <h5>バージョン 1.7 (2012年1月3日)</h5>
+  
+  
+  <h5>バージョン 1.6.1 (2011年12月6日)</h5>
+  
+  
+  <h5>バージョン 1.6 (2011年11月23日)</h5>
+  
+  
+  <h5>バージョン 1.5.3 (2011年10月31日)</h5>
+  
+  
+  <h5>バージョン 1.5.2 (2011年10月19日)</h5>
+  
+  
+  <h5>バージョン 1.5.1 (2011年10月13日)</h5>
+  
+  
+  <h5>バージョン 1.5</h5>
+  
+  
+  <h5>バージョン 1.4</h5>
+  
+  
+  <h5>バージョン 1.3.1</h5>
+  
+  
+  <h5>バージョン 1.3</h5>
+  
+  
+  <h5>バージョン 1.2.4</h5>
+  
+  
+  <h5>バージョン 1.2.3</h5>
+  
+  
+  <h5>バージョン 1.2.2</h5>
+  
+  
+  <h5>バージョン 1.2.1</h5>
+  
+  
+  <h5>バージョン 1.2</h5>
+  
+  
+  <h5>バージョン 1.1.6.1</h5>
+  
+  
+  <h5>バージョン 1.1.6</h5>
+  
+  
+  <h5>バージョン 1.1.5</h5>
+  
+  
+  <h5>バージョン 1.1.4</h5>
+  
+  
+  <h5>バージョン 1.1.3</h5>
+  
+  
+  <h5>バージョン 1.1.2</h5>
+  
+  
+  <h5>バージョン 1.1.1</h5>
+  
+  
+  <h5>バージョン 1.1</h5>
+  
+  
+  <h5>バージョン 1.0.1</h5>
+  
+  
+  <h5>バージョン 1.0</h5>
+  
+  
+  </div>
+</div>
+
+      
+    </div>
+
+    <!-- ******************* sidebar ******************* -->
+    <div id="app_sidebar">
+      
+      <div class="app-box chart-lock-container">
+    
+    
+        <div class="app-box-content">
+<h3>収益の推計値</h3>
+<div class="chart-lock">
+    <div class="chart-lock-image">
+        <img src="/media/pictures/ui/chart_lock.png" />
+    </div>
+    <div class="lock-info">
+        Intelligenceのプレミアム購読で、このアプリのダウンロード数と収益の推計値を入手しましょう。
+    </div>
+    <div class="request-demo">
+        <a href="/intelligence/" target="_blank" ga-tracking data-ga-category="MKT-INT Demo Promotion" data-ga-action="Click" data-ga-label="App_Details_Estimate_Box">詳細</a>
+    </div>
+</div></div>
+    
+</div>
+      
+      <div class="app-box-links links">
+    
+    
+        <div class="app-box-content"><ul>
+<li><a href="http://www.joeisanerd.com/apps/" target="_blank">Joeisanerd.com ウェブサイト <i class="fa fa-external-link"></i> </a></li><li><a href="http://www.joeisanerd.com/apps/" target="_blank">Joeisanerd.com サポート <i class="fa fa-external-link"></i> </a></li>
+</ul>
+</div>
+    
+</div>
+      
+      <div class="app-box-links summary">
+    
+        <h3>フィーチャー <span class="more-info">(2014年7月5日)</span></h3>
+    
+    
+        <div class="app-box-content">
+
+<div class="app_slide_container app_slide_container-show-all">
+
+<div class="app_slide" id="app_feature_ipad_content">
+<div class="app_slide_header" id="app_feature_ipad">
+<i class="icon-caret-down"></i><i class="icon-caret-right"></i>iPad マーケット
+</div>
+<div class="app_slide_content"><ul>
+
+<li><span class="ui-icon featured_gold"></span>
+フィーチャー掲載なし
+
+iTunesホームページ
+</li>
+
+<li><span class="ui-icon featured_silver"></span>
+<strong><a title="地域についての詳細はクリックしてください" href="/apps/ios/app/icatcher-podcast-app/features/#device=ipad
+">1回</a></strong>
+
+iTunes
+</li>
+
+</ul></div>
+</div>
+
+</div>
+</div>
+    
+</div>
+      
+      <div class="app-box app-info-version">
+    
+        <h3>バージョン</h3>
+    
+    
+        <div class="app-box-content">
+
+<table id="app_versions" cellspacing="0" cellpadding="0" class="fold-on">
+<colgroup><col width="22"/><col width="70"/><col width="95"/><col width="100%"/></colgroup>
+
+<tbody>
+<tr class=" first">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.7.2">2.7.2</span></td><td class="date">2015年10月29日</td><td class="note">現行リリース</td>
+</tr>
+
+<tr class="">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.7.1">2.7.1</span></td><td class="date">2015年10月16日</td><td class="note"></td>
+</tr>
+
+<tr class="">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.7">2.7</span></td><td class="date">2015年10月2日</td><td class="note"></td>
+</tr>
+</tbody>
+<tbody class="fold-block">
+<tr class="fold-open"><td colspan="4" class="dot"><b>...</b></td></tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.6.2">2.6.2</span></td><td class="date">2015年6月30日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.6.1">2.6.1</span></td><td class="date">2015年6月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.6">2.6</span></td><td class="date">2015年6月5日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.5">2.5</span></td><td class="date">2015年4月28日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.4">2.4</span></td><td class="date">2015年4月20日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.3.4">2.3.4</span></td><td class="date">2015年4月8日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.3.3">2.3.3</span></td><td class="date">2015年2月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.3.2">2.3.2</span></td><td class="date">2015年1月26日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.3.1">2.3.1</span></td><td class="date">2015年1月6日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.3">2.3</span></td><td class="date">2015年1月5日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.2.6">2.2.6</span></td><td class="date">2014年11月20日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.2.5">2.2.5</span></td><td class="date">2014年11月14日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.2.4">2.2.4</span></td><td class="date">2014年11月4日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.2.3">2.2.3</span></td><td class="date">2014年10月30日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.2.2">2.2.2</span></td><td class="date">2014年10月24日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.2.1">2.2.1</span></td><td class="date">2014年10月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.2">2.2</span></td><td class="date">2014年9月15日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1.6">2.1.6</span></td><td class="date">2014年7月11日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1.5">2.1.5</span></td><td class="date">2014年6月22日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1.4">2.1.4</span></td><td class="date">2014年5月27日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1.3">2.1.3</span></td><td class="date">2014年5月19日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1.2">2.1.2</span></td><td class="date">2014年5月2日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1.1">2.1.1</span></td><td class="date">2014年4月21日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1">2.1</span></td><td class="date">2014年4月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.0.3">2.0.3</span></td><td class="date">2014年3月5日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.0.2">2.0.2</span></td><td class="date">2014年2月7日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.0.1">2.0.1</span></td><td class="date">2014年1月26日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.0">2.0</span></td><td class="date">2014年1月10日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.12.3">1.12.3</span></td><td class="date">2013年12月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.12.2">1.12.2</span></td><td class="date">2013年12月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.12.1">1.12.1</span></td><td class="date">2013年12月1日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.12">1.12</span></td><td class="date">2013年11月16日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.11.3">1.11.3</span></td><td class="date">2013年10月22日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.11.2">1.11.2</span></td><td class="date">2013年9月26日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.11.1">1.11.1</span></td><td class="date">2013年9月20日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.11">1.11</span></td><td class="date">2013年9月17日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.10.4">1.10.4</span></td><td class="date">2013年9月3日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.10.3.1">1.10.3.1</span></td><td class="date">2013年8月21日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.10.3">1.10.3</span></td><td class="date">2013年7月31日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.10.2.2">1.10.2.2</span></td><td class="date">2013年7月1日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.10.2.1">1.10.2.1</span></td><td class="date">2013年6月28日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.10.2">1.10.2</span></td><td class="date">2013年6月17日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.10.1.5">1.10.1.5</span></td><td class="date">2013年5月24日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.10.1">1.10.1</span></td><td class="date">2013年5月19日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.10">1.10</span></td><td class="date">2013年5月10日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.14">1.9.14</span></td><td class="date">2013年4月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.13">1.9.13</span></td><td class="date">2013年4月1日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.12">1.9.12</span></td><td class="date">2013年3月15日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.11">1.9.11</span></td><td class="date">2013年2月23日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.10">1.9.10</span></td><td class="date">2013年2月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.9">1.9.9</span></td><td class="date">2013年1月22日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.8.5">1.9.8.5</span></td><td class="date">2012年12月24日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.8">1.9.8</span></td><td class="date">2012年12月15日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.7">1.9.7</span></td><td class="date">2012年12月7日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.6.2">1.9.6.2</span></td><td class="date">2012年11月25日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.6.1">1.9.6.1</span></td><td class="date">2012年11月15日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.6">1.9.6</span></td><td class="date">2012年11月3日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.5">1.9.5</span></td><td class="date">2012年10月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.4.1">1.9.4.1</span></td><td class="date">2012年10月5日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.4">1.9.4</span></td><td class="date">2012年9月19日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.3">1.9.3</span></td><td class="date">2012年8月29日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.2">1.9.2</span></td><td class="date">2012年8月23日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.1">1.9.1</span></td><td class="date">2012年8月2日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9">1.9</span></td><td class="date">2012年7月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.8.5">1.8.5</span></td><td class="date">2012年6月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.8.4">1.8.4</span></td><td class="date">2012年5月29日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.8.3">1.8.3</span></td><td class="date">2012年5月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.8.2">1.8.2</span></td><td class="date">2012年5月5日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.8.1">1.8.1</span></td><td class="date">2012年4月20日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.8">1.8</span></td><td class="date">2012年4月6日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7.6.5">1.7.6.5</span></td><td class="date">2012年3月21日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7.6">1.7.6</span></td><td class="date">2012年3月14日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7.5">1.7.5</span></td><td class="date">2012年2月16日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7.4">1.7.4</span></td><td class="date">2012年2月3日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7.3">1.7.3</span></td><td class="date">2012年1月29日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7.2">1.7.2</span></td><td class="date">2012年1月19日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7.1">1.7.1</span></td><td class="date">2012年1月9日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7">1.7</span></td><td class="date">2012年1月3日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.6.1">1.6.1</span></td><td class="date">2011年12月6日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.6">1.6</span></td><td class="date">2011年11月23日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.3">1.5.3</span></td><td class="date">2011年10月31日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.2">1.5.2</span></td><td class="date">2011年10月19日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.1">1.5.1</span></td><td class="date">2011年10月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5">1.5</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.4">1.4</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.1">1.3.1</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3">1.3</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2.4">1.2.4</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2.3">1.2.3</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2.2">1.2.2</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2.1">1.2.1</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2">1.2</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1.6.1">1.1.6.1</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1.6">1.1.6</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1.5">1.1.5</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1.4">1.1.4</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1.3">1.1.3</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1.2">1.1.2</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1.1">1.1.1</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1">1.1</span></td><td class="date"></td><td class="note"></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.0.1">1.0.1</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr class=" last">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.0">1.0</span></td><td class="date"></td><td class="note">初回リリース</td>
+</tr>
+
+<tr class="fold-close"><td colspan="4" class="dot"><b><span class="icon-chevron-up"></span> バージョンをたたむ</b></td></tr>
+</tbody>
+
+</table>
+</div>
+    
+</div>
+      
+      
+
+
+<div  class="app-box app-info-rating">
+<h3 class="rating_head">評価平均 <span>(</span><span title="United States" class="country">United States</span><span>)</span><span class="more"><a href="/apps/ios/app/icatcher-podcast-app/ratings/" class="more_link">その他の国 </a></span></h3>
+<div class="app-box-content"><div class="app_slide_container">
+  
+  <div class="app_slide" id="r_current_content">
+    <div class="app_slide_header" id="r_current">
+      <i class="fa fa-caret-down"></i><i class="fa fa-caret-right"></i>現行バージョン -  <strong>5.0</strong> - <strong>45</strong> 評価
+    </div>
+    <div class="app_slide_content">
+      <table class="rating_table" cellspacing="0" cellpadding="0">
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 95.5555555556%;"></div></div></td>
+      <td class="count">(43)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 4.44444444444%;"></div></div></td>
+      <td class="count">(2)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 0.0%;"></div></div></td>
+      <td class="count">(0)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 0.0%;"></div></div></td>
+      <td class="count">(0)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 0.0%;"></div></div></td>
+      <td class="count">(0)</td>
+      </tr>
+      
+      </table>
+    </div>
+  <div class="rating_date">更新日 2015年11月2日</div>
+  </div>
+  
+  <div class="app_slide" id="r_all_content">
+    <div class="app_slide_header" id="r_all">
+      <i class="fa fa-caret-down"></i><i class="fa fa-caret-right"></i>すべてのバージョン -  <strong>4.7</strong> - <strong>3510</strong> 評価
+    </div>
+    <div class="app_slide_content">
+      <table class="rating_table" cellspacing="0" cellpadding="0">
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 79.5156695157%;"></div></div></td>
+      <td class="count">(2791)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 15.0142450142%;"></div></div></td>
+      <td class="count">(527)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 2.22222222222%;"></div></div></td>
+      <td class="count">(78)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 1.11111111111%;"></div></div></td>
+      <td class="count">(39)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 2.13675213675%;"></div></div></td>
+      <td class="count">(75)</td>
+      </tr>
+      
+      </table>
+    </div>
+  <div class="rating_date">更新日 2015年11月2日</div>
+  </div>
+  
+</div></div>
+</div>
+
+      
+      <div class="app-box-itemlist about_app">
+    
+        <h3>概要</h3>
+    
+    
+        <div class="app-box-content"><p><b>互換性:</b> ユニバーサル</p><p><b>カテゴリー:</b> News</p><p><b>最終更新日:</b> 2015年11月2日</p><p><b>バージョン:</b> 2.7.2</p><p><b>サイズ:</b> 11.1 MB</p><p><b>言語:</b> English</p><p><b>販売元:</b> Joe Graf</p><p><b>評価: </b>Rated 17+</p><ul class="rated"><li>Infrequent/Mild Profanity or Crude Humor</li><li>Unrestricted Web Access</li></ul><p><b>ファミリーシェアリング:</b> Yes</p><p><b>要件:</b> Requires iOS 6.0 or later. Compatible with iPhone, iPad, and iPod touch. This app is optimized for iPad Pro.</p><p><b>バンドル ID:</b> com.joeisanerd.icatcher</p><p><b>Apple Watchのサポート:</b> Yes (2015年4月29日)</p></div>
+    
+</div>
+      
+    </div><!--app_sidebar-->
+
+    <!-- ******************* more sections ******************* -->
+    
+      <div class="app-content-more-sections">
+        
+          <div class="x-clear more-related-box">
+            
+              
+                
+                  <div class="app_content_section">
+  <h3>このようなアプリも購入されています</h3>
+  <ul>
+  
+    <li><a href="/apps/ios/app/twit/" title="TWiT"><img src="https://static-s.aa-cdn.net/img/ios/299663499/76458ed75c80957edb4a7df7464735eb" class="app_icon">
+    <span class="app_name">TWiT</span>
+    <span class="category">News</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/feeddler-rss-reader-for-ipad-and-iphone/" title="Feeddler RSS Reader for iPad and iPhone"><img src="https://static-s.aa-cdn.net/img/ios/364873582/9a65bbb9e6d77056e1bf9ebbfe514bd8" class="app_icon">
+    <span class="app_name">Feeddler RSS Reader for iPad and iPhone</span>
+    <span class="category">News</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/downcast/" title="Downcast"><img src="https://static-s.aa-cdn.net/img/ios/393858566/6d8814b0d722916a7b9deaf84c7613d8" class="app_icon">
+    <span class="app_name">Downcast</span>
+    <span class="category">News</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/pocket-casts/" title="Pocket Casts"><img src="https://static-s.aa-cdn.net/img/ios/414834813/198732d69e4b554eb41a5f419a232f6d" class="app_icon">
+    <span class="app_name">Pocket Casts</span>
+    <span class="category">News</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/podcruncher-podcast-app-player/" title="PodCruncher podcast app - Player and manager for podcasts"><img src="https://static-s.aa-cdn.net/img/ios/421894356/5757cbb840e1a05cda8e13bad8b86e7b" class="app_icon">
+    <span class="app_name">PodCruncher podcast app - Player and manager for podcasts</span>
+    <span class="category">News</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/hourly-news/" title="Hourly News"><img src="https://static-s.aa-cdn.net/img/ios/493859859/5b40c2e12a93855c5bd237fd99782e8e" class="app_icon">
+    <span class="app_name">Hourly News</span>
+    <span class="category">News</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/planet-money/" title="Planet Money"><img src="https://static-s.aa-cdn.net/img/ios/529827672/e19223ac033e4d6ee2fc648575aac827" class="app_icon">
+    <span class="app_name">Planet Money</span>
+    <span class="category">News</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/nfb-newsline-mobile/" title="NFB-NEWSLINE® Mobile"><img src="https://static-s.aa-cdn.net/img/ios/530470425/8f90ade72bb528c60dfc49dcb1d7feed" class="app_icon">
+    <span class="app_name">NFB-NEWSLINE® Mobile</span>
+    <span class="category">News</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/reeder-2/" title="Reeder 2"><img src="https://static-s.aa-cdn.net/img/ios/697846300/44add72b5ce5b395792004fbcb50ad08" class="app_icon">
+    <span class="app_name">Reeder 2</span>
+    <span class="category">News</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/overcast-podcast-player/" title="Overcast: Podcast Player"><img src="https://static-s.aa-cdn.net/img/ios/888422857/78c07aa40444e397402cdd95d0f6f6a4" class="app_icon">
+    <span class="app_name">Overcast: Podcast Player</span>
+    <span class="category">News</span>
+    </a></li>
+  
+  </ul>
+</div>
+
+                
+              
+            
+          </div>
+        
+      </div>
+    
+  
+</div><!--app_details-->
+
+            </div>
+
+            
+<div>
+    
+    
+
+    
+
+</div>
+
+            
+<div class="aa-copy-item-id">
+    App&nbsp;ID:&nbsp; 414419105 
+    &nbsp;<a id="item-id-text" href="javascript:void(0)" data-clipboard-text="414419105">[コピー]</a>
+    </div>
+
+        </div>
+    </div>
+    <div class="left-sidebar-bg"></div>
+</div>
+
+    </div><!-- .inner -->
+    
+
+    
+
+</div><!-- .main -->
+
+    
+
+<div class="footer-v2"><div class="inner">
+    <div class="ft-navs">
+        
+<ul class="ft-links">
+    
+        <li><a href="/">ホーム</a></li>
+    
+        <li><a href="/tours/market-data/">市場データ</a></li>
+    
+        <li><a href="/tours/enterprise-market-data/">法人向けアプリ市場データ</a></li>
+    
+        <li><a href="/tours/app-analytics-platform/">分析ツール</a></li>
+    
+        <li><a href="/pricing/">価格</a></li>
+    
+        <li><a href="/about/">企業情報</a></li>
+    
+        <li><a href="/about/leadership/">経営陣</a></li>
+    
+        <li><a href="/about/jobs/">採用</a></li>
+    
+        <li><a href="/about/partnerships/">パートナーシップ</a></li>
+    
+        <li><a href="/about/press/">メディア向け情報</a></li>
+    
+        <li><a href="/about/contact/">連絡先・所在地</a></li>
+    
+        <li><a href="http://blog.appannie.com" target="_blank">ブログ</a></li>
+    
+</ul><ul class="ft-links">
+    
+        <li><a href="http://support.appannie.com" target="_blank">サポート</a></li>
+    
+        <li><a href="http://support.appannie.com/categories/20083210" target="_blank">Analytics API</a></li>
+    
+        <li><a href="/legal/security/">セキュリティポリシー</a></li>
+    
+        <li><a href="/legal/data-usage-policy/">データ使用ポリシー</a></li>
+    
+        <li><a href="/legal/copyright/">著作権ポリシー</a></li>
+    
+</ul>
+
+
+        <ul class="ft-links ft-lang-switch">
+        
+            <li data-lang="en">
+                <a>English</a>
+            </li>
+        
+            <li data-lang="jp" class="current">
+                <a>日本語</a>
+            </li>
+        
+            <li data-lang="kr">
+                <a>한국어</a>
+            </li>
+        
+            <li data-lang="cn">
+                <a>中文(简体)</a>
+            </li>
+        
+            <li data-lang="ru">
+                <a>Русский</a>
+            </li>
+        
+            <li data-lang="fr">
+                <a>Français</a>
+            </li>
+        
+            <li data-lang="de">
+                <a>Deutsch</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ft-misc clearfix">
+        <div class="pull-left">
+            <ul class="ft-links">
+                <li>© 2015 App Annie</li>
+                <li><a href="/help/terms/">サービス利用規約</a></li>
+                <li><a href="/help/privacy/">プライバシーポリシー</a></li>
+                <li id="edd8bedb-dfb9-45e4-9bc6-a547890d2b4d">
+                    <a href="//privacy.truste.com/privacy-seal/App-Annie/validation?rid=d5ca94fe-face-4cbc-97c9-5cad37668d4d"
+                       title="TRUSTe European Safe Harbor certification" target="_blank">
+                        <img style="border: none; vertical-align: middle;" src="//privacy-policy.truste.com/privacy-seal/App-Annie/seal?rid=d5ca94fe-face-4cbc-97c9-5cad37668d4d" alt="TRUSTe European Safe Harbor certification" height="26" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pull-right">
+            <div class="ft-socials">
+                <a href="http://www.linkedin.com/company/app-annie" target="_blank"><i class="sprite-aa-linkedin"></i></a>
+                <a href="http://www.facebook.com/AppAnnie" target="_blank"><i class="sprite-aa-facebook"></i></a>
+                <a href="http://www.twitter.com/appannie/" target="_blank"><i class="sprite-aa-twitter"></i></a>
+                <a href="http://google.com/+appannie" target="_blank"><i class="sprite-aa-gplus"></i></a>
+                <a href="http://www.slideshare.net/AppAnnie" target="_blank"><i class="sprite-aa-slideshare"></i></a>
+                <a href="http://www.youtube.com/appannietv" target="_blank"><i class="sprite-aa-youtube"></i></a>
+                <a href="http://e.weibo.com/appannie" target="_blank"><i class="sprite-aa-weibo"></i></a>
+                <a href="http://blog.appannie.com/feed/" target="_blank"><i class="sprite-aa-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+
+
+<div id="overlay"></div>
+
+<script>
+aaTrack=function(){var e={},f=[],k=0,h=function(){if(arguments[0]){var a=arguments[0],g=[].slice.call(arguments,1);500>k?(f.push([a,g]),k++):(f.shift(),f.push([a,g]));if(e[a])for(var a=e[a],b=a.length,c=0;c<b;c++)a[c].apply(null,g)}};h.register=function(a,g){a:if("object"==typeof a)for(var b in a){var c=a[b];if(e[b])for(var d=e[b],k=d.length,l=0;l<k;l++){if(d[l]==c)break a}else e[b]=[];e[b].push(c)}if(g)for(var h in a)for(b=a[h],c=f.length,d=0;d<c;d++)f[d][0]==h&&b.apply(null,f[d][1])};return h}();
+</script>
+<script type="text/javascript" data-tk="pre_install" >
+  var _kmq = _kmq || [];
+  var _mkto = _mkto || [];
+
+  aaTrack('set', {
+      'env': 'production',
+      'pageType': 'product'
+  });
+
+  (function() {
+    var _tracker = [];
+    tracker = function(item) { _tracker.push(item); }; tracker.pool = _tracker;
+  })();
+</script>
+
+
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-D44H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+!function(w,d,l,i){function go(){!function(w,d,s,l,i){w[l]=w[l]||[],w[l].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl="dataLayer"!=l?"&l="+l:"";j.async=!0,j.src="//www.googletagmanager.com/gtm.js?id="+i+dl,f.parentNode.insertBefore(j,f)}(window,document,"script",l,i)}l="dataLayer_"+i.replace("GTM-",""),lo=w[l]||(w[l]=[]),aaTrack.register({set:function(obj){lo.push(obj)}},!0),w.addEventListener?w.addEventListener("load",go,!1):w.attachEvent?w.attachEvent("onload",go):setTimeout(go,100)}(window,document,"","GTM-D44H");
+</script>
+
+    
+    
+
+<script type="text/javascript" data-tk="track_on_every_page" data-tk-com="gp">
+    aaTrack('set', {
+        'Interface Language': 'jp',
+        'Page Type': 'Web Prod'
+    });
+
+    
+        aaTrack('set', {
+            'eid': 'b11c4a9df33b212c40c2f3df0cc19f98',
+            'uid': '588128'
+        });
+    
+
+    
+        try {
+            tracker(['identify', 588128, {
+                email: 'okuyama@se.cs.titech.ac.jp',
+                $mktoHash: '5c311be456c9b06752068081475037397873dd00'
+            }]);
+        } catch (ex) {
+        }
+        
+    
+    // set all logs to ga
+    
+    try {
+        tracker(['page']);
+    } catch (ex) {
+    }
+
+    
+</script>
+
+
+</div>
+
+<script>
+/* quick $ step 2/3 */
+window.$ = window.jQuery = undefined;
+</script>
+<script src="https://static-s.aa-cdn.net/media/javascript/_lang/ja/django/all.v-004165-2005e1.js"></script>
+
+
+    
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="https://static-s.aa-cdn.net/media/javascript/lib/browser-support/excanvas.canvas.text.js"></script>
+        <![endif]-->
+        <script src="https://static-s.aa-cdn.net/media/javascript/c/prod.min.v-4966027c.js"></script>
+<script src="https://static-s.aa-cdn.net/media/lib/ng-v1.2.1/i18n/angular-locale_ja.v-71f2306c.js"></script>
+        
+    
+
+
+
+<script>
+/* quick $ step 3/3 */
+(function(fns, $) {
+  if (!fns || fns.length < 1) { return; }
+  var i = 0, l = fns.length;
+  for (; i < l; ++i) {
+    $(fns[i]);
+  }
+  fns.length = 0;
+})(__aa_fns, jQuery);
+
+
+    var pageVal = pageVal || {};
+    pageVal.page = 'Detail';
+
+</script>
+
+<script>/* JIRA:XP-793 */
+(function(a,e,n,r){try{if(!a||!e)return;n=e.host;if(n.match(/localhost|\.appannie\.(dev|com)/))return;r=n.replace(/www\./,"blog.");if(n===r)return;a('a[href*="blog.appannie.com"]').each(function(e,n){var o=a(n).attr("href").replace(/blog\.appannie\.com($|[?\/])/,r+"$1");a(n).attr("href",o)})}catch(o){}})(window.jQuery,window.location);
+</script>
+
+
+<script>
+$(function() {
+  var clip = new ZeroClipboard( document.getElementById("item-id-text"), {
+    moviePath: "https://static-s.aa-cdn.net/media/swf/ZeroClipboard.swf", trustedDomains: ['*'], allowScriptAccess: "always"
+  });
+});
+</script>
+
+
+<script>
+    var pageVal = pageVal || {};
+    pageVal.detailPanelOpened = true;
+    pageVal.account_id = '';
+    pageVal.app_id =  '414419105' 
+    pageVal.is_shared = true;
+    pageVal.vertical = 'apps';
+    pageVal.is_demo = false;
+
+pageVal.user_prefer_country = "US";
+pageVal.user_prefer_tzone = "PST8PDT";
+
+
+ pageVal.countries = [{"name": "\u30a2\u30eb\u30d0\u30cb\u30a2", "code": "AL", "slug": "albania", "tzone": "Europe/Tirane", "sid": 143575}, {"name": "\u30a2\u30eb\u30b8\u30a7\u30ea\u30a2", "code": "DZ", "slug": "algeria", "tzone": "Africa/Algiers", "sid": 143563}, {"name": "\u30a2\u30f3\u30b4\u30e9", "code": "AO", "slug": "angola", "tzone": "Africa/Luanda", "sid": 143564}, {"name": "\u30a2\u30f3\u30ae\u30e9", "code": "AI", "slug": "anguilla", "tzone": "America/Anguilla", "sid": 143538}, {"name": "\u30a2\u30f3\u30c6\u30a3\u30b0\u30a2\u30fb\u30d0\u30fc\u30d6\u30fc\u30c0", "code": "AG", "slug": "antigua-and-barbuda", "tzone": "America/Antigua", "sid": 143540}, {"name": "\u30a2\u30eb\u30bc\u30f3\u30c1\u30f3", "code": "AR", "slug": "argentina", "tzone": "America/Argentina/Buenos_Aires", "sid": 143505}, {"name": "\u30a2\u30eb\u30e1\u30cb\u30a2", "code": "AM", "slug": "armenia", "tzone": "Asia/Yerevan", "sid": 143524}, {"name": "\u30aa\u30fc\u30b9\u30c8\u30e9\u30ea\u30a2", "code": "AU", "slug": "australia", "tzone": "Australia/Sydney", "sid": 143460}, {"name": "\u30aa\u30fc\u30b9\u30c8\u30ea\u30a2", "code": "AT", "slug": "austria", "tzone": "Europe/Vienna", "sid": 143445}, {"name": "\u30a2\u30bc\u30eb\u30d0\u30a4\u30b8\u30e3\u30f3", "code": "AZ", "slug": "azerbaijan", "tzone": "Asia/Baku", "sid": 143568}, {"name": "\u30d0\u30cf\u30de", "code": "BS", "slug": "bahamas", "tzone": "America/Nassau", "sid": 143539}, {"name": "\u30d0\u30fc\u30ec\u30fc\u30f3", "code": "BH", "slug": "bahrain", "tzone": "Asia/Bahrain", "sid": 143559}, {"name": "\u30d0\u30eb\u30d0\u30c9\u30b9", "code": "BB", "slug": "barbados", "tzone": "America/Barbados", "sid": 143541}, {"name": "\u30d9\u30e9\u30eb\u30fc\u30b7", "code": "BY", "slug": "belarus", "tzone": "Europe/Minsk", "sid": 143565}, {"name": "\u30d9\u30eb\u30ae\u30fc", "code": "BE", "slug": "belgium", "tzone": "Europe/Brussels", "sid": 143446}, {"name": "\u30d9\u30ea\u30fc\u30ba", "code": "BZ", "slug": "belize", "tzone": "America/Belize", "sid": 143555}, {"name": "\u30d9\u30cb\u30f3", "code": "BJ", "slug": "benin", "tzone": "Africa/Porto-Novo", "sid": 143576}, {"name": "\u30d0\u30df\u30e5\u30fc\u30c0", "code": "BM", "slug": "bermuda", "tzone": "Atlantic/Bermuda", "sid": 143542}, {"name": "\u30d6\u30fc\u30bf\u30f3", "code": "BT", "slug": "Bhutan", "tzone": "Asia/Thimphu", "sid": 143577}, {"name": "\u30dc\u30ea\u30d3\u30a2", "code": "BO", "slug": "bolivia", "tzone": "America/La_Paz", "sid": 143556}, {"name": "\u30dc\u30c4\u30ef\u30ca", "code": "BW", "slug": "botswana", "tzone": "Africa/Gaborone", "sid": 143525}, {"name": "\u30d6\u30e9\u30b8\u30eb", "code": "BR", "slug": "brazil", "tzone": "America/Sao_Paulo", "sid": 143503}, {"name": "\u82f1\u9818\u30f4\u30a1\u30fc\u30b8\u30f3\u8af8\u5cf6", "code": "VG", "slug": "british-virgin-islands", "tzone": "America/Tortola", "sid": 143543}, {"name": "\u30d6\u30eb\u30cd\u30a4", "code": "BN", "slug": "brunei", "tzone": "Asia/Brunei", "sid": 143560}, {"name": "\u30d6\u30eb\u30ac\u30ea\u30a2", "code": "BG", "slug": "bulgaria", "tzone": "Europe/Sofia", "sid": 143526}, {"name": "\u30d6\u30eb\u30ad\u30ca\u30d5\u30a1\u30bd", "code": "BF", "slug": "burkina-faso", "tzone": "Africa/Ouagadougou", "sid": 143578}, {"name": "\u30ab\u30f3\u30dc\u30b8\u30a2", "code": "KH", "slug": "cambodia", "tzone": "Asia/Phnom_Penh", "sid": 143579}, {"name": "\u30ab\u30ca\u30c0", "code": "CA", "slug": "canada", "tzone": "America/Toronto", "sid": 143455}, {"name": "\u30ab\u30fc\u30dc\u30d9\u30eb\u30c7", "code": "CV", "slug": "cape-verde", "tzone": "Atlantic/Cape_Verde", "sid": 143580}, {"name": "\u30b1\u30a4\u30de\u30f3\u8af8\u5cf6", "code": "KY", "slug": "cayman-islands", "tzone": "America/Cayman", "sid": 143544}, {"name": "\u30c1\u30e3\u30c9", "code": "TD", "slug": "chad", "tzone": "Africa/Ndjamena", "sid": 143581}, {"name": "\u30c1\u30ea", "code": "CL", "slug": "chile", "tzone": "America/Santiago", "sid": 143483}, {"name": "\u4e2d\u56fd", "code": "CN", "slug": "china", "tzone": "Asia/Shanghai", "sid": 143465}, {"name": "\u30b3\u30ed\u30f3\u30d3\u30a2", "code": "CO", "slug": "colombia", "tzone": "America/Bogota", "sid": 143501}, {"name": "\u30b3\u30f3\u30b4", "code": "CG", "slug": "congo", "tzone": "Africa/Brazzaville", "sid": 143582}, {"name": "\u30b3\u30b9\u30bf\u30ea\u30ab", "code": "CR", "slug": "costa-rica", "tzone": "America/Costa_Rica", "sid": 143495}, {"name": "\u30af\u30ed\u30a2\u30c1\u30a2", "code": "HR", "slug": "croatia", "tzone": "Europe/Zagreb", "sid": 143494}, {"name": "\u30ad\u30d7\u30ed\u30b9", "code": "CY", "slug": "cyprus", "tzone": "Asia/Nicosia", "sid": 143557}, {"name": "\u30c1\u30a7\u30b3\u5171\u548c\u56fd", "code": "CZ", "slug": "czech-republic", "tzone": "Europe/Prague", "sid": 143489}, {"name": "\u30c7\u30f3\u30de\u30fc\u30af", "code": "DK", "slug": "denmark", "tzone": "Europe/Copenhagen", "sid": 143458}, {"name": "\u30c9\u30df\u30cb\u30ab", "code": "DM", "slug": "dominica", "tzone": "America/Dominica", "sid": 143545}, {"name": "\u30c9\u30df\u30cb\u30ab\u5171\u548c\u56fd", "code": "DO", "slug": "dominican-republic", "tzone": "America/Santo_Domingo", "sid": 143508}, {"name": "\u30a8\u30af\u30a2\u30c9\u30eb", "code": "EC", "slug": "ecuador", "tzone": "America/Guayaquil", "sid": 143509}, {"name": "\u30a8\u30b8\u30d7\u30c8", "code": "EG", "slug": "egypt", "tzone": "Africa/Cairo", "sid": 143516}, {"name": "\u30a8\u30eb\u30b5\u30eb\u30d0\u30c9\u30eb", "code": "SV", "slug": "el-salvador", "tzone": "America/El_Salvador", "sid": 143506}, {"name": "\u30a8\u30b9\u30c8\u30cb\u30a2", "code": "EE", "slug": "estonia", "tzone": "Europe/Tallinn", "sid": 143518}, {"name": "\u30d5\u30a3\u30b8\u30fc", "code": "FJ", "slug": "fiji", "tzone": "Pacific/Fiji", "sid": 143583}, {"name": "\u30d5\u30a3\u30f3\u30e9\u30f3\u30c9", "code": "FI", "slug": "finland", "tzone": "Europe/Helsinki", "sid": 143447}, {"name": "\u30d5\u30e9\u30f3\u30b9", "code": "FR", "slug": "france", "tzone": "Europe/Paris", "sid": 143442}, {"name": "\u30ac\u30f3\u30d3\u30a2", "code": "GM", "slug": "gambia", "tzone": "Africa/Banjul", "sid": 143584}, {"name": "\u30c9\u30a4\u30c4", "code": "DE", "slug": "germany", "tzone": "Europe/Berlin", "sid": 143443}, {"name": "\u30ac\u30fc\u30ca", "code": "GH", "slug": "ghana", "tzone": "Africa/Accra", "sid": 143573}, {"name": "\u30ae\u30ea\u30b7\u30e3", "code": "GR", "slug": "greece", "tzone": "Europe/Athens", "sid": 143448}, {"name": "\u30b0\u30ec\u30ca\u30c0", "code": "GD", "slug": "grenada", "tzone": "America/Grenada", "sid": 143546}, {"name": "\u30b0\u30a2\u30c6\u30de\u30e9", "code": "GT", "slug": "guatemala", "tzone": "America/Guatemala", "sid": 143504}, {"name": "\u30ae\u30cb\u30a2\u30d3\u30b5\u30a6", "code": "GW", "slug": "guinea-bissau", "tzone": "Africa/Bissau", "sid": 143585}, {"name": "\u30ac\u30a4\u30a2\u30ca", "code": "GY", "slug": "guyana", "tzone": "America/Guyana", "sid": 143553}, {"name": "\u30db\u30f3\u30b8\u30e5\u30e9\u30b9", "code": "HN", "slug": "honduras", "tzone": "America/Tegucigalpa", "sid": 143510}, {"name": "\u9999\u6e2f", "code": "HK", "slug": "hong-kong", "tzone": "Asia/Hong_Kong", "sid": 143463}, {"name": "\u30cf\u30f3\u30ac\u30ea\u30fc", "code": "HU", "slug": "hungary", "tzone": "Europe/Budapest", "sid": 143482}, {"name": "\u30a2\u30a4\u30b9\u30e9\u30f3\u30c9", "code": "IS", "slug": "iceland", "tzone": "Atlantic/Reykjavik", "sid": 143558}, {"name": "\u30a4\u30f3\u30c9", "code": "IN", "slug": "india", "tzone": "Asia/Kolkata", "sid": 143467}, {"name": "\u30a4\u30f3\u30c9\u30cd\u30b7\u30a2", "code": "ID", "slug": "indonesia", "tzone": "Asia/Jakarta", "sid": 143476}, {"name": "\u30a2\u30a4\u30eb\u30e9\u30f3\u30c9", "code": "IE", "slug": "ireland", "tzone": "Europe/Dublin", "sid": 143449}, {"name": "\u30a4\u30b9\u30e9\u30a8\u30eb", "code": "IL", "slug": "israel", "tzone": "Asia/Jerusalem", "sid": 143491}, {"name": "\u30a4\u30bf\u30ea\u30a2", "code": "IT", "slug": "italy", "tzone": "Europe/Rome", "sid": 143450}, {"name": "\u30b8\u30e3\u30de\u30a4\u30ab", "code": "JM", "slug": "jamaica", "tzone": "America/Jamaica", "sid": 143511}, {"name": "\u65e5\u672c", "code": "JP", "slug": "japan", "tzone": "Asia/Tokyo", "sid": 143462}, {"name": "\u30e8\u30eb\u30c0\u30f3", "code": "JO", "slug": "jordan", "tzone": "Asia/Amman", "sid": 143528}, {"name": "\u30ab\u30b6\u30d5\u30b9\u30bf\u30f3", "code": "KZ", "slug": "kazakhstan", "tzone": "Asia/Almaty", "sid": 143517}, {"name": "\u30b1\u30cb\u30a2", "code": "KE", "slug": "kenya", "tzone": "Africa/Nairobi", "sid": 143529}, {"name": "\u30af\u30a6\u30a7\u30fc\u30c8", "code": "KW", "slug": "kuwait", "tzone": "Asia/Kuwait", "sid": 143493}, {"name": "\u30ad\u30eb\u30ae\u30b9\u30bf\u30f3", "code": "KG", "slug": "kyrgyzstan", "tzone": "Asia/Bishkek", "sid": 143586}, {"name": "\u30e9\u30aa\u30b9", "code": "LA", "slug": "laos", "tzone": "Asia/Vientiane", "sid": 143587}, {"name": "\u30e9\u30c8\u30d3\u30a2", "code": "LV", "slug": "latvia", "tzone": "Europe/Riga", "sid": 143519}, {"name": "\u30ec\u30d0\u30ce\u30f3", "code": "LB", "slug": "lebanon", "tzone": "Asia/Beirut", "sid": 143497}, {"name": "\u30ea\u30d9\u30ea\u30a2", "code": "LR", "slug": "liberia", "tzone": "Africa/Monrovia", "sid": 143588}, {"name": "\u30ea\u30c8\u30a2\u30cb\u30a2", "code": "LT", "slug": "lithuania", "tzone": "Europe/Vilnius", "sid": 143520}, {"name": "\u30eb\u30af\u30bb\u30f3\u30d6\u30eb\u30af", "code": "LU", "slug": "luxembourg", "tzone": "Europe/Luxembourg", "sid": 143451}, {"name": "\u30de\u30ab\u30aa", "code": "MO", "slug": "macau", "tzone": "Asia/Macau", "sid": 143515}, {"name": "\u30de\u30b1\u30c9\u30cb\u30a2", "code": "MK", "slug": "macedonia", "tzone": "Europe/Skopje", "sid": 143530}, {"name": "\u30de\u30c0\u30ac\u30b9\u30ab\u30eb", "code": "MG", "slug": "madagascar", "tzone": "Indian/Antananarivo", "sid": 143531}, {"name": "\u30de\u30e9\u30a6\u30a4", "code": "MW", "slug": "malawi", "tzone": "Africa/Blantyre", "sid": 143589}, {"name": "\u30de\u30ec\u30fc\u30b7\u30a2", "code": "MY", "slug": "malaysia", "tzone": "Asia/Kuala_Lumpur", "sid": 143473}, {"name": "\u30de\u30ea", "code": "ML", "slug": "mali", "tzone": "Africa/Bamako", "sid": 143532}, {"name": "\u30de\u30eb\u30bf", "code": "MT", "slug": "malta", "tzone": "Europe/Malta", "sid": 143521}, {"name": "\u30e2\u30fc\u30ea\u30bf\u30cb\u30a2", "code": "MR", "slug": "mauritania", "tzone": "Africa/Nouakchott", "sid": 143590}, {"name": "\u30e2\u30fc\u30ea\u30b7\u30e3\u30b9", "code": "MU", "slug": "mauritius", "tzone": "Indian/Mauritius", "sid": 143533}, {"name": "\u30e1\u30ad\u30b7\u30b3", "code": "MX", "slug": "mexico", "tzone": "America/Mexico_City", "sid": 143468}, {"name": "\u30df\u30af\u30ed\u30cd\u30b7\u30a2", "code": "FM", "slug": "micronesia", "tzone": "Pacific/Chuuk", "sid": 143591}, {"name": "\u30e2\u30eb\u30c9\u30d0", "code": "MD", "slug": "moldova", "tzone": "Europe/Chisinau", "sid": 143523}, {"name": "\u30e2\u30f3\u30b4\u30eb", "code": "MN", "slug": "mongolia", "tzone": "Asia/Ulaanbaatar", "sid": 143592}, {"name": "\u30e2\u30f3\u30c8\u30bb\u30e9\u30c8", "code": "MS", "slug": "montserrat", "tzone": "America/Montserrat", "sid": 143547}, {"name": "\u30e2\u30b6\u30f3\u30d3\u30fc\u30af", "code": "MZ", "slug": "mozambique", "tzone": "Africa/Maputo", "sid": 143593}, {"name": "\u30ca\u30df\u30d3\u30a2", "code": "NA", "slug": "namibia", "tzone": "Africa/Windhoek", "sid": 143594}, {"name": "\u30cd\u30d1\u30fc\u30eb", "code": "NP", "slug": "nepal", "tzone": "Asia/Kathmandu", "sid": 143484}, {"name": "\u30aa\u30e9\u30f3\u30c0", "code": "NL", "slug": "netherlands", "tzone": "Europe/Amsterdam", "sid": 143452}, {"name": "\u30cb\u30e5\u30fc\u30b8\u30fc\u30e9\u30f3\u30c9", "code": "NZ", "slug": "new-zealand", "tzone": "Pacific/Auckland", "sid": 143461}, {"name": "\u30cb\u30ab\u30e9\u30b0\u30a2", "code": "NI", "slug": "nicaragua", "tzone": "America/Managua", "sid": 143512}, {"name": "\u30cb\u30b8\u30a7\u30fc\u30eb", "code": "NE", "slug": "niger", "tzone": "Africa/Niamey", "sid": 143534}, {"name": "\u30ca\u30a4\u30b8\u30a7\u30ea\u30a2", "code": "NG", "slug": "nigeria", "tzone": "Africa/Lagos", "sid": 143561}, {"name": "\u30ce\u30eb\u30a6\u30a7\u30fc", "code": "NO", "slug": "norway", "tzone": "Europe/Oslo", "sid": 143457}, {"name": "\u30aa\u30de\u30fc\u30f3", "code": "OM", "slug": "oman", "tzone": "Asia/Muscat", "sid": 143562}, {"name": "\u30d1\u30ad\u30b9\u30bf\u30f3", "code": "PK", "slug": "pakistan", "tzone": "Asia/Karachi", "sid": 143477}, {"name": "\u30d1\u30e9\u30aa", "code": "PW", "slug": "palau", "tzone": "Pacific/Palau", "sid": 143595}, {"name": "\u30d1\u30ca\u30de", "code": "PA", "slug": "panama", "tzone": "America/Panama", "sid": 143485}, {"name": "\u30d1\u30d7\u30a2\u30cb\u30e5\u30fc\u30ae\u30cb\u30a2", "code": "PG", "slug": "papua-new-guinea", "tzone": "Pacific/Port_Moresby", "sid": 143597}, {"name": "\u30d1\u30e9\u30b0\u30a2\u30a4", "code": "PY", "slug": "paraguay", "tzone": "America/Asuncion", "sid": 143513}, {"name": "\u30da\u30eb\u30fc", "code": "PE", "slug": "peru", "tzone": "America/Lima", "sid": 143507}, {"name": "\u30d5\u30a3\u30ea\u30d4\u30f3", "code": "PH", "slug": "philipines", "tzone": "Asia/Manila", "sid": 143474}, {"name": "\u30dd\u30fc\u30e9\u30f3\u30c9", "code": "PL", "slug": "poland", "tzone": "Europe/Warsaw", "sid": 143478}, {"name": "\u30dd\u30eb\u30c8\u30ac\u30eb", "code": "PT", "slug": "portugal", "tzone": "Europe/Lisbon", "sid": 143453}, {"name": "\u30ab\u30bf\u30fc\u30eb", "code": "QA", "slug": "qatar", "tzone": "Asia/Qatar", "sid": 143498}, {"name": "\u30eb\u30fc\u30de\u30cb\u30a2", "code": "RO", "slug": "romania", "tzone": "Europe/Bucharest", "sid": 143487}, {"name": "\u30ed\u30b7\u30a2", "code": "RU", "slug": "russia", "tzone": "Europe/Moscow", "sid": 143469}, {"name": "\u30b5\u30f3\u30c8\u30e1\u30fb\u30d7\u30ea\u30f3\u30b7\u30da", "code": "ST", "slug": "sao-tome-and-principe", "tzone": "Africa/Sao_Tome", "sid": 143598}, {"name": "\u30b5\u30a6\u30b8\u30a2\u30e9\u30d3\u30a2", "code": "SA", "slug": "saudi-arabia", "tzone": "Asia/Riyadh", "sid": 143479}, {"name": "\u30bb\u30cd\u30ac\u30eb", "code": "SN", "slug": "senegal", "tzone": "Africa/Dakar", "sid": 143535}, {"name": "\u30bb\u30a4\u30b7\u30a7\u30eb", "code": "SC", "slug": "seychelles", "tzone": "Indian/Mahe", "sid": 143599}, {"name": "\u30b7\u30a8\u30e9\u30ec\u30aa\u30cd", "code": "SL", "slug": "sierra-leone", "tzone": "Africa/Freetown", "sid": 143600}, {"name": "\u30b7\u30f3\u30ac\u30dd\u30fc\u30eb", "code": "SG", "slug": "singapore", "tzone": "Asia/Singapore", "sid": 143464}, {"name": "\u30b9\u30ed\u30d0\u30ad\u30a2", "code": "SK", "slug": "slovakia", "tzone": "Europe/Bratislava", "sid": 143496}, {"name": "\u30b9\u30ed\u30d9\u30cb\u30a2", "code": "SI", "slug": "slovenia", "tzone": "Europe/Ljubljana", "sid": 143499}, {"name": "\u30bd\u30ed\u30e2\u30f3\u8af8\u5cf6", "code": "SB", "slug": "solomon-islands", "tzone": "Pacific/Guadalcanal", "sid": 143601}, {"name": "\u5357\u30a2\u30d5\u30ea\u30ab", "code": "ZA", "slug": "south-africa", "tzone": "Africa/Johannesburg", "sid": 143472}, {"name": "\u97d3\u56fd", "code": "KR", "slug": "south-korea", "tzone": "Asia/Seoul", "sid": 143466}, {"name": "\u30b9\u30da\u30a4\u30f3", "code": "ES", "slug": "spain", "tzone": "Europe/Madrid", "sid": 143454}, {"name": "\u30b9\u30ea\u30e9\u30f3\u30ab", "code": "LK", "slug": "sri-lanka", "tzone": "Asia/Colombo", "sid": 143486}, {"name": "\u30bb\u30f3\u30c8\u30ad\u30c3\u30c4\u30fb\u30cd\u30a4\u30d3\u30b9", "code": "KN", "slug": "st-kitts-and-nevis", "tzone": "America/St_Kitts", "sid": 143548}, {"name": "\u30bb\u30f3\u30c8\u30eb\u30b7\u30a2", "code": "LC", "slug": "st-lucia", "tzone": "America/St_Lucia", "sid": 143549}, {"name": "\u30bb\u30f3\u30c8\u30d3\u30f3\u30bb\u30f3\u30c8\u30fb\u30b0\u30ec\u30ca\u30c7\u30a3\u30fc\u30f3", "code": "VC", "slug": "st-vincent-and-the-grenadines", "tzone": "America/St_Vincent", "sid": 143550}, {"name": "\u30b9\u30ea\u30ca\u30e0", "code": "SR", "slug": "suriname", "tzone": "America/Paramaribo", "sid": 143554}, {"name": "\u30b9\u30ef\u30b8\u30e9\u30f3\u30c9", "code": "SZ", "slug": "swaziland", "tzone": "Africa/Mbabane", "sid": 143602}, {"name": "\u30b9\u30a6\u30a7\u30fc\u30c7\u30f3", "code": "SE", "slug": "sweden", "tzone": "Europe/Stockholm", "sid": 143456}, {"name": "\u30b9\u30a4\u30b9", "code": "CH", "slug": "switzerland", "tzone": "Europe/Zurich", "sid": 143459}, {"name": "\u53f0\u6e7e", "code": "TW", "slug": "taiwan", "tzone": "Asia/Taipei", "sid": 143470}, {"name": "\u30bf\u30b8\u30ad\u30b9\u30bf\u30f3", "code": "TJ", "slug": "tajikistan", "tzone": "Asia/Dushanbe", "sid": 143603}, {"name": "\u30bf\u30f3\u30b6\u30cb\u30a2", "code": "TZ", "slug": "tanzania", "tzone": "Africa/Dar_es_Salaam", "sid": 143572}, {"name": "\u30bf\u30a4", "code": "TH", "slug": "thailand", "tzone": "Asia/Bangkok", "sid": 143475}, {"name": "\u30c8\u30ea\u30cb\u30c0\u30fc\u30c9\u30fb\u30c8\u30d0\u30b4", "code": "TT", "slug": "trinidad-and-tobago", "tzone": "America/Port_of_Spain", "sid": 143551}, {"name": "\u30c1\u30e5\u30cb\u30b8\u30a2", "code": "TN", "slug": "tunisia", "tzone": "Africa/Tunis", "sid": 143536}, {"name": "\u30c8\u30eb\u30b3", "code": "TR", "slug": "turkey", "tzone": "Europe/Istanbul", "sid": 143480}, {"name": "\u30c8\u30eb\u30af\u30e1\u30cb\u30b9\u30bf\u30f3", "code": "TM", "slug": "turkmenistan", "tzone": "Asia/Ashgabat", "sid": 143604}, {"name": "\u30bf\u30fc\u30af\u30b9\u30fb\u30ab\u30a4\u30b3\u30b9", "code": "TC", "slug": "turks-and-caicos", "tzone": "America/Grand_Turk", "sid": 143552}, {"name": "\u30a6\u30ac\u30f3\u30c0", "code": "UG", "slug": "uganda", "tzone": "Africa/Kampala", "sid": 143537}, {"name": "\u30a6\u30af\u30e9\u30a4\u30ca", "code": "UA", "slug": "ukraine", "tzone": "Europe/Kiev", "sid": 143492}, {"name": "\u30a2\u30e9\u30d6\u9996\u9577\u56fd\u9023\u90a6", "code": "AE", "slug": "united-arab-emirates", "tzone": "Asia/Dubai", "sid": 143481}, {"name": "\u30a4\u30ae\u30ea\u30b9", "code": "GB", "slug": "united-kingdom", "tzone": "Europe/London", "sid": 143444}, {"name": "\u7c73\u56fd", "code": "US", "slug": "united-states", "tzone": "America/Los_Angeles", "sid": 143441}, {"name": "\u30a6\u30eb\u30b0\u30a2\u30a4", "code": "UY", "slug": "uruguay", "tzone": "America/Montevideo", "sid": 143514}, {"name": "\u30a6\u30ba\u30d9\u30ad\u30b9\u30bf\u30f3", "code": "UZ", "slug": "uzbekistan", "tzone": "Asia/Tashkent", "sid": 143566}, {"name": "\u30d9\u30cd\u30ba\u30a8\u30e9", "code": "VE", "slug": "venezuela", "tzone": "America/Caracas", "sid": 143502}, {"name": "\u30d9\u30c8\u30ca\u30e0", "code": "VN", "slug": "vietnam", "tzone": "Asia/Ho_Chi_Minh", "sid": 143471}, {"name": "\u30a4\u30a8\u30e1\u30f3", "code": "YE", "slug": "yemen", "tzone": "Asia/Aden", "sid": 143571}, {"name": "\u30b8\u30f3\u30d0\u30d6\u30a8", "code": "ZW", "slug": "zimbabwe", "tzone": "Africa/Harare", "sid": 143605}];
+
+
+
+    __ng_boot_inject_module = 'item.all';
+</script>
+<script src="https://static-s.aa-cdn.net/media/javascript/_lang/ja/sea/aa.v-8a6714-2005e1.js"></script>
+<script src="https://static-s.aa-cdn.net/media/javascript/_lang/ja/sea/app.v-30487f-2005e1.js"></script>
+<script src="https://static-s.aa-cdn.net/media/javascript/prod/aa.min.v-d116a027.js"></script>
+<script src="https://static-s.aa-cdn.net/media/javascript/prod/app.min.v-6a1e3dfe.js"></script>
+<script> jQuery(function(){ require(["app/app"]); }); </script>
+
+<script>
+var pageVal = $.extend(pageVal || {}, {
+    'GA': {
+        'pageType': 'SS',
+        'vertical': '',
+        'pageName': 'Detail',
+        'label': 'SS-Detail'
+    }
+});
+</script>
+
+<script>
+    
+    $(function() { setTimeout(function() {
+    var el = document.createElement('script'); el.type = 'text/javascript'; el.async = true;
+    el.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fe162ac05cbe453';
+    document.body.appendChild(el);
+    }, 800);
+    });
+    
+    
+var pageVal = $.extend({}, pageVal);
+
+pageVal.lang =  __lang;
+
+
+
+
+
+    
+</script>
+
+
+
+<!-- www.appannie.com, https://www.appannie.com -->
+
+
+
+</body>
+</html>

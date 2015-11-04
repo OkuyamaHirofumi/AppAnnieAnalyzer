@@ -1,0 +1,2496 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html lang="jp" class="ie ie8" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9]><html lang="jp" class="ie ie9" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if gte IE 10]><html lang="jp" class="ie ie-edge" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if !IE]><!--> <html lang="jp" xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwcPUFJXGwEBUlJSDgc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"8c32ed8b53","agent":"js-agent.newrelic.com/nr-768.min.js","transactionName":"ZwdbZkpZXENVWxZbDF5Nf0dWW0ZZW1ZNRQZSA1dTVEFGWVdLTEUGUkxdV0xZW1xHAiBTEFUmXEZZUV5DYlEHRU1XB00=","applicationID":"2163096","errorBeacon":"bam.nr-data.net","applicationTime":398}</script>
+<meta name="robots" content="noarchive">
+<meta name="viewport" content="width=980"/>
+<title>
+
+Tweetlogix for Twitter - iOS Store ストアトップアプリ
+
+ | App Annie</title>
+<meta name="description" content="
+
+iOS StoreのTweetlogix for Twitterなど、デイリーアプリランキング、ランク履歴、トップベストセラーアプリの特徴とレビューをご確認ください。
+
+" />
+<meta name="keywords" content="app annie analytics store stats intelligence rankings reviews statistics market data ios apple google android" />
+<meta name="google-site-verification" content="ivCYuhXzy549wGxwC7WBt3xK68o8CBxXAmt0tWt-ork" />
+
+<meta name="apple-itunes-app" content="app-id=660004961"/>
+<meta name="google-play-app" content="app-id=com.appannie.app">
+
+
+
+    
+        <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@appannie">
+<meta name="twitter:creator" content="@appannie">
+
+    <meta name="twitter:title" content="Tweetlogix for Twitter">
+    <meta property="og:title" content="Tweetlogix for Twitter">
+
+
+
+    <meta name="twitter:image:src" content="https://static-s.aa-cdn.net/img/ios/390063388/e295897f3f5f8b8762f37a55a0b154aa">
+    <meta property="og:image" content="https://static-s.aa-cdn.net/img/ios/390063388/e295897f3f5f8b8762f37a55a0b154aa">
+
+
+    
+
+
+<link rel="alternate" type="application/rss+xml" title="App Annie - App Tracking &amp; Analytics" href="http://feeds.feedburner.com/askannie" />
+<link rel="apple-touch-icon-precomposed" href="https://static-s.aa-cdn.net/media/pictures/favicon-60.v-ff775b28.png" />
+<link rel="icon" type="image/png" href="https://static-s.aa-cdn.net/media/pictures/favicon.v-83fca9a0.png" />
+
+<script>
+AA_MEDIA_URL = 'https://static-s.aa-cdn.net/media/';
+AA_CMS_CONTENT_URL = 'https://static-c.aa-cdn.net/wp-content/';
+AA_BLOG_CONTENT_URL = 'https://static-s.aa-cdn.net/media/blog-content/';
+</script>
+<script>
+/* quick $ step 1/3 */
+(function() {
+var fns = __aa_fns = [];
+$ = jQuery = function(fn) {
+  if (fn.call && fn.apply) { fns.push(fn); return;
+  } else if (fn === document) {
+    return { ready: function(fn) {
+        if (fn.call && fn.apply) { fns.push(fn); }
+    } };
+  }
+  throw 'dont use $ other than ready';
+};
+$.extend = function(obj) {
+  var i=1,srcs=arguments,l=srcs.length,src,key;
+  for(;i<l;++i) { src=srcs[i];
+    for (key in src) { obj[key] = src[key]; }
+  }
+  return obj;
+};
+
+window.__lang = 'ja';
+})();
+</script>
+
+
+
+
+    <link type="text/css" rel="stylesheet" href="https://static-s.aa-cdn.net/media/css/c/base.min.v-2abe22a1.css" />
+    
+        <link type="text/css" rel="stylesheet" href="https://static-s.aa-cdn.net/media/css/c/prod.min.v-061a0160.css" />
+
+        
+    
+
+
+
+
+
+<!-- TradeDoubler site verification 2289284 -->
+</head>
+<body class="customize-bs fix-for-bs lang-noop lang-jp section-storestats  body-page-app-details "
+    >
+
+
+<div id="container" class="">
+<!--[if lt IE 10]>
+<div id="no_old_ie">
+    <h3>ブラウザのバージョンが最新ではありません。</h3>
+    <p>より速くて安全なブラウジングができるよう、以下のブラウザから選んでアップグレードしてください。</p>
+    <div id="browser_upgrade">
+        <a href="http://www.google.com/chrome" title="Google Chrome"><img src="https://static-s.aa-cdn.net/media/pictures/browser/chrome.v-8f9bd35a.jpg" alt="Google Chrome" /></a>
+        <a href="http://www.mozilla.org/" title="Mozilla Firefox"><img src="https://static-s.aa-cdn.net/media/pictures/browser/firefox.v-fd4ea3bb.jpg" alt="Mozilla Firefox" /></a>
+        <a href="http://windows.microsoft.com/en-hk/internet-explorer/ie-11-worldwide-languages" title="Internet Explorer 11"><img src="https://static-s.aa-cdn.net/media/pictures/browser/ie11.v-fb7889f9.jpg" alt="Internet Explorer 11" /></a>
+    </div>
+</div>
+<![endif]-->
+    
+
+    
+<div class="header-v2-old">
+    <div class="header-v2-old-main-nav-wrap">
+        <div class="inner">
+            <div class="brand pull-left">
+                <a class="navbar-brand pull-left" href="/">
+                    <img src="https://static-s.aa-cdn.net/media/pictures/appannie-logo.v-64ae5eec.png" alt="App Annie"/>
+                </a>
+            </div>
+
+            <ul class="main-nav prod-main-nav pull-left" id="J-main-nav">
+                <li class="nav-item">
+                    <a href="#subnav-market-data" onclick="return false;" class="aa-nav-toggle">市場データ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#subnav-analytics" onclick="return false;" class="aa-nav-toggle">分析ツール</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/indexes/all-stores/report/" class="aa-nav-link">インサイト</a>
+                </li>
+            </ul>
+
+            <div class="pull-right right-nav">
+                
+                <ul class="main-nav mkt-main-nav pull-left" id="J-main-nav-r">
+                    <li class="nav-item">
+                        <a href="#subnav-tours" onclick="return false;" class="aa-nav-toggle">製品紹介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/jp/pricing/" class="aa-nav-link">価格</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#subnav-about" onclick="return false;" class="aa-nav-toggle">企業情報</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="http://jp.blog.appannie.com/" class="aa-nav-link">ブログ</a>
+                    </li>
+                    <li class="nav-item hide">
+                        <a target="_blank" href="http://support.appannie.com" class="aa-nav-link">サポート</a>
+                    </li>
+                </ul>
+                
+
+                <div class="search-box-wrap pull-left">
+                    <form action="/search/" name="search">
+                    <ul class="search-box">
+                        <li class="dropdown selector">
+                            <span class="dropdown-toggle" role="button" data-toggle="dropdown"><span data-value="apps">アプリ</span><i class="fa fa-chevron-up icon-chevron-up"></i><i class="fa fa-chevron-down icon-chevron-down"></i></span>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"
+                                    data-placeholder=""
+                                    data-value=""
+                                    data-vertical=""
+                                    data-market=""
+                                    data-label="">
+                                    <a role="menuitem" href="#">
+                                        
+                                        <i class="icon-aa-check"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="vertical" value="apps">
+                        </li>
+                        <li>
+                            <input name="q" class="search-box-input"
+                                placeholder="アプリ、 パブリッシャー"
+                                value="">
+                        </li>
+                        <li class="search-icon"><i class="icon-search fa fa-search"></i></li>
+                    </ul>
+                    </form>
+                </div>
+
+                <ul class="user-nav pull-left pull-left-space">
+
+                    <li class="nav-item dropdown nav-item-user-prefs">
+                        <a href="#" class="aa-user-prefs-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="user-display-name">奥山 博史</span>
+                            <span class="user-email">okuyama@se.cs.titech.ac.jp</span>
+                            <i class="fa fa-chevron-up icon-chevron-up"></i><i class="fa fa-chevron-down icon-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            
+
+    <li class="head head-for-analytics">
+        Analytics &amp; Advertising
+    </li>
+    
+        <li><a href="/account/list/">接続済みアカウント</a></li>
+    
+        <li><a href="/account/apps/">アプリ</a></li>
+    
+        <li><a href="/account/sharing/">データ共有</a></li>
+    
+        <li><a href="/account/export/">バックアップデータ</a></li>
+    
+
+    <li class="head head-for-account">
+        App Annieアカウント
+    </li>
+    
+        <li><a href="/account/teams/">チームシェア</a></li>
+    
+        <li><a href="/account/settings/">ユーザー設定</a></li>
+    
+        <li><a href="/account/api/key/">APIキー</a></li>
+    
+
+
+                            <li class="spacer"></li>
+                            <li class="support"><a target="_blank" href="http://support.appannie.com">サポート</a></li>
+                            <li class="logout"><a href="/account/logout/">ログアウト</a></li>
+                        </ul>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-v2-old-sub-nav-wrap"><div class="header-v2-old-sub-nav-inner">
+        <div id="subnav-analytics" class="sub-nav-drawer">
+            <div class="inner">
+                <ul class="sub-nav-item">
+                    <li class="">
+                        <a href="/comparator/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            App Analytics</a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item">
+                    <li class="">
+                        <a href="/ad_dashboard/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Advertising Analytics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="subnav-market-data" class="sub-nav-drawer">
+            <div class="inner">
+                <ul class="sub-nav-item nav-for-analytics">
+                    <li class="">
+                        <a href="/top/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Store Stats</a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item nav-for-analytics">
+                    <li class="">
+                        <a href="/indexes/all-stores/rank/overall/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Index</a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item sub-nav-item-sep nav-for-analytics">
+                    <li class="">
+                        <a href="/ssp_dashboard/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Store Stats Pro
+                        </a>
+                        <span class="sub-nav-item-label">月額$59から</span>
+                    </li>
+                </ul>
+                
+                <ul class="sub-nav-item sub-nav-item-sep nav-for-market-data">
+                    <li class="">
+                        <a href="/intelligence/dashboard/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Store Intelligence
+                        </a>
+                        <span class="sub-nav-item-label">PREMIUM</span>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item nav-for-market-data">
+                    <li class="">
+                        <a href="/intelligence/dashboard/usage/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Usage Intelligence
+                        </a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item nav-for-market-data">
+                    <li class="">
+                        <a href="/intelligence/audience/top/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Audience Intelligence
+                        </a>
+                     </li>
+                 </ul>
+            </div>
+        </div>
+        
+        <div id="subnav-tours" class="sub-nav-drawer">
+            <div class="inner">
+                
+<ul class="sub-nav-item nav-for-analytics">
+    <li class=" as-header">
+        <a href="/tours/market-data/">
+            
+            市場データ
+        </a>
+    </li><li class="">
+        <a href="/tours/store-stats/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Store Stats
+        </a>
+    </li><li class="">
+        <a href="/tours/store-stats-pro/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Store Stats Pro
+            <i class="nav-special-dot">月額$59から</i>
+        </a>
+    </li><li class="">
+        <a href="/tours/aso/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            ASO
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item nav-for-market-data">
+    <li class=" as-header">
+        <a href="/tours/enterprise-market-data/">
+            
+            法人向けアプリ市場データ
+            <i class="nav-special-dot">PREMIUM</i>
+        </a>
+    </li><li class="">
+        <a href="/tours/store-intelligence/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Store Intelligence
+        </a>
+    </li><li class="">
+        <a href="/tours/usage-intelligence/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Usage Intelligence
+        </a>
+    </li><li class="">
+        <a href="/tours/audience-intelligence/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Audience Intelligence
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item nav-for-analytics">
+    <li class=" as-header">
+        <a href="/tours/app-analytics-platform/">
+            
+            分析ツール
+        </a>
+    </li><li class="">
+        <a href="/tours/app-store-analytics/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            App Store Analytics
+        </a>
+    </li><li class="">
+        <a href="/tours/advertising-analytics/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Advertising Analytics
+        </a>
+    </li><li class="">
+        <a href="/tours/in-app-analytics/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            In-App Analytics
+            <i class="nav-special-dot">BETA</i>
+        </a>
+    </li>
+</ul>
+
+
+            </div>
+        </div>
+        <div id="subnav-about" class="sub-nav-drawer">
+            <div class="inner">
+                
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            企業情報
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/leadership/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            経営陣
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/jobs/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            採用
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/customers/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            導入企業例
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/partnerships/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            パートナーシップ
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/press/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            メディア向け情報
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/contact/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            連絡先・所在地
+        </a>
+    </li>
+</ul>
+
+
+            </div>
+        </div>
+        
+    </div></div>
+</div>
+
+<script>
+
+(function(){var mainNav=document.getElementById("J-main-nav");if(mainNav){proc(mainNav)}mainNav=document.getElementById("J-main-nav-r");if(mainNav){proc(mainNav)}function proc(mainNav){var navItems=mainNav.getElementsByTagName("li");var currentNavItem;var hasClass=function(element,className){var classNames=element.className.split(/\s+/);for(var i=0;i<classNames.length;i++){if(className===classNames[i]){return true}}return false};for(var i=0,len=navItems.length;i<len;i++){var nav=navItems[i];if(hasClass(nav,"current")){currentNavItem=nav}}if(!currentNavItem){return}var currentNavLink=currentNavItem.getElementsByTagName("a")[0];if(!hasClass(currentNavLink,"aa-nav-toggle")){return}currentNavItem.className+=" active";var targetSubNavId=currentNavLink.href.split("#")[1];var targetSubNav=document.getElementById(targetSubNavId);if(!targetSubNav){return}var inner=targetSubNav.getElementsByTagName("div")[0];var wrapper=targetSubNav.parentElement.parentElement;targetSubNav.className+=" aa-nav-in";targetSubNav.style.display="block";inner.style.top="0";inner.style.display="block";wrapper.style.minHeight=inner.offsetHeight+"px"}})();
+
+</script>
+
+  
+
+    <div class="main storestats_wrapper page_app-details">
+    
+    <div class="inner" 
+itemscope itemtype="http://schema.org/MobileSoftwareApplication"
+>
+      <!-- AddThis Button BEGIN -->
+      <div class="aa-widget-addthis">
+        <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+        </div>
+      </div>
+      <!-- AddThis Button END -->
+      
+
+<script>
+    var pageVal = pageVal || {};
+    pageVal.app_show_mode = 'public'; 
+    pageVal.app_market = 'itc';
+    pageVal.market_langid = 'ITC';
+    pageVal.app_device = ''; 
+</script>
+
+<!-- app picker -->
+<!--  -->
+<!-- app picker end -->
+<div class="frame frame-app">
+    <div class="aa-sidebar aa-sidebar-large">
+        <div class="sidebar-inner">
+            
+            <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <span itemprop="price" content="2.99 USD"></span>
+                <span itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+                  <span itemprop="name" content="iOS Store"></span>
+                </span>
+            </span>
+            <span itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
+                <span itemprop="ratingValue" content=""></span>
+                <span itemprop="ratingCount" content=""></span>
+            </span>
+            
+            <div class="app_name entity-profile">
+                <div class="entity-icon">
+                    <img itemprop="image" class="itc" src="https://static-s.aa-cdn.net/img/ios/390063388/e295897f3f5f8b8762f37a55a0b154aa"  alt="Tweetlogix for Twitter - iOS StoreのアプリランキングとアプリのStore Stats" />
+                </div>
+                <div class="entity-name" itemprop="name">Tweetlogix for Twitter</div>
+            </div>
+            
+<ul class="menu" data-category="analytics">
+    
+    <li class="current">
+        
+        <a  href="/apps/ios/app/390063388/"  target="">
+            
+            
+            <i class="icon-info-sign fa fa-info-circle"></i><span>アプリ詳細</span>
+            
+            
+            
+        </a>
+    </li>
+    
+</ul>
+
+<ul class="menu" data-category="intelligence">
+    
+    <li class="">
+        
+            <i class="ui-icon prem-small"></i>
+        
+        <a  href="/apps/ios/app/390063388/intelligence/"  target="">
+            
+            
+            <i class="aaicon-store"></i><span>Store<br>Intelligence</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/390063388/usage/"  target="">
+            
+            
+            <i class="aaicon-usage"></i><span>Usage<br>Intelligence</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/390063388/audience/"  target="">
+            
+            
+            <i class="icon-male fa fa-male"></i><span>Audience<br>Intelligence</span>
+            
+            
+            
+        </a>
+    </li>
+    
+</ul>
+
+<ul class="menu" data-category="rank">
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/390063388/ssp/"  target="">
+            
+            
+            <i class="aaicon-sspro_icon"></i><span>Store Stats Pro</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/390063388/app-ranking/"  target="">
+            
+            
+            <i class="icon-calendar fa fa-calendar"></i><span>デイリーランク</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/390063388/rank-history/"  target="">
+            
+            
+            <i class="icon-arrow-up fa fa-arrow-up"></i><span>ランキング推移</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/390063388/keywords/"  target="">
+            
+            
+            <i class="aaicon-keywords"></i><span>キーワード/ ASO</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/390063388/features/"  target="">
+            
+            
+            <i class="aaicon-featured"></i><span>フィーチャー</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/390063388/ratings/"  target="">
+            
+            
+            <i class="icon-star-half"></i><i class="icon-star-empty"></i><i class="fa fa-star-half-o"></i><span>評価</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/390063388/reviews/"  target="">
+            
+            
+            <i class="icon-comments fa fa-comments"></i><span>レビュー</span>
+            
+            
+            
+        </a>
+    </li>
+    
+</ul>
+
+
+
+            <img class="sidebar-logo" src="https://static-s.aa-cdn.net/media/pictures/logo/sidebar_stencil.v-6b37ae6b.png" alt="AppAnnie.com" width="141" height="97"/>
+        </div>
+    </div>
+
+    <div class="content content-app app-details">
+        <div class=" content-container aa-popup-container">
+            
+
+            
+
+<div class="app-info-top aa-info-columns aa-info-columns-app">
+    
+    <div class="name">
+        <h2 class="asset-name" js-expandable >Tweetlogix for Twitter</h2><label class="asset-type">[アプリ]</label>
+        
+<div class="aa-sharing-link">
+
+
+</div>
+
+    </div>
+    <div class="row-control-group clearfix summary-container">
+    <div class="left-align-controls invisible summary">
+    
+        
+
+<div class="summary-item">
+    <label  >ストア</label>
+    <div class="value">
+
+    
+
+
+    
+    
+        <a class="summary-item-text" title="iOS Store" href="https://itunes.apple.com/app/id390063388" target="_blank">iOS Store</a>
+        <i class="fa fa-external-link"></i>
+        
+    
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label  >価格</label>
+    <div class="value">
+
+    
+    2.99 USD
+    
+
+
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label  >互換性</label>
+    <div class="value">
+
+    
+    ユニバーサル
+    
+
+
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label  >パブリッシャー</label>
+    <div class="value">
+
+    
+
+
+    
+    
+        <a class="summary-item-text" title="Onloft Software LLC" href="/apps/ios/publisher/onloft-software-llc" >Onloft Software LLC</a>
+        
+        
+    
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label data-helptip="ストア全体における、あるアプリの異なるバージョンに対する一貫した名前。データはApp Annieが管理・所有するものです。"  >ユニファイド・アプリ</label>
+    <div class="value">
+
+    
+
+
+    
+
+
+    
+
+
+    
+        
+        <a class="summary-item-link" href="/apps/all-stores/app/tweetlogix-for-twitter/">
+            <span class="summary-item-text" title="Tweetlogix for Twitter">Tweetlogix for Twitter</span><span> (1アプリ)</span>
+        </a>
+        
+        <div class="btn btn-mini click-to-show" data-type="app" ><i class="fa fa-caret-down"></i></div>
+        
+        
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label data-helptip="同じ知的財産を共有するアプリのグループ。メディアミックスのようなもの。データはApp Annieが管理・所有するものです。"  >アプリフランチャイズ</label>
+    <div class="value">
+
+    
+
+
+    
+
+
+    
+
+
+    
+        
+        <label data-helptip="まだデータがありません">N/A</label>
+        
+    
+
+    </div>
+</div>
+
+    
+    </div>
+
+    <div class="right-align-controls">
+    
+    </div>
+</div>
+
+    
+    
+</div>
+
+            <div class="main-app-content">
+            
+            <div class="ss-report-note">
+                
+                データは2015年9月19日にアプリストアから収集されたものです。 
+                
+                App Annieは、アプリストアで提供されている内容について責任を負いませんのでご注意ください。</div>
+            
+
+            
+<div>
+  
+    
+    <div class="x-clear app-screenshots">
+      
+        
+          
+<div class="None">
+    
+    <div id="screenshots" class="">
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/ab03383bc422ef21938e808899396645"><img src="https://static-s.aa-cdn.net/img/ios/390063388/ab03383bc422ef21938e808899396645" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/1b825e6d05bbb398d605e1bef28313c1"><img src="https://static-s.aa-cdn.net/img/ios/390063388/1b825e6d05bbb398d605e1bef28313c1" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/11b6d931ca9d4b995e1938254fb4c6d2"><img src="https://static-s.aa-cdn.net/img/ios/390063388/11b6d931ca9d4b995e1938254fb4c6d2" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/fd73e2a0a34ac83981dc35b835c66fd5"><img src="https://static-s.aa-cdn.net/img/ios/390063388/fd73e2a0a34ac83981dc35b835c66fd5" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/5bcb0de88e8cfaf96d8c36b422e5b31b"><img src="https://static-s.aa-cdn.net/img/ios/390063388/5bcb0de88e8cfaf96d8c36b422e5b31b" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/277d0d6abf02583134096daca7d84b8b"><img src="https://static-s.aa-cdn.net/img/ios/390063388/277d0d6abf02583134096daca7d84b8b" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/347155fd4991b7bc195a6e2b33bf1bdf"><img src="https://static-s.aa-cdn.net/img/ios/390063388/347155fd4991b7bc195a6e2b33bf1bdf" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/6d10cad1a6164eccccc6dcf4ce72ac61"><img src="https://static-s.aa-cdn.net/img/ios/390063388/6d10cad1a6164eccccc6dcf4ce72ac61" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/82f08cca664e8d7ab62a4c877a8727ce"><img src="https://static-s.aa-cdn.net/img/ios/390063388/82f08cca664e8d7ab62a4c877a8727ce" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/390063388/5c8306bd1b92fca9ec26b10ede6bd418"><img src="https://static-s.aa-cdn.net/img/ios/390063388/5c8306bd1b92fca9ec26b10ede6bd418" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+    </div>
+</div>
+
+        
+      
+    </div>
+    
+
+    <!-- ******************* contents ******************* -->
+    <div id="app_content">
+      
+      
+<div class="app_content_section">
+<h3>説明</h3>
+<div class="desc" itemprop="description">
+<p><p>Tweetlogix makes Twitter on iPhone and iPad better than ever. Powerful filtering lets you instantly mute users,
+keywords or phrases. Design your own color themes, view inline images, search nearby, and much more. All in a simple,
+fast, easy-to-navigate app. Visit tweetlogix.com to learn more.</p>
+
+<p>New for iOS 9<br />● Multitasking on iPad lets you seamlessly transition between Slide Over, Split View, and Full
+Screen modes<br />● Optional Safari-based web view</p>
+
+<p>Powerful Filtering<br />● Mute users, keywords or phrases<br />● Mute clients<br />● Mute retweets<br />● Filters
+apply instantly to your timeline<br />● Review filtered-out tweets</p>
+
+<p>Customizable Themes<br />● Design your own color themes<br />● Tweet or email themes<br />● Import themes<br />●
+Built-in light and dark themes</p>
+
+<p>Rich Timelines<br />● Wi-Fi streaming refresh<br />● Inline image previews<br />● Inline display of quoted tweets<br
+/>● View Twitter animated GIFs and videos<br />● Tappable links in tweets<br />● Auto expansion of long tweets<br />●
+Gap detection and expansion<br />● Tap-and-hold link actions <br />● Swipe any tweet for toolbar actions<br />●
+Translate tweets<br />● Twitter list and financial symbol links supported<br />● Customizable font style</p>
+
+<p>Conversations and Replies<br />● Tap any tweet to view conversation<br />● Reply search integrated within individual
+tweet view</p>
+
+<p>Compose Tweets<br />● Auto completion of usernames and hashtags<br />● Alphabetized and indexed contacts <br />● Add
+images and videos<br />● Tweet music titles<br />● Send long tweets with TwitLonger<br />● Background task completion
+for sending tweets<br />● Choose from recent hashtags<br />● Geotag tweets<br />● Save and manage drafts<br />● Shorten
+URLs with bit.ly or TinyURL<br />● Custom URL shortener and bit.ly settings<br />● Upload images to Twitter, TwitrPix,
+Mobypicture, or img.ly <br />● Upload videos to Twitter or Mobypicture</p>
+
+<p>Twitter Lists<br />● Create and edit lists<br />● Use a list as your main Timeline</p>
+
+<p>Unread Counters and Synchronization<br />● Unread count for timelines, lists, and messages <br />● Tweets marked read
+as you scroll<br />● Tweet Marker synchronization</p>
+
+<p>Bookmarks and Web Mobilizer<br />● Save links to Instapaper, Pocket, Readability, or Pinboard <br />● Instapaper and
+Readability Mobilizer support</p>
+
+<p>Powerful Search<br />● Search is integrated throughout the app<br />● Search for people or tweets<br />● Browse
+Twitter suggested users<br />● Nearby search with map and list views<br />● Use a Saved Search as your main timeline</p>
+
+<p>Multiple Accounts<br />● Easily import iOS Twitter accounts<br />● Support for multiple Twitter accounts<br />●
+Multi-account auto refresh<br />● Convenient accounts summary view</p>
+
+<p>Twitter Profiles<br />● View recent images and videos for Twitter users<br />● Edit your profile<br />● Upload
+profile avatar and header images<br />● View header images in user profiles</p>
+
+<p>Trends<br />● Current and local trends<br />● Trend definitions by What The Trend</p>
+
+<p>Customize the App<br />● Use a list or saved search as your main timeline<br />● Rearrange your tabs<br />● In-app
+Settings</p>
+
+<p>Other Features<br />● Landscape support everywhere <br />● Support for iOS Sharing Sheet</p></p>
+</div>
+</div>
+
+      
+      
+
+<div class="app_content_section app-version-block">
+  <h3>新着情報</h3>
+  <div class="desc">
+  
+  <h5>バージョン 2.8 (2015年9月18日)</h5>
+  <div class="app-version-note">
+  <p><p>This update introduces support for iOS 9, as well as a number of other great new features. Take advantage of iPad
+multitasking, Safari-based web views, customizable fonts and more.</p>
+
+<p>New for iOS 9<br />● Multitasking on iPad lets you seamlessly transition between Slide Over, Split View, and Full
+Screen modes<br />● Optional Safari-based web view (see Settings &gt; Display &gt; Web Browser)</p>
+
+<p>More New Features and Changes<br />● Customizable font style (see Settings &gt; Display &gt; Fonts)<br />● Support
+for reading and sending Twitter direct messages up to 10,000 characters<br />● Keyword and muted user filters now also
+apply to quoted tweet content<br />● Standard web view updated to faster WebKit-based technology<br />● Updated
+Tweetlogix icon</p>
+
+<p>Bug Fixes<br />● Fixed problem displaying inline previews for some video links</p>
+
+<p>Note that you may wish to clear your Tweetlogix cache after updating to this version in order to view the full text
+of existing long direct messages.</p>
+
+<p>Thanks to everyone who helped beta test this release. Tweetlogix never prompts for reviews within the app, but we
+would greatly appreciate if you would take the time to rate or review Tweetlogix in the App Store.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.7.1 (2015年8月11日)</h5>
+  <div class="app-version-note">
+  <p><p>● Fixed problem displaying expanded long tweets in individual tweet view<br />● Fixed possible crash when changing
+sound effects in Tweetlogix settings<br />● Other minor bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.7 (2015年6月24日)</h5>
+  <div class="app-version-note">
+  <p><p>Enhancements</p>
+
+<p>● Support for sending tweets with Twitter video<br />● Support for viewing recent photos and videos from user
+profiles<br />● Support for displaying inline Twitter quoted tweets<br />● Support for quoting tweets (additional action
+available from Retweet button)<br />● Compose view now uses dark keyboard style for dark themes</p>
+
+<p>You may need to clear your Tweetlogix cache after updating to this version in order to view inline quotes for
+existing cached tweets. Also note that the default video upload service has changed to Twitter.</p>
+
+<p>Bug Fixes</p>
+
+<p>● Fixed problem closing image viewer with swipe-down gesture<br />● Fixed problem navigating to some tweet links<br
+/>● Fixed problem which may cause image viewer to incorrectly open when expanding timeline gaps<br />● Fixed problem
+opening URLs in VoiceOver mode from iOS 8 sharing sheet</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.6.1 (2015年2月27日)</h5>
+  <div class="app-version-note">
+  <p><p>Fixed problem on 64-bit devices verifying Wi-Fi connectivity for Twitter streaming</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.6 (2015年2月20日)</h5>
+  <div class="app-version-note">
+  <p><p>Enhancements</p>
+
+<p>● Support for viewing Twitter animated GIFs and videos<br />● Enhanced image viewer supporting side-swipe gesture for
+viewing multiple images<br />● Long tapping links in iOS 8 now also displays URL<br />● Added video stream quality
+setting for Twitter video (See Settings &gt; Media)<br />● Added ability to clear cookies for in-app web browser (See
+Settings &gt; Reset)</p>
+
+<p>You may need to clear your Tweetlogix cache after updating to this version in order to view Twitter animated GIFs and
+videos in existing cached tweets.</p>
+
+<p>Also note that Twitter has not yet added support for animated GIFs and videos in search results. However, you can tap
+any tweet to view animated GIFs and videos from the individual tweet view.</p>
+
+<p>Bug Fixes</p>
+
+<p>● Fixed problem closing image viewer with swipe-down gesture<br />● Fixed problem causing retweets of blocked users
+to appear in home timeline while streaming<br />● Fixed problem muting retweets in cached search results<br />● Fixed
+web view sharing sheet to use URL of currently displayed page<br />● Fixed contrast problem for tab buttons with some
+color themes<br />● Fixed problem scrolling to bottom of search results</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.5.1 (2014年12月29日)</h5>
+  <div class="app-version-note">
+  <p><p>● Fixed incorrect display of detailed tweet view when navigating to some links<br />● Fixed problem causing some
+tweets to display invalid location maps</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.5 (2014年12月16日)</h5>
+  <div class="app-version-note">
+  <p><p>New Features and Improvements</p>
+
+<p>● Support for iOS 8 Sharing Sheet<br />● Twitter header images now displayed in user profiles<br />● Upload your own
+Twitter header image (See Profile &gt; Edit)<br />● Options for round, square, or rounded-square avatars (See Settings
+&gt; Display)<br />● Web view on iPad is now always displayed as a full width view<br />● Web view on iPad can be closed
+with a two-finger swipe down gesture<br />● Navigating into tweet links now displays detailed tweet view<br />● Users
+are now removed from Recent Users list when blocked or reported as spam</p>
+
+<p>Bug Fixes</p>
+
+<p>● Fixed problem displaying some action confirmations on iPad<br />● Fixed problem deleting keyword filters</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.4.1 (2014年10月23日)</h5>
+  <div class="app-version-note">
+  <p><p>● Fixed problem causing some sent or discarded tweets to be saved as drafts<br />● Fixed problem displaying "Tweet
+Sent Successfully" message<br />● Fixed problem dismissing images with swipe-down gesture<br />● Fixed layout issue when
+iOS in-call status bar is displayed<br />● Fixed possible title text overlap in tweets</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.4 (2014年10月8日)</h5>
+  <div class="app-version-note">
+  <p><p>New Features</p>
+
+<p>● Support for iOS 8, iPhone 6, and iPhone 6 Plus<br />● Improved detailed tweet view with integrated reply search
+(pull down for replies)<br />● Improved detailed tweet view with Favorited and Retweeted buttons<br />● Medium and Large
+inline image options (See Settings &gt; Display &gt; Inline Images)<br />● Support for displaying multiple Twitter
+images in tweets<br />● Support for sending tweets with multiple Twitter image attachments<br />● Settings for uploaded
+image size (See Settings &gt; Services &gt; Media &gt; Images)<br />● Ability to mute retweets in search results (See
+Filters &gt; Muted Retweets)<br />● Video play symbol displayed for inline YouTube image previews<br />● Sharing action
+now offers an option to copy tweet link<br />● Tap-hold action for links now offers an Open in Safari action<br />●
+Settings for device auto locking (See Settings &gt; Advanced &gt; Auto Lock)</p>
+
+<p>Note that Twitter does not yet provide multiple images in streaming or search results.</p>
+
+<p>Bug Fixes</p>
+
+<p>● Fixed problem maintaining scroll position after rotation<br />● Fixed problem displaying location map from user
+profiles<br />● Fixed incorrect tab bar colors after importing a theme<br />● Fixed problem displaying Flickr inline
+images<br />● Fixed incorrect music links added in compose view<br />● Fixed possible crash when changing tabs or
+clearing cache on iPad<br />● Fixed sidebar layout problem when image viewer is closed on iPad</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.3.1 (2014年2月13日)</h5>
+  <div class="app-version-note">
+  <p><p>● Support for displaying Twitter images in DMs (Note that Twitter has not yet added support for uploading DM
+images from 3rd party apps)<br />● Fixed possible crash receiving DMs while streaming<br />● Fixed problem opening
+financial symbol links<br />● Fixed status bar text color for some themes<br />● Fixed navigation bar colors when
+emailing tweets<br />● Fixed key-repeat interruption when deleting characters in compose view<br />● VoiceOver
+improvements</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.3 (2013年12月13日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes<br />● Mute individual user retweets in timeline, lists, and search<br />● Optional
+background refresh for mentions and messages (requires iOS 7)<br />● Save links to Safari Reading List (requires iOS
+7)<br />● Translucency of navigation and tab bars in iOS 7 is now optional<br />● Drafts view now offers action to send
+all drafts<br />● Improved display of web links in profile descriptions<br />● Optional confirmation when posting tweets
+(Settings &gt; Advanced &gt; Actions)<br />● Changed image viewer button colors in iOS 7</p>
+
+<p>To enable background refresh, see Settings &gt; Refresh &gt; Background Refresh. For more details about this feature,
+see the Tweetlogix FAQ.</p>
+
+<p>Bug fixes<br />● Fixed possible crash returning to detailed tweet view with location map<br />● Fixed incorrect
+status bar color after closing image viewer on iPad<br />● Fixed reversed Mentions and Your Tweets colors in Theme
+Designer<br />● Fixed incorrectly repeated user search results<br />● Fixed scroll indicator positioning on iOS 7<br />●
+Fixed keyboard flicker after canceling compose view on iOS 7<br />● Fixed text alignment in More view</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.2 (2013年10月11日)</h5>
+  <div class="app-version-note">
+  <p><p>Thoroughly updated for iOS 7 compatibility.</p>
+
+<p>● New iOS 7 look and feel<br />● New iOS 7 style icons<br />● New app icon<br />● Improved color theme support for
+iOS 7</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1.2 (2013年6月17日)</h5>
+  <div class="app-version-note">
+  <p><p>● Fixed problems uploading image/video attachments<br />● Fixed crash opening Maps from Compose view</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1.1 (2013年4月18日)</h5>
+  <div class="app-version-note">
+  <p><p>● Fixed problem causing some retweets to incorrectly appear in timeline and mentions while streaming<br />● Fixed
+filter scope problem while streaming<br />● Fixed problem updating timeline badge<br />● Fixed client muting for
+retweets<br />● Fixed problem attaching videos in iPad compose view<br />● Enabled looping for Vine video
+playback</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.1 (2013年4月4日)</h5>
+  <div class="app-version-note">
+  <p><p>● Wi-Fi Streaming Refresh<br />● Support for new Instagram image link format<br />● Vine video playback in web
+view<br />● New (via @username) retweet option<br />● Improved VoiceOver for tweets</p>
+
+<p>With Wi-Fi Streaming your home timeline, mentions, and messages refresh instantly while Tweetlogix is active and
+connected to a Wi-Fi network. See Settings &gt; Refresh &gt; Wi-Fi Streaming for related settings.</p>
+
+<p>Bug Fixes<br />● Fixed problem using camera with iPad<br />● Fixed problem updating favorite button<br />● Fixed
+problem updating local trends</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.0.1 (2013年3月7日)</h5>
+  <div class="app-version-note">
+  <p><p>● Re-introduced user display name setting<br />● Fixed missing undo retweet actions<br />● Fixed DM authorization
+for imported iOS accounts<br />● Fixed incorrect badge when switching timelines<br />● Fixed problem computing remaining
+chars in Compose view<br />● Improved VoiceOver for Accounts view<br />● Rate limit errors from Twitter are silently
+ignored</p>
+
+<p>An upcoming 2.1 update will also introduce Wi-Fi streaming timeline refresh. This will help reduce problems due to
+Twitter's new 1.1 API rate limits.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 2.0 (2013年3月1日)</h5>
+  <div class="app-version-note">
+  <p><p>Tweetlogix 2.0 has arrived with universal support for iPad and iPhone! This update has been a long time in the
+making and I'm happy to release it as one universal app. Thanks to everyone who has helped make Tweetlogix successful.
+Enjoy Tweetlogix on iPad.</p>
+
+<p>** Note that Twitter will begin changing to their new 1.1 API on March 5th. Tweetlogix 2.0 is ready for this change.
+Please be sure to upgrade to Tweetlogix 2.0 prior to March 5th. Earlier Tweetlogix versions will no longer function
+after Twitter completes its API changes.</p>
+
+<p>New Features and Improvements<br />● Universal support for iPad and iPhone<br />● Equivalent feature set for all iOS
+devices<br />● Easily import iOS Twitter accounts<br />● Expand iPad web view to screen width<br />● Improved web view
+design<br />● Open in Chrome web view action<br />● Improved VoiceOver for iPad and iPhone<br />● Theme Designer support
+for iPad side bar colors<br />● Additional system-provided theme<br />● Improved tool bar design for tweets<br />● New
+timeline home button<br />● Support for Twitter 1.1 API<br />● Twitter 1.1 rate limit view (Profile &gt; Twitter Rate
+Limits)</p>
+
+<p>Bug Fixes<br />● Fixed problem computing remaining chars in Compose view<br />● Fixed problem expanding long
+retweets<br />● Fixed double-tap return home from Profile &gt; Tweets</p>
+
+<p>Changes for Twitter Display Requirements and Terms of Service<br />● Removed user display name setting<br />● Retweet
+action is disabled for tweets posted by protected Twitter users<br />● Photo and video sharing actions are disabled when
+composing direct messages</p>
+
+<p>Note that the Twitter 1.1 API introduces changes in Twitter rate limiting. Previously, Twitter permitted each user to
+perform up to 350 operations per hour. With Twitter 1.1, the rate limit varies depending upon the type of operation
+being performed and resets every 15 minutes. For example, Twitter now permits 15 home timeline refreshes every 15
+minutes.</p>
+
+<p>You can monitor your Twitter rate limits by navigating to Profile &gt; Twitter Rate Limits. A new setting is also
+provided if you prefer to disable rate limit error reporting. To help reduce the likelihood of exceeding Twitter 1.1
+rate limits, the minimum auto refresh interval has been increased to 5 minutes.</p>
+
+<p>Also note that Twitter's 1.1 API no longer supports "Retweets to Me" and "Retweets by Me" which were previously
+available in My Profile. An alternative way to find retweets posted by yourself is to navigate to Profile &gt; Tweets
+where you can find all of your tweets and retweets.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.9 (2012年11月6日)</h5>
+  <div class="app-version-note">
+  <p><p>● Trend definitions are now optional (Settings &gt; Services &gt; Trend Definitions)<br />● Tapping avatar on
+individual tweets offers a choice to open profile or image<br />● Improved VoiceOver support<br />● Composed tweet
+automatically saved to drafts if app is shutdown<br />● Error message now displayed if photo cannot be saved due to iOS
+6 privacy settings<br />● Removed mentions retweet filter (Twitter is no longer returning retweets in mentions)<br />●
+Fixed problem opening profile locations in iOS 6<br />● Fixed problem causing corrupted icons in iOS 6</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.8 (2012年9月27日)</h5>
+  <div class="app-version-note">
+  <p><p>● Compatible with iPhone 5<br />● Inline image previews for YouTube links<br />● Fixed problem creating new
+lists</p>
+
+<p>This update also includes changes related to Twitter's new Display Requirements:<br />● Individual tweet timestamps
+link to Tweet permalink<br />● Individual tweet avatar and title link to user profile <br />● Full name and @username
+shown on timeline by default (see Settings &gt; User Display Name)</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.7 (2012年9月17日)</h5>
+  <div class="app-version-note">
+  <p><p>● Fixed problem causing Direct Messages to be misordered<br />● Fixed problem displaying Twitter image previews in
+detailed tweet view<br />● Fixed problem dismissing full screen images with swipe down gesture</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.6 (2012年9月11日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes<br />● Improved Find Replies search results<br />● Swipe down to close images<br />●
+Inline image support for Flickr short URLs, twipple.jp, and photozou.jp<br />● Retweet Comment style settings (see
+Settings &gt; Advanced)<br />● Unfollowing users removes cached tweets from timelines<br />● Saving to Pinboard now sets
+Pinboard's toRead attribute<br />● My Profile is now auto refreshed when activated<br />● Improved design of Select
+Timeline view<br />● Support for secure https Twitter search<br />● Adjusted Timeline tap target to avoid accidental
+invocations</p>
+
+<p>Bug fixes<br />● Fixed problem displaying inline pic.twitter.com images<br />● Fixed problem marking unread direct
+messages<br />● Fixed missing compose button when Messages is on located More page<br />● Fixed keyword filtering for
+expanded long tweet content<br />● Fixed problem displaying lengthy trend names</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.5 (2012年6月14日)</h5>
+  <div class="app-version-note">
+  <p><p>● Inline theme preview images<br />● Direct message swipe toolbar and tap-hold actions<br />● Direct message
+translate, email, and copy actions<br />● Retweet filters are no longer restricted by filter scope<br />● Re-introduced
+"Shorten to 140 chars" option when sending long tweets<br />● Fixed problem selecting list memberships<br />● Fixed
+problem removing previously deleted tweets or messages</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.4 (2012年5月25日)</h5>
+  <div class="app-version-note">
+  <p><p>● Added retweet filter for Mentions (see More &gt; Filters &gt; Retweets)<br />● Fixed problems refreshing
+favorites<br />● Fixed possible crash when navigating between views<br />● Fixed remaining char count when composing
+tweets containing financial symbol links<br />● Fixed problem causing timeline title button to stop working</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.3 (2012年5月8日)</h5>
+  <div class="app-version-note">
+  <p><p>This version is compatible with Twitter's upcoming May 14th API changes. Please be sure to install this update
+before May 14th. Earlier versions of Tweetlogix will no longer function completely on that date.</p>
+
+<p>Changes in this update:</p>
+
+<p>● Updated for compatibility with Twitter's May 14th API changes<br />● Removed Public Timeline (Twitter will no
+longer support the non-streaming public timeline on May 14th)<br />● Fixed remaining character count when composing
+tweets containing links<br />● Renamed Read it Later to Pocket</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.2 (2012年3月22日)</h5>
+  <div class="app-version-note">
+  <p><p>● Fixed problem causing some muted tweets to appear in timeline<br />● Fixed possible crash while refreshing
+timelines</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9.1 (2012年3月14日)</h5>
+  <div class="app-version-note">
+  <p><p>New Features &amp; Changes<br />● Hidden Tweets link is now optional (Settings &gt; Filters)<br />● Retweet
+filters for home timeline and lists (More &gt; Filters &gt; Retweets)<br />● Mute, Block, &amp; Report Spam actions now
+in swipe menu and detail view<br />● Report Spam now in user tap-hold menu</p>
+
+<p>Bug fixes<br />● Fixed problem detecting timeline gaps<br />● Fixed problem where activity indicator may continue
+after filling a gap<br />● Fixed problem where Hidden Tweets link may incorrectly disappear</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.9 (2012年2月29日)</h5>
+  <div class="app-version-note">
+  <p><p>Improved Filtering<br />● Navigate to muted tweets from your timelines<br />● Faster keyword filtering<br />●
+Background processing of filters<br />● Whole word and location options for muted keywords or phrases</p>
+
+<p>Customizable Timeline<br />● Select a list or saved search as your main timeline</p>
+
+<p>Improved Lists<br />● Retweets now included in lists<br />● List view now offers compose tweet, add list member, and
+follow/unfollow list actions<br />● Support for @username/listname links<br />● Last active list is now retained after
+changing tabs</p>
+
+<p>Other Enhancements<br />● Support for Readability Mobilizer<br />● Saved Search timelines now support caching and gap
+detection<br />● Theme Designer now offers a separate color choice for mentions background</p>
+
+<p>Bug Fixes<br />● Fixed problem where tweet mark could incorrectly appear on a user timeline<br />● Fixed problem
+causing list badge to possibly become negative<br />● Fixed filtering problem for tweets located directly above a gap<br
+/>● Fixed problem causing lists view to be limited to 20 subscribed lists</p>
+
+<p>Note that the whole word and location options for muted keywords have replaced the prior regular expression
+option.</p>
+
+<p>If you have existing regular expression keywords using ^ (start) or \b (word boundary), these will be converted
+automatically to the new options.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.8.1 (2011年12月11日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes</p>
+
+<p>• Support for muting clients<br />• Readability support for saving links<br />• Pinboard support for saving links<br
+/>• Instapaper links now use tweet text as description<br />• Copy Link action when tapping tweet in detail view<br />•
+Email action when tapping-and-holding links<br />• Changed image viewer button positions<br />• Double-tap image viewer
+title bar to return home</p>
+
+<p>Bug fixes</p>
+
+<p>• Fixed image viewer zoom problem<br />• Fixed problem loading Yfrog image previews<br />• Fixed problem causing
+mentions badge to be incorrectly reset</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.8 (2011年11月19日)</h5>
+  <div class="app-version-note">
+  <p><p>New Features</p>
+
+<p>– Tweet Marker synchronization (See Settings &gt; Services &gt; Synchronize to enable)<br />– Support for uploading
+to Twitter's image service<br />– Improved image viewer with full screen support<br />– Block User and Report Spam now
+remove cached tweets<br />– Drafts are now sorted by modified date<br />– Support for t.co unwrapping in DMs</p>
+
+<p>Note that Tweet Marker support requires an iOS device capable of multitasking. This feature is not supported for
+iPhone 3G or 2nd generation iPod touch devices.</p>
+
+<p>Bug Fixes</p>
+
+<p>– Fixed problem restoring Nearby Tweets tab selection<br />– Fixed problem causing lists to be mis-ordered<br />–
+Fixed problem replying to your own tweets<br />– Fixed problem causing duplicate recent hashtags<br />– Fixed problem
+causing web view to change page after activating mobilizer</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.7.1 (2011年10月19日)</h5>
+  <div class="app-version-note">
+  <p><p>– Fixed compatibility problem with iOS 5 Japanese keyboard<br />– Added t.co link unwrapping for search results<br
+/>– Fixed problem resulting in duplicate accounts<br />– Fixed problem with hue setting in Theme Designer<br />– Fixed
+retweet icon for dark themes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.7 (2011年9月27日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes</p>
+
+<p>– Design your own Tweetlogix color themes<br />– Share color themes with your friends - tweet or email themes<br />–
+Import color themes by tapping theme links in tweets</p>
+
+<p>Bug fixes</p>
+
+<p>– Fixed keyword filtering to handle t.co display names<br />– Fixed t.co unwrapping in conversations<br />– Fixed
+potential crash when editing Short URL settings<br />– Fixed problem expanding long tweets<br />– Compatibility fix for
+Twitter's upcoming trend API changes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.6.1 (2011年8月16日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes</p>
+
+<p>– New app badge settings<br />– New setting to always enable t.co link wrapping (see Settings &gt; URL Shortening)<br
+/>– Show Rate Limit now displays time until reset</p>
+
+<p>Bug fixes</p>
+
+<p>– Fixed problem expanding t.co wrapped TwitLonger links<br />– Fixed saving of badges when app is shutdown<br />–
+Fixed pulldown refresh in Lists Following view<br />– Fixed Lists Following view to load multiple pages<br />– Fixed
+username completion after changing accounts in Compose view</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.6 (2011年7月29日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes</p>
+
+<p>– Home and List timeline badges<br />– Scroll to mark tweets read<br />– Search to find unread tweets (double-tap
+Timeline/Mentions)<br />– Customize Mark Read behavior in settings<br />– Enable or disable badges in settings<br />–
+Sound effects for new tweets, mentions, messages, and sent events<br />– Sound effect settings<br />– Switch accounts in
+Compose view<br />– Inline previews of Twitter-hosted images<br />– Find Replies to tweets<br />– New Search button to
+Find Replies or Find Retweeters<br />– Full t.co unwrapping with use of URL display names<br />– Read It Later tweet
+attribution<br />– Settings to auto-refresh active account or all accounts<br />– Settings to enable confirms for
+retweet &amp; add favorite actions <br />– Customize mentions update size in settings<br />– My Profile view now
+includes Select List Memberships action<br />– Improvements to reduce interruptions when updating timelines<br />–
+Improved timeline and tweet caching</p>
+
+<p>Bug fixes</p>
+
+<p>– Fixed swipe delete for DMs<br />– Fixed centering of multiline titles<br />– Fixed problem expanding twtmore
+content<br />– Fixed problem creating new lists<br />– Fixed restore of Mentions timeline scroll position<br />– Fixed
+background color problem in detailed tweet view<br />– Fixed problem removing previously deleted DMs</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.1 (2011年6月3日)</h5>
+  <div class="app-version-note">
+  <p><p>** Note that Twitter will be enforcing new account permission levels beginning June 30th. Please upgrade to this
+version and reauthorize existing accounts prior to that date. Tap the blue Reauthorize button in Accounts view.</p>
+
+<p>New features &amp; changes</p>
+
+<p>– Twitter OAuth web flow login (now required by Twitter for DM access)<br />– Reauthorize button in Accounts view.
+Please reauthorize existing accounts prior to June 30th.<br />– Support for Mobypicture image and video uploading<br />–
+Support for img.ly image uploading<br />– Access drafts within compose view<br />– Pulldown refresh displays last update
+time<br />– Lists view offers customization of list order<br />– Delete or unsubscribe in Lists view<br />– Search bar
+remembers previous search text<br />– Comment and Retweet inserts leading space<br />– Revised icons in compose
+toolbar<br />– Indicator icons in tweets sized proportionately for smaller fonts</p>
+
+<p>Bug fixes</p>
+
+<p>– Fixed translation for devices set to British English language<br />– Fixed titlebar double-tap to no longer invoke
+a timeline refresh<br />– Fixed problem expanding invalid long tweet links<br />– Fixed retweet overlay icon positioning
+in detailed tweet view<br />– Fixed error handling when blocking/unblocking users<br />– Fixed delete action for
+previously deleted tweets<br />– Fixed handling of links ending with asterisks<br />– Fixed lag when resetting pulldown
+refresh</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5 (2011年5月17日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes</p>
+
+<p>– Auto completion of usernames and hashtags in compose view<br />– Pull down compose view to see reply-to tweet<br
+/>– Swipe any tweet for advanced toolbar<br />– Hashtag and keyword muting<br />– Regular expression based keyword
+muting<br />– Mute hashtags by tapping-and-holding hashtag links<br />– Mute users by tapping-and-holding user links<br
+/>– User and keyword muting supported in search timelines<br />– Local trends with definitions<br />– Find nearby trend
+locations using location services, or browse countries and cities<br />– Retweet actions now accessible from separate
+toolbar button<br />– Favstar action now links directly to Favstar recent page<br />– Swipe action to delete individual
+saved searches<br />– Read it Later now uses full link and title when invoked from web view<br />– New setting to
+disable inline photo previews<br />– New security settings<br />– New refresh on wake settings<br />– Scroll position
+maintained when rotating timeline or message views<br />– Changed Plixi image service to Lockerz<br />– Retweeters view
+now shows user count in title<br />– Improvements to reduce memory usage<br />– Improvements to reduce UI interruption
+when updating timeline</p>
+
+<p>Bug fixes</p>
+
+<p>– Fixed failure displaying followers/following lists with Arabic region formats<br />– Fixed crash when adding a
+muted user using people search<br />– Fixed clipped inline images for some retweets</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.4.1 (2011年3月30日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes<br />– New Find Retweeters action available from detailed tweet view<br />– Muted user
+filters now supported for home timeline, mentions, and lists<br />– New Filter Scope settings<br />– New Location
+Precision setting<br />– Compose view now uses dark background for Blackboard theme<br />– Favstar link action available
+in profile view<br />– Image uploading support for Twitgoo and TwitrPix<br />– Inline image support for Twitgoo,
+TwitrPix, and twipl<br />– Support for $symbol financial symbol links<br />– Hashtag links now support international
+characters<br />– Trailing space auto-added after mentions and hashtags in compose view<br />– Improved scrolling
+performance for lists of users<br />– Improved performance adding new tweets to timelines<br />– Reply All now supported
+for retweets<br />– Emailed tweets now include link to tweet<br />– Enabled posting long tweets from protected
+accounts<br />– Enabled muting of retweets by username or retweeter name</p>
+
+<p>Bug fixes<br />– Fixed UI interruption during drop-down banner animation<br />– Fixed problem where timeline may
+scroll to top after pull-down refresh<br />– Fixed problem detecting timeline gaps<br />– Fixed misordered recent
+hashtags after restarting app<br />– Fixed problem where auto-geotagging was unnecessarily started when composing DMs<br
+/>– Fixed problem displaying conversations for retweets<br />– Fixed problems with some actions invoked on retweets<br
+/>– Fixed problem displaying some inline images on retweets<br />– Fixed search results to use hi-res profile images for
+Retina display<br />– Fixed memory leak related to timeline views</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.4 (2011年3月4日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes<br />– New Tweetlogix app icon<br />– Inline conversations within detailed tweet
+view<br />– Inline Instagram photo previews<br />– Twitter People Search available in all search boxes and Contacts
+view<br />– New mobilizer settings<br />– New web view toolbar action to adjust mobilizer settings<br />– New settings
+for bit.ly account configuration<br />– Video upload to Posterous<br />– Full support for right-to-left and BIDI text<br
+/>– Improved timeline scrolling performance<br />– Place descriptions shown in tweets<br />– Geotagging accuracy shown
+in Compose view beside pin<br />– Tap pin in Compose to view location on map<br />– Auto unwrapping of t.co shortened
+image and video links<br />– New font settings for enabling bold links and titles<br />– Smaller timeline font size
+selections<br />– New setting for detailed tweet font size<br />– New setting for tweet line spacing<br />– New theme
+setting for pinstripe or textured background<br />– New setting for preferred long tweet service<br />– Removed
+confirmation when adding new favorites<br />– Hashtags typed in Compose view automatically added to recent list<br />–
+Drop-down banners now supported in Compose view<br />– Sending new DM from message view now opens full Contacts view <br
+/>– To ensure privacy, posting to Twitlonger and twtmore is no longer permitted for Direct Messages or from protected
+accounts</p>
+
+<p>Bug fixes<br />– Fixed possible crash when closing Compose view<br />– Fixed problem with unreliable geotagging<br
+/>– Fixed delay navigating back to previous views<br />– Fixed sluggish behavior changing tabs<br />– Fixed problem
+opening some app store links<br />– Fixed problem shortening URLs with nested http references<br />– Fixed detailed
+tweet view to allow long tweet expansion of any length<br />– Fixed inline expansion for retweets<br />– Fixed problem
+removing previously deleted DMs</p>
+
+<p>* Thanks to Elixir Graphics for designing the new Tweetlogix puzzle icon.</p>
+
+<p>* Thanks to all the Tweetlogix 1.4 beta testers for your super helpful feedback!</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3.3 (2011年1月18日)</h5>
+  <div class="app-version-note">
+  <p><p>Fixed problem causing some home timeline cells to be displayed incorrectly when expanding long tweets.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3.2 (2011年1月13日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes<br />– Double-tap navigation title bar to easily return to home timeline<br />– Nearby
+search now offers list view and auto recall of map/list selection<br />– New setting to enable auto expansion of twtmore
+or TwitLonger tweets<br />– New setting to enable auto geotagging when composing new tweets<br />– Shortcut buttons for
+adding @ or # characters in compose view<br />– New action to tweet search text from all search timeline views<br />–
+Product info view now offers an action to follow us @tweetlogix</p>
+
+<p>Bug fixes<br />– Fixed problem where posting new tweet could create erroneous gap and duplicate tweet<br />– Fixed
+crash when marking messages or mentions read with iOS 4.1 or older<br />– Fixed geotag button to properly stop an active
+location search<br />– Fixed layout issues when in-call status bar is active<br />– Fixed missing read later button for
+some retweets</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3.1 (2010年12月23日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes<br />– New action to mark all mentions/messages read by double-tabbing tab<br />–
+Changed pulldown Refresh All to perform a normal refresh of Timeline, Messages, and Mentions in one action.<br />–
+Improved geotagging to offer options for approximate or 1 km search<br />– Increased contacts capacity to 3000 users<br
+/>– Improved scrolling performance with absolute and mixed date formats<br />– Revised app icon color scheme</p>
+
+<p>Bug fixes<br />– Fixed scrolling issue with saved searches<br />– Fixed incorrect table action in search view<br />–
+Fixed incorrect table cell height for some retweets</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3 (2010年12月14日)</h5>
+  <div class="app-version-note">
+  <p><p>New features &amp; changes<br />– New Tweetlogix icon<br />– Profile editing and profile image uploading<br />–
+Direct message and DM conversation deletion<br />– Auto rotation settings<br />– Date format settings<br />– Compose
+font setting<br />– Timeline capacity setting<br />– Gap fill setting (upward or downward)<br />– Favorite action now
+uses outlined star icon if tweet is not favorited<br />– Compose view now inserts contacts &amp; hashtags at cursor
+position<br />– Deleted tweets automatically removed from timeline<br />– Refresh All action added for direct
+messages<br />– Copy Link action added in web view<br />– Improved recent users view to only show users recently tapped
+in timelines<br />– Improved recent hashtags view to no longer include non-hashtag saved searches<br />– Clear action
+added to recent hashtags view</p>
+
+<p>Bug fixes<br />– Fixed problem causing timeline and mentions badge to be reset after memory warning<br />– Fixed
+problem where geo-tagged tweets may have inaccurate locations<br />– Fixed problem where some user mentions were not
+shown as links<br />– Fixed error reporting when Twitter service is unavailable<br />– Fixed error when scrolling to end
+of search timeline</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.2.1 (2010年11月15日)</h5>
+  <div class="app-version-note">
+  <p><p>– Fixed crash when sending tweets with iPhone 3G and 2nd generation iPod Touch devices.<br />– Fixed problem
+causing timeline to scroll to top when app receives a high memory warning.</p>
+
+<p>*Important Note*  This version is ready for Twitter's "Snowflake" API changes taking effect on Friday, November 26th.
+Tweetlogix versions prior to 1.2 will no longer work on Nov 26th.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.2</h5>
+  
+  
+  <h5>バージョン 1.1.1</h5>
+  
+  
+  <h5>バージョン 1.1</h5>
+  
+  
+  <h5>バージョン 1.0.1</h5>
+  
+  
+  <h5>バージョン 1.0</h5>
+  
+  
+  </div>
+</div>
+
+      
+    </div>
+
+    <!-- ******************* sidebar ******************* -->
+    <div id="app_sidebar">
+      
+      <div class="app-box chart-lock-container">
+    
+    
+        <div class="app-box-content">
+<h3>収益の推計値</h3>
+<div class="chart-lock">
+    <div class="chart-lock-image">
+        <img src="/media/pictures/ui/chart_lock.png" />
+    </div>
+    <div class="lock-info">
+        Intelligenceのプレミアム購読で、このアプリのダウンロード数と収益の推計値を入手しましょう。
+    </div>
+    <div class="request-demo">
+        <a href="/intelligence/" target="_blank" ga-tracking data-ga-category="MKT-INT Demo Promotion" data-ga-action="Click" data-ga-label="App_Details_Estimate_Box">詳細</a>
+    </div>
+</div></div>
+    
+</div>
+      
+      <div class="app-box-links links">
+    
+    
+        <div class="app-box-content"><ul>
+<li><a href="http://tweetlogix.com" target="_blank">Onloft Software LLC ウェブサイト <i class="fa fa-external-link"></i> </a></li><li><a href="http://onloft.com/contact" target="_blank">Onloft Software LLC サポート <i class="fa fa-external-link"></i> </a></li>
+</ul>
+</div>
+    
+</div>
+      
+      <div class="app-box-links summary">
+    
+        <h3>フィーチャー <span class="more-info">(2015年3月26日)</span></h3>
+    
+    
+        <div class="app-box-content">
+
+<div class="app_slide_container app_slide_container-show-all">
+
+<div class="app_slide" id="app_feature_iphone_content">
+<div class="app_slide_header" id="app_feature_iphone">
+<i class="icon-caret-down"></i><i class="icon-caret-right"></i>iPhone マーケット
+</div>
+<div class="app_slide_content"><ul>
+
+<li><span class="ui-icon featured_gold"></span>
+フィーチャー掲載なし
+
+iTunesホームページ
+</li>
+
+<li><span class="ui-icon featured_silver"></span>
+<strong><a title="地域についての詳細はクリックしてください" href="/apps/ios/app/tweetlogix-for-twitter/features/#device=iphone
+">3回</a></strong>
+
+iTunes
+</li>
+
+</ul></div>
+</div>
+
+<div class="app_slide" id="app_feature_ipad_content">
+<div class="app_slide_header" id="app_feature_ipad">
+<i class="icon-caret-down"></i><i class="icon-caret-right"></i>iPad マーケット
+</div>
+<div class="app_slide_content"><ul>
+
+<li><span class="ui-icon featured_gold"></span>
+フィーチャー掲載なし
+
+iTunesホームページ
+</li>
+
+<li><span class="ui-icon featured_silver"></span>
+<strong><a title="地域についての詳細はクリックしてください" href="/apps/ios/app/tweetlogix-for-twitter/features/#device=ipad
+">3回</a></strong>
+
+iTunes
+</li>
+
+</ul></div>
+</div>
+
+</div>
+</div>
+    
+</div>
+      
+      <div class="app-box app-info-version">
+    
+        <h3>バージョン</h3>
+    
+    
+        <div class="app-box-content">
+
+<table id="app_versions" cellspacing="0" cellpadding="0" class="fold-on">
+<colgroup><col width="22"/><col width="70"/><col width="95"/><col width="100%"/></colgroup>
+
+<tbody>
+<tr class=" first">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.8">2.8</span></td><td class="date">2015年9月18日</td><td class="note">現行リリース</td>
+</tr>
+
+<tr class="">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.7.1">2.7.1</span></td><td class="date">2015年8月11日</td><td class="note"></td>
+</tr>
+
+<tr class="">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.7">2.7</span></td><td class="date">2015年6月24日</td><td class="note"></td>
+</tr>
+</tbody>
+<tbody class="fold-block">
+<tr class="fold-open"><td colspan="4" class="dot"><b>...</b></td></tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.6.1">2.6.1</span></td><td class="date">2015年2月27日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.6">2.6</span></td><td class="date">2015年2月20日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.5.1">2.5.1</span></td><td class="date">2014年12月29日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.5">2.5</span></td><td class="date">2014年12月16日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.4.1">2.4.1</span></td><td class="date">2014年10月23日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.4">2.4</span></td><td class="date">2014年10月8日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.3.1">2.3.1</span></td><td class="date">2014年2月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.3">2.3</span></td><td class="date">2013年12月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.2">2.2</span></td><td class="date">2013年10月11日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1.2">2.1.2</span></td><td class="date">2013年6月17日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1.1">2.1.1</span></td><td class="date">2013年4月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.1">2.1</span></td><td class="date">2013年4月4日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.0.1">2.0.1</span></td><td class="date">2013年3月7日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="2.0">2.0</span></td><td class="date">2013年3月1日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.9">1.9.9</span></td><td class="date">2012年11月6日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.8">1.9.8</span></td><td class="date">2012年9月27日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.7">1.9.7</span></td><td class="date">2012年9月17日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.6">1.9.6</span></td><td class="date">2012年9月11日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.5">1.9.5</span></td><td class="date">2012年6月14日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.4">1.9.4</span></td><td class="date">2012年5月25日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.3">1.9.3</span></td><td class="date">2012年5月8日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.2">1.9.2</span></td><td class="date">2012年3月22日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9.1">1.9.1</span></td><td class="date">2012年3月14日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.9">1.9</span></td><td class="date">2012年2月29日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.8.1">1.8.1</span></td><td class="date">2011年12月11日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.8">1.8</span></td><td class="date">2011年11月19日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7.1">1.7.1</span></td><td class="date">2011年10月19日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.7">1.7</span></td><td class="date">2011年9月27日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.6.1">1.6.1</span></td><td class="date">2011年8月16日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.6">1.6</span></td><td class="date">2011年7月29日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.1">1.5.1</span></td><td class="date">2011年6月3日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5">1.5</span></td><td class="date">2011年5月17日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.4.1">1.4.1</span></td><td class="date">2011年3月30日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.4">1.4</span></td><td class="date">2011年3月4日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.3">1.3.3</span></td><td class="date">2011年1月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.2">1.3.2</span></td><td class="date">2011年1月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.1">1.3.1</span></td><td class="date">2010年12月23日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3">1.3</span></td><td class="date">2010年12月14日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2.1">1.2.1</span></td><td class="date">2010年11月15日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2">1.2</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1.1">1.1.1</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.1">1.1</span></td><td class="date"></td><td class="note"></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.0.1">1.0.1</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr class=" last">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.0">1.0</span></td><td class="date"></td><td class="note">初回リリース</td>
+</tr>
+
+<tr class="fold-close"><td colspan="4" class="dot"><b><span class="icon-chevron-up"></span> バージョンをたたむ</b></td></tr>
+</tbody>
+
+</table>
+</div>
+    
+</div>
+      
+      
+
+
+<div  class="app-box app-info-rating">
+<h3 class="rating_head">評価平均 <span>(</span><span title="United States" class="country">United States</span><span>)</span><span class="more"><a href="/apps/ios/app/tweetlogix-for-twitter/ratings/" class="more_link">その他の国 </a></span></h3>
+<div class="app-box-content"><div class="app_slide_container">
+  
+  <div class="app_slide" id="r_current_content">
+    <div class="app_slide_header" id="r_current">
+      <i class="fa fa-caret-down"></i><i class="fa fa-caret-right"></i>現行バージョン -  <strong>4.1</strong> - <strong>15</strong> 評価
+    </div>
+    <div class="app_slide_content">
+      <table class="rating_table" cellspacing="0" cellpadding="0">
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 40.0%;"></div></div></td>
+      <td class="count">(6)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 40.0%;"></div></div></td>
+      <td class="count">(6)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 6.66666666667%;"></div></div></td>
+      <td class="count">(1)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 13.3333333333%;"></div></div></td>
+      <td class="count">(2)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 0.0%;"></div></div></td>
+      <td class="count">(0)</td>
+      </tr>
+      
+      </table>
+    </div>
+  <div class="rating_date">更新日 2015年11月2日</div>
+  </div>
+  
+  <div class="app_slide" id="r_all_content">
+    <div class="app_slide_header" id="r_all">
+      <i class="fa fa-caret-down"></i><i class="fa fa-caret-right"></i>すべてのバージョン -  <strong>3.9</strong> - <strong>868</strong> 評価
+    </div>
+    <div class="app_slide_content">
+      <table class="rating_table" cellspacing="0" cellpadding="0">
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 39.400921659%;"></div></div></td>
+      <td class="count">(342)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 31.5668202765%;"></div></div></td>
+      <td class="count">(274)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 14.400921659%;"></div></div></td>
+      <td class="count">(125)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 4.83870967742%;"></div></div></td>
+      <td class="count">(42)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 9.79262672811%;"></div></div></td>
+      <td class="count">(85)</td>
+      </tr>
+      
+      </table>
+    </div>
+  <div class="rating_date">更新日 2015年11月2日</div>
+  </div>
+  
+</div></div>
+</div>
+
+      
+      <div class="app-box-itemlist about_app">
+    
+        <h3>概要</h3>
+    
+    
+        <div class="app-box-content"><p><b>互換性:</b> ユニバーサル</p><p><b>カテゴリー:</b> Social Networking</p><p><b>最終更新日:</b> 2015年9月19日</p><p><b>バージョン:</b> 2.8</p><p><b>サイズ:</b> 5.5 MB</p><p><b>言語:</b> English</p><p><b>販売元:</b> Onloft Software LLC</p><p><b>評価: </b>Rated 4+</p><p><b>ファミリーシェアリング:</b> Yes</p><p><b>要件:</b> Requires iOS 8.2 or later. Compatible with iPhone, iPad, and iPod touch.</p><p><b>バンドル ID:</b> com.onloft.Tweetlogix</p><p><b>Apple Watchのサポート:</b> No</p></div>
+    
+</div>
+      
+    </div><!--app_sidebar-->
+
+    <!-- ******************* more sections ******************* -->
+    
+      <div class="app-content-more-sections">
+        
+          <div class="x-clear more-related-box">
+            
+              
+                
+                  <div class="app_content_section">
+  <h3>このようなアプリも購入されています</h3>
+  <ul>
+  
+    <li><a href="/apps/ios/app/twitbird-free-for-twitter/" title="TwitBird free for Twitter"><img src="https://static-s.aa-cdn.net/img/ios/352891124/f556c0ed9c72b355bc6c5ec72932de37" class="app_icon">
+    <span class="app_name">TwitBird free for Twitter</span>
+    <span class="category">Social Networking</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/teewee-for-twitter/" title="Teewee for Twitter"><img src="https://static-s.aa-cdn.net/img/ios/373762697/0dcc73d8bac9ae73ad17b35f89c25007" class="app_icon">
+    <span class="app_name">Teewee for Twitter</span>
+    <span class="category">Social Networking</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/tweetcaster-for-twitter/" title="TweetCaster for Twitter"><img src="https://static-s.aa-cdn.net/img/ios/420792544/31c56371be68dbc61e79616d1c657585" class="app_icon">
+    <span class="app_name">TweetCaster for Twitter</span>
+    <span class="category">Social Networking</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/twitrocker2-lite-for-iphone/" title="TwitRocker2 Lite for iPhone - twitter client for the next generation"><img src="https://static-s.aa-cdn.net/img/ios/504162038/62ec0d38a4dad1a77d85099ca8f7d1ce" class="app_icon">
+    <span class="app_name">TwitRocker2 Lite for iPhone - twitter client for the next generation</span>
+    <span class="category">Social Networking</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/theworld-for-ios/" title="TheWorld for iOS"><img src="https://static-s.aa-cdn.net/img/ios/548994749/8ad047df9b897c1318164b1499932f0d" class="app_icon">
+    <span class="app_name">TheWorld for iOS</span>
+    <span class="category">Social Networking</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/twitterrific-5-for-twitter/" title="Twitterrific 5 for Twitter"><img src="https://static-s.aa-cdn.net/img/ios/580311103/f15dba486bb4190261971c2ecb9bc3eb" class="app_icon">
+    <span class="app_name">Twitterrific 5 for Twitter</span>
+    <span class="category">Social Networking</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/feather-for-twitter/" title="feather - a light Twitter app"><img src="https://static-s.aa-cdn.net/img/ios/793157344/ef27f93dd593ba4620ee759dd83134c7" class="app_icon">
+    <span class="app_name">feather - a light Twitter app</span>
+    <span class="category">Social Networking</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/tweetbot-4-for-twitter/" title="Tweetbot 4 for Twitter"><img src="https://static-s.aa-cdn.net/img/ios/1018355599/b4e6de3afb06f5144aa5a0e88cc5a351" class="app_icon">
+    <span class="app_name">Tweetbot 4 for Twitter</span>
+    <span class="category">Social Networking</span>
+    </a></li>
+  
+  </ul>
+</div>
+
+                
+              
+            
+          </div>
+        
+      </div>
+    
+  
+</div><!--app_details-->
+
+            </div>
+
+            
+<div>
+    
+    
+
+    
+
+</div>
+
+            
+<div class="aa-copy-item-id">
+    App&nbsp;ID:&nbsp; 390063388 
+    &nbsp;<a id="item-id-text" href="javascript:void(0)" data-clipboard-text="390063388">[コピー]</a>
+    </div>
+
+        </div>
+    </div>
+    <div class="left-sidebar-bg"></div>
+</div>
+
+    </div><!-- .inner -->
+    
+
+    
+
+</div><!-- .main -->
+
+    
+
+<div class="footer-v2"><div class="inner">
+    <div class="ft-navs">
+        
+<ul class="ft-links">
+    
+        <li><a href="/">ホーム</a></li>
+    
+        <li><a href="/tours/market-data/">市場データ</a></li>
+    
+        <li><a href="/tours/enterprise-market-data/">法人向けアプリ市場データ</a></li>
+    
+        <li><a href="/tours/app-analytics-platform/">分析ツール</a></li>
+    
+        <li><a href="/pricing/">価格</a></li>
+    
+        <li><a href="/about/">企業情報</a></li>
+    
+        <li><a href="/about/leadership/">経営陣</a></li>
+    
+        <li><a href="/about/jobs/">採用</a></li>
+    
+        <li><a href="/about/partnerships/">パートナーシップ</a></li>
+    
+        <li><a href="/about/press/">メディア向け情報</a></li>
+    
+        <li><a href="/about/contact/">連絡先・所在地</a></li>
+    
+        <li><a href="http://blog.appannie.com" target="_blank">ブログ</a></li>
+    
+</ul><ul class="ft-links">
+    
+        <li><a href="http://support.appannie.com" target="_blank">サポート</a></li>
+    
+        <li><a href="http://support.appannie.com/categories/20083210" target="_blank">Analytics API</a></li>
+    
+        <li><a href="/legal/security/">セキュリティポリシー</a></li>
+    
+        <li><a href="/legal/data-usage-policy/">データ使用ポリシー</a></li>
+    
+        <li><a href="/legal/copyright/">著作権ポリシー</a></li>
+    
+</ul>
+
+
+        <ul class="ft-links ft-lang-switch">
+        
+            <li data-lang="en">
+                <a>English</a>
+            </li>
+        
+            <li data-lang="jp" class="current">
+                <a>日本語</a>
+            </li>
+        
+            <li data-lang="kr">
+                <a>한국어</a>
+            </li>
+        
+            <li data-lang="cn">
+                <a>中文(简体)</a>
+            </li>
+        
+            <li data-lang="ru">
+                <a>Русский</a>
+            </li>
+        
+            <li data-lang="fr">
+                <a>Français</a>
+            </li>
+        
+            <li data-lang="de">
+                <a>Deutsch</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ft-misc clearfix">
+        <div class="pull-left">
+            <ul class="ft-links">
+                <li>© 2015 App Annie</li>
+                <li><a href="/help/terms/">サービス利用規約</a></li>
+                <li><a href="/help/privacy/">プライバシーポリシー</a></li>
+                <li id="edd8bedb-dfb9-45e4-9bc6-a547890d2b4d">
+                    <a href="//privacy.truste.com/privacy-seal/App-Annie/validation?rid=d5ca94fe-face-4cbc-97c9-5cad37668d4d"
+                       title="TRUSTe European Safe Harbor certification" target="_blank">
+                        <img style="border: none; vertical-align: middle;" src="//privacy-policy.truste.com/privacy-seal/App-Annie/seal?rid=d5ca94fe-face-4cbc-97c9-5cad37668d4d" alt="TRUSTe European Safe Harbor certification" height="26" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pull-right">
+            <div class="ft-socials">
+                <a href="http://www.linkedin.com/company/app-annie" target="_blank"><i class="sprite-aa-linkedin"></i></a>
+                <a href="http://www.facebook.com/AppAnnie" target="_blank"><i class="sprite-aa-facebook"></i></a>
+                <a href="http://www.twitter.com/appannie/" target="_blank"><i class="sprite-aa-twitter"></i></a>
+                <a href="http://google.com/+appannie" target="_blank"><i class="sprite-aa-gplus"></i></a>
+                <a href="http://www.slideshare.net/AppAnnie" target="_blank"><i class="sprite-aa-slideshare"></i></a>
+                <a href="http://www.youtube.com/appannietv" target="_blank"><i class="sprite-aa-youtube"></i></a>
+                <a href="http://e.weibo.com/appannie" target="_blank"><i class="sprite-aa-weibo"></i></a>
+                <a href="http://blog.appannie.com/feed/" target="_blank"><i class="sprite-aa-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+
+
+<div id="overlay"></div>
+
+<script>
+aaTrack=function(){var e={},f=[],k=0,h=function(){if(arguments[0]){var a=arguments[0],g=[].slice.call(arguments,1);500>k?(f.push([a,g]),k++):(f.shift(),f.push([a,g]));if(e[a])for(var a=e[a],b=a.length,c=0;c<b;c++)a[c].apply(null,g)}};h.register=function(a,g){a:if("object"==typeof a)for(var b in a){var c=a[b];if(e[b])for(var d=e[b],k=d.length,l=0;l<k;l++){if(d[l]==c)break a}else e[b]=[];e[b].push(c)}if(g)for(var h in a)for(b=a[h],c=f.length,d=0;d<c;d++)f[d][0]==h&&b.apply(null,f[d][1])};return h}();
+</script>
+<script type="text/javascript" data-tk="pre_install" >
+  var _kmq = _kmq || [];
+  var _mkto = _mkto || [];
+
+  aaTrack('set', {
+      'env': 'production',
+      'pageType': 'product'
+  });
+
+  (function() {
+    var _tracker = [];
+    tracker = function(item) { _tracker.push(item); }; tracker.pool = _tracker;
+  })();
+</script>
+
+
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-D44H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+!function(w,d,l,i){function go(){!function(w,d,s,l,i){w[l]=w[l]||[],w[l].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl="dataLayer"!=l?"&l="+l:"";j.async=!0,j.src="//www.googletagmanager.com/gtm.js?id="+i+dl,f.parentNode.insertBefore(j,f)}(window,document,"script",l,i)}l="dataLayer_"+i.replace("GTM-",""),lo=w[l]||(w[l]=[]),aaTrack.register({set:function(obj){lo.push(obj)}},!0),w.addEventListener?w.addEventListener("load",go,!1):w.attachEvent?w.attachEvent("onload",go):setTimeout(go,100)}(window,document,"","GTM-D44H");
+</script>
+
+    
+    
+
+<script type="text/javascript" data-tk="track_on_every_page" data-tk-com="gp">
+    aaTrack('set', {
+        'Interface Language': 'jp',
+        'Page Type': 'Web Prod'
+    });
+
+    
+        aaTrack('set', {
+            'eid': 'b11c4a9df33b212c40c2f3df0cc19f98',
+            'uid': '588128'
+        });
+    
+
+    
+        try {
+            tracker(['identify', 588128, {
+                email: 'okuyama@se.cs.titech.ac.jp',
+                $mktoHash: '5c311be456c9b06752068081475037397873dd00'
+            }]);
+        } catch (ex) {
+        }
+        
+    
+    // set all logs to ga
+    
+    try {
+        tracker(['page']);
+    } catch (ex) {
+    }
+
+    
+</script>
+
+
+</div>
+
+<script>
+/* quick $ step 2/3 */
+window.$ = window.jQuery = undefined;
+</script>
+<script src="https://static-s.aa-cdn.net/media/javascript/_lang/ja/django/all.v-004165-2005e1.js"></script>
+
+
+    
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="https://static-s.aa-cdn.net/media/javascript/lib/browser-support/excanvas.canvas.text.js"></script>
+        <![endif]-->
+        <script src="https://static-s.aa-cdn.net/media/javascript/c/prod.min.v-4966027c.js"></script>
+<script src="https://static-s.aa-cdn.net/media/lib/ng-v1.2.1/i18n/angular-locale_ja.v-71f2306c.js"></script>
+        
+    
+
+
+
+<script>
+/* quick $ step 3/3 */
+(function(fns, $) {
+  if (!fns || fns.length < 1) { return; }
+  var i = 0, l = fns.length;
+  for (; i < l; ++i) {
+    $(fns[i]);
+  }
+  fns.length = 0;
+})(__aa_fns, jQuery);
+
+
+    var pageVal = pageVal || {};
+    pageVal.page = 'Detail';
+
+</script>
+
+<script>/* JIRA:XP-793 */
+(function(a,e,n,r){try{if(!a||!e)return;n=e.host;if(n.match(/localhost|\.appannie\.(dev|com)/))return;r=n.replace(/www\./,"blog.");if(n===r)return;a('a[href*="blog.appannie.com"]').each(function(e,n){var o=a(n).attr("href").replace(/blog\.appannie\.com($|[?\/])/,r+"$1");a(n).attr("href",o)})}catch(o){}})(window.jQuery,window.location);
+</script>
+
+
+<script>
+$(function() {
+  var clip = new ZeroClipboard( document.getElementById("item-id-text"), {
+    moviePath: "https://static-s.aa-cdn.net/media/swf/ZeroClipboard.swf", trustedDomains: ['*'], allowScriptAccess: "always"
+  });
+});
+</script>
+
+
+<script>
+    var pageVal = pageVal || {};
+    pageVal.detailPanelOpened = true;
+    pageVal.account_id = '';
+    pageVal.app_id =  '390063388' 
+    pageVal.is_shared = true;
+    pageVal.vertical = 'apps';
+    pageVal.is_demo = false;
+
+pageVal.user_prefer_country = "US";
+pageVal.user_prefer_tzone = "PST8PDT";
+
+
+ pageVal.countries = [{"name": "\u30a2\u30eb\u30d0\u30cb\u30a2", "code": "AL", "slug": "albania", "tzone": "Europe/Tirane", "sid": 143575}, {"name": "\u30a2\u30eb\u30b8\u30a7\u30ea\u30a2", "code": "DZ", "slug": "algeria", "tzone": "Africa/Algiers", "sid": 143563}, {"name": "\u30a2\u30f3\u30b4\u30e9", "code": "AO", "slug": "angola", "tzone": "Africa/Luanda", "sid": 143564}, {"name": "\u30a2\u30f3\u30ae\u30e9", "code": "AI", "slug": "anguilla", "tzone": "America/Anguilla", "sid": 143538}, {"name": "\u30a2\u30f3\u30c6\u30a3\u30b0\u30a2\u30fb\u30d0\u30fc\u30d6\u30fc\u30c0", "code": "AG", "slug": "antigua-and-barbuda", "tzone": "America/Antigua", "sid": 143540}, {"name": "\u30a2\u30eb\u30bc\u30f3\u30c1\u30f3", "code": "AR", "slug": "argentina", "tzone": "America/Argentina/Buenos_Aires", "sid": 143505}, {"name": "\u30a2\u30eb\u30e1\u30cb\u30a2", "code": "AM", "slug": "armenia", "tzone": "Asia/Yerevan", "sid": 143524}, {"name": "\u30aa\u30fc\u30b9\u30c8\u30e9\u30ea\u30a2", "code": "AU", "slug": "australia", "tzone": "Australia/Sydney", "sid": 143460}, {"name": "\u30aa\u30fc\u30b9\u30c8\u30ea\u30a2", "code": "AT", "slug": "austria", "tzone": "Europe/Vienna", "sid": 143445}, {"name": "\u30a2\u30bc\u30eb\u30d0\u30a4\u30b8\u30e3\u30f3", "code": "AZ", "slug": "azerbaijan", "tzone": "Asia/Baku", "sid": 143568}, {"name": "\u30d0\u30cf\u30de", "code": "BS", "slug": "bahamas", "tzone": "America/Nassau", "sid": 143539}, {"name": "\u30d0\u30fc\u30ec\u30fc\u30f3", "code": "BH", "slug": "bahrain", "tzone": "Asia/Bahrain", "sid": 143559}, {"name": "\u30d0\u30eb\u30d0\u30c9\u30b9", "code": "BB", "slug": "barbados", "tzone": "America/Barbados", "sid": 143541}, {"name": "\u30d9\u30e9\u30eb\u30fc\u30b7", "code": "BY", "slug": "belarus", "tzone": "Europe/Minsk", "sid": 143565}, {"name": "\u30d9\u30eb\u30ae\u30fc", "code": "BE", "slug": "belgium", "tzone": "Europe/Brussels", "sid": 143446}, {"name": "\u30d9\u30ea\u30fc\u30ba", "code": "BZ", "slug": "belize", "tzone": "America/Belize", "sid": 143555}, {"name": "\u30d9\u30cb\u30f3", "code": "BJ", "slug": "benin", "tzone": "Africa/Porto-Novo", "sid": 143576}, {"name": "\u30d0\u30df\u30e5\u30fc\u30c0", "code": "BM", "slug": "bermuda", "tzone": "Atlantic/Bermuda", "sid": 143542}, {"name": "\u30d6\u30fc\u30bf\u30f3", "code": "BT", "slug": "Bhutan", "tzone": "Asia/Thimphu", "sid": 143577}, {"name": "\u30dc\u30ea\u30d3\u30a2", "code": "BO", "slug": "bolivia", "tzone": "America/La_Paz", "sid": 143556}, {"name": "\u30dc\u30c4\u30ef\u30ca", "code": "BW", "slug": "botswana", "tzone": "Africa/Gaborone", "sid": 143525}, {"name": "\u30d6\u30e9\u30b8\u30eb", "code": "BR", "slug": "brazil", "tzone": "America/Sao_Paulo", "sid": 143503}, {"name": "\u82f1\u9818\u30f4\u30a1\u30fc\u30b8\u30f3\u8af8\u5cf6", "code": "VG", "slug": "british-virgin-islands", "tzone": "America/Tortola", "sid": 143543}, {"name": "\u30d6\u30eb\u30cd\u30a4", "code": "BN", "slug": "brunei", "tzone": "Asia/Brunei", "sid": 143560}, {"name": "\u30d6\u30eb\u30ac\u30ea\u30a2", "code": "BG", "slug": "bulgaria", "tzone": "Europe/Sofia", "sid": 143526}, {"name": "\u30d6\u30eb\u30ad\u30ca\u30d5\u30a1\u30bd", "code": "BF", "slug": "burkina-faso", "tzone": "Africa/Ouagadougou", "sid": 143578}, {"name": "\u30ab\u30f3\u30dc\u30b8\u30a2", "code": "KH", "slug": "cambodia", "tzone": "Asia/Phnom_Penh", "sid": 143579}, {"name": "\u30ab\u30ca\u30c0", "code": "CA", "slug": "canada", "tzone": "America/Toronto", "sid": 143455}, {"name": "\u30ab\u30fc\u30dc\u30d9\u30eb\u30c7", "code": "CV", "slug": "cape-verde", "tzone": "Atlantic/Cape_Verde", "sid": 143580}, {"name": "\u30b1\u30a4\u30de\u30f3\u8af8\u5cf6", "code": "KY", "slug": "cayman-islands", "tzone": "America/Cayman", "sid": 143544}, {"name": "\u30c1\u30e3\u30c9", "code": "TD", "slug": "chad", "tzone": "Africa/Ndjamena", "sid": 143581}, {"name": "\u30c1\u30ea", "code": "CL", "slug": "chile", "tzone": "America/Santiago", "sid": 143483}, {"name": "\u4e2d\u56fd", "code": "CN", "slug": "china", "tzone": "Asia/Shanghai", "sid": 143465}, {"name": "\u30b3\u30ed\u30f3\u30d3\u30a2", "code": "CO", "slug": "colombia", "tzone": "America/Bogota", "sid": 143501}, {"name": "\u30b3\u30f3\u30b4", "code": "CG", "slug": "congo", "tzone": "Africa/Brazzaville", "sid": 143582}, {"name": "\u30b3\u30b9\u30bf\u30ea\u30ab", "code": "CR", "slug": "costa-rica", "tzone": "America/Costa_Rica", "sid": 143495}, {"name": "\u30af\u30ed\u30a2\u30c1\u30a2", "code": "HR", "slug": "croatia", "tzone": "Europe/Zagreb", "sid": 143494}, {"name": "\u30ad\u30d7\u30ed\u30b9", "code": "CY", "slug": "cyprus", "tzone": "Asia/Nicosia", "sid": 143557}, {"name": "\u30c1\u30a7\u30b3\u5171\u548c\u56fd", "code": "CZ", "slug": "czech-republic", "tzone": "Europe/Prague", "sid": 143489}, {"name": "\u30c7\u30f3\u30de\u30fc\u30af", "code": "DK", "slug": "denmark", "tzone": "Europe/Copenhagen", "sid": 143458}, {"name": "\u30c9\u30df\u30cb\u30ab", "code": "DM", "slug": "dominica", "tzone": "America/Dominica", "sid": 143545}, {"name": "\u30c9\u30df\u30cb\u30ab\u5171\u548c\u56fd", "code": "DO", "slug": "dominican-republic", "tzone": "America/Santo_Domingo", "sid": 143508}, {"name": "\u30a8\u30af\u30a2\u30c9\u30eb", "code": "EC", "slug": "ecuador", "tzone": "America/Guayaquil", "sid": 143509}, {"name": "\u30a8\u30b8\u30d7\u30c8", "code": "EG", "slug": "egypt", "tzone": "Africa/Cairo", "sid": 143516}, {"name": "\u30a8\u30eb\u30b5\u30eb\u30d0\u30c9\u30eb", "code": "SV", "slug": "el-salvador", "tzone": "America/El_Salvador", "sid": 143506}, {"name": "\u30a8\u30b9\u30c8\u30cb\u30a2", "code": "EE", "slug": "estonia", "tzone": "Europe/Tallinn", "sid": 143518}, {"name": "\u30d5\u30a3\u30b8\u30fc", "code": "FJ", "slug": "fiji", "tzone": "Pacific/Fiji", "sid": 143583}, {"name": "\u30d5\u30a3\u30f3\u30e9\u30f3\u30c9", "code": "FI", "slug": "finland", "tzone": "Europe/Helsinki", "sid": 143447}, {"name": "\u30d5\u30e9\u30f3\u30b9", "code": "FR", "slug": "france", "tzone": "Europe/Paris", "sid": 143442}, {"name": "\u30ac\u30f3\u30d3\u30a2", "code": "GM", "slug": "gambia", "tzone": "Africa/Banjul", "sid": 143584}, {"name": "\u30c9\u30a4\u30c4", "code": "DE", "slug": "germany", "tzone": "Europe/Berlin", "sid": 143443}, {"name": "\u30ac\u30fc\u30ca", "code": "GH", "slug": "ghana", "tzone": "Africa/Accra", "sid": 143573}, {"name": "\u30ae\u30ea\u30b7\u30e3", "code": "GR", "slug": "greece", "tzone": "Europe/Athens", "sid": 143448}, {"name": "\u30b0\u30ec\u30ca\u30c0", "code": "GD", "slug": "grenada", "tzone": "America/Grenada", "sid": 143546}, {"name": "\u30b0\u30a2\u30c6\u30de\u30e9", "code": "GT", "slug": "guatemala", "tzone": "America/Guatemala", "sid": 143504}, {"name": "\u30ae\u30cb\u30a2\u30d3\u30b5\u30a6", "code": "GW", "slug": "guinea-bissau", "tzone": "Africa/Bissau", "sid": 143585}, {"name": "\u30ac\u30a4\u30a2\u30ca", "code": "GY", "slug": "guyana", "tzone": "America/Guyana", "sid": 143553}, {"name": "\u30db\u30f3\u30b8\u30e5\u30e9\u30b9", "code": "HN", "slug": "honduras", "tzone": "America/Tegucigalpa", "sid": 143510}, {"name": "\u9999\u6e2f", "code": "HK", "slug": "hong-kong", "tzone": "Asia/Hong_Kong", "sid": 143463}, {"name": "\u30cf\u30f3\u30ac\u30ea\u30fc", "code": "HU", "slug": "hungary", "tzone": "Europe/Budapest", "sid": 143482}, {"name": "\u30a2\u30a4\u30b9\u30e9\u30f3\u30c9", "code": "IS", "slug": "iceland", "tzone": "Atlantic/Reykjavik", "sid": 143558}, {"name": "\u30a4\u30f3\u30c9", "code": "IN", "slug": "india", "tzone": "Asia/Kolkata", "sid": 143467}, {"name": "\u30a4\u30f3\u30c9\u30cd\u30b7\u30a2", "code": "ID", "slug": "indonesia", "tzone": "Asia/Jakarta", "sid": 143476}, {"name": "\u30a2\u30a4\u30eb\u30e9\u30f3\u30c9", "code": "IE", "slug": "ireland", "tzone": "Europe/Dublin", "sid": 143449}, {"name": "\u30a4\u30b9\u30e9\u30a8\u30eb", "code": "IL", "slug": "israel", "tzone": "Asia/Jerusalem", "sid": 143491}, {"name": "\u30a4\u30bf\u30ea\u30a2", "code": "IT", "slug": "italy", "tzone": "Europe/Rome", "sid": 143450}, {"name": "\u30b8\u30e3\u30de\u30a4\u30ab", "code": "JM", "slug": "jamaica", "tzone": "America/Jamaica", "sid": 143511}, {"name": "\u65e5\u672c", "code": "JP", "slug": "japan", "tzone": "Asia/Tokyo", "sid": 143462}, {"name": "\u30e8\u30eb\u30c0\u30f3", "code": "JO", "slug": "jordan", "tzone": "Asia/Amman", "sid": 143528}, {"name": "\u30ab\u30b6\u30d5\u30b9\u30bf\u30f3", "code": "KZ", "slug": "kazakhstan", "tzone": "Asia/Almaty", "sid": 143517}, {"name": "\u30b1\u30cb\u30a2", "code": "KE", "slug": "kenya", "tzone": "Africa/Nairobi", "sid": 143529}, {"name": "\u30af\u30a6\u30a7\u30fc\u30c8", "code": "KW", "slug": "kuwait", "tzone": "Asia/Kuwait", "sid": 143493}, {"name": "\u30ad\u30eb\u30ae\u30b9\u30bf\u30f3", "code": "KG", "slug": "kyrgyzstan", "tzone": "Asia/Bishkek", "sid": 143586}, {"name": "\u30e9\u30aa\u30b9", "code": "LA", "slug": "laos", "tzone": "Asia/Vientiane", "sid": 143587}, {"name": "\u30e9\u30c8\u30d3\u30a2", "code": "LV", "slug": "latvia", "tzone": "Europe/Riga", "sid": 143519}, {"name": "\u30ec\u30d0\u30ce\u30f3", "code": "LB", "slug": "lebanon", "tzone": "Asia/Beirut", "sid": 143497}, {"name": "\u30ea\u30d9\u30ea\u30a2", "code": "LR", "slug": "liberia", "tzone": "Africa/Monrovia", "sid": 143588}, {"name": "\u30ea\u30c8\u30a2\u30cb\u30a2", "code": "LT", "slug": "lithuania", "tzone": "Europe/Vilnius", "sid": 143520}, {"name": "\u30eb\u30af\u30bb\u30f3\u30d6\u30eb\u30af", "code": "LU", "slug": "luxembourg", "tzone": "Europe/Luxembourg", "sid": 143451}, {"name": "\u30de\u30ab\u30aa", "code": "MO", "slug": "macau", "tzone": "Asia/Macau", "sid": 143515}, {"name": "\u30de\u30b1\u30c9\u30cb\u30a2", "code": "MK", "slug": "macedonia", "tzone": "Europe/Skopje", "sid": 143530}, {"name": "\u30de\u30c0\u30ac\u30b9\u30ab\u30eb", "code": "MG", "slug": "madagascar", "tzone": "Indian/Antananarivo", "sid": 143531}, {"name": "\u30de\u30e9\u30a6\u30a4", "code": "MW", "slug": "malawi", "tzone": "Africa/Blantyre", "sid": 143589}, {"name": "\u30de\u30ec\u30fc\u30b7\u30a2", "code": "MY", "slug": "malaysia", "tzone": "Asia/Kuala_Lumpur", "sid": 143473}, {"name": "\u30de\u30ea", "code": "ML", "slug": "mali", "tzone": "Africa/Bamako", "sid": 143532}, {"name": "\u30de\u30eb\u30bf", "code": "MT", "slug": "malta", "tzone": "Europe/Malta", "sid": 143521}, {"name": "\u30e2\u30fc\u30ea\u30bf\u30cb\u30a2", "code": "MR", "slug": "mauritania", "tzone": "Africa/Nouakchott", "sid": 143590}, {"name": "\u30e2\u30fc\u30ea\u30b7\u30e3\u30b9", "code": "MU", "slug": "mauritius", "tzone": "Indian/Mauritius", "sid": 143533}, {"name": "\u30e1\u30ad\u30b7\u30b3", "code": "MX", "slug": "mexico", "tzone": "America/Mexico_City", "sid": 143468}, {"name": "\u30df\u30af\u30ed\u30cd\u30b7\u30a2", "code": "FM", "slug": "micronesia", "tzone": "Pacific/Chuuk", "sid": 143591}, {"name": "\u30e2\u30eb\u30c9\u30d0", "code": "MD", "slug": "moldova", "tzone": "Europe/Chisinau", "sid": 143523}, {"name": "\u30e2\u30f3\u30b4\u30eb", "code": "MN", "slug": "mongolia", "tzone": "Asia/Ulaanbaatar", "sid": 143592}, {"name": "\u30e2\u30f3\u30c8\u30bb\u30e9\u30c8", "code": "MS", "slug": "montserrat", "tzone": "America/Montserrat", "sid": 143547}, {"name": "\u30e2\u30b6\u30f3\u30d3\u30fc\u30af", "code": "MZ", "slug": "mozambique", "tzone": "Africa/Maputo", "sid": 143593}, {"name": "\u30ca\u30df\u30d3\u30a2", "code": "NA", "slug": "namibia", "tzone": "Africa/Windhoek", "sid": 143594}, {"name": "\u30cd\u30d1\u30fc\u30eb", "code": "NP", "slug": "nepal", "tzone": "Asia/Kathmandu", "sid": 143484}, {"name": "\u30aa\u30e9\u30f3\u30c0", "code": "NL", "slug": "netherlands", "tzone": "Europe/Amsterdam", "sid": 143452}, {"name": "\u30cb\u30e5\u30fc\u30b8\u30fc\u30e9\u30f3\u30c9", "code": "NZ", "slug": "new-zealand", "tzone": "Pacific/Auckland", "sid": 143461}, {"name": "\u30cb\u30ab\u30e9\u30b0\u30a2", "code": "NI", "slug": "nicaragua", "tzone": "America/Managua", "sid": 143512}, {"name": "\u30cb\u30b8\u30a7\u30fc\u30eb", "code": "NE", "slug": "niger", "tzone": "Africa/Niamey", "sid": 143534}, {"name": "\u30ca\u30a4\u30b8\u30a7\u30ea\u30a2", "code": "NG", "slug": "nigeria", "tzone": "Africa/Lagos", "sid": 143561}, {"name": "\u30ce\u30eb\u30a6\u30a7\u30fc", "code": "NO", "slug": "norway", "tzone": "Europe/Oslo", "sid": 143457}, {"name": "\u30aa\u30de\u30fc\u30f3", "code": "OM", "slug": "oman", "tzone": "Asia/Muscat", "sid": 143562}, {"name": "\u30d1\u30ad\u30b9\u30bf\u30f3", "code": "PK", "slug": "pakistan", "tzone": "Asia/Karachi", "sid": 143477}, {"name": "\u30d1\u30e9\u30aa", "code": "PW", "slug": "palau", "tzone": "Pacific/Palau", "sid": 143595}, {"name": "\u30d1\u30ca\u30de", "code": "PA", "slug": "panama", "tzone": "America/Panama", "sid": 143485}, {"name": "\u30d1\u30d7\u30a2\u30cb\u30e5\u30fc\u30ae\u30cb\u30a2", "code": "PG", "slug": "papua-new-guinea", "tzone": "Pacific/Port_Moresby", "sid": 143597}, {"name": "\u30d1\u30e9\u30b0\u30a2\u30a4", "code": "PY", "slug": "paraguay", "tzone": "America/Asuncion", "sid": 143513}, {"name": "\u30da\u30eb\u30fc", "code": "PE", "slug": "peru", "tzone": "America/Lima", "sid": 143507}, {"name": "\u30d5\u30a3\u30ea\u30d4\u30f3", "code": "PH", "slug": "philipines", "tzone": "Asia/Manila", "sid": 143474}, {"name": "\u30dd\u30fc\u30e9\u30f3\u30c9", "code": "PL", "slug": "poland", "tzone": "Europe/Warsaw", "sid": 143478}, {"name": "\u30dd\u30eb\u30c8\u30ac\u30eb", "code": "PT", "slug": "portugal", "tzone": "Europe/Lisbon", "sid": 143453}, {"name": "\u30ab\u30bf\u30fc\u30eb", "code": "QA", "slug": "qatar", "tzone": "Asia/Qatar", "sid": 143498}, {"name": "\u30eb\u30fc\u30de\u30cb\u30a2", "code": "RO", "slug": "romania", "tzone": "Europe/Bucharest", "sid": 143487}, {"name": "\u30ed\u30b7\u30a2", "code": "RU", "slug": "russia", "tzone": "Europe/Moscow", "sid": 143469}, {"name": "\u30b5\u30f3\u30c8\u30e1\u30fb\u30d7\u30ea\u30f3\u30b7\u30da", "code": "ST", "slug": "sao-tome-and-principe", "tzone": "Africa/Sao_Tome", "sid": 143598}, {"name": "\u30b5\u30a6\u30b8\u30a2\u30e9\u30d3\u30a2", "code": "SA", "slug": "saudi-arabia", "tzone": "Asia/Riyadh", "sid": 143479}, {"name": "\u30bb\u30cd\u30ac\u30eb", "code": "SN", "slug": "senegal", "tzone": "Africa/Dakar", "sid": 143535}, {"name": "\u30bb\u30a4\u30b7\u30a7\u30eb", "code": "SC", "slug": "seychelles", "tzone": "Indian/Mahe", "sid": 143599}, {"name": "\u30b7\u30a8\u30e9\u30ec\u30aa\u30cd", "code": "SL", "slug": "sierra-leone", "tzone": "Africa/Freetown", "sid": 143600}, {"name": "\u30b7\u30f3\u30ac\u30dd\u30fc\u30eb", "code": "SG", "slug": "singapore", "tzone": "Asia/Singapore", "sid": 143464}, {"name": "\u30b9\u30ed\u30d0\u30ad\u30a2", "code": "SK", "slug": "slovakia", "tzone": "Europe/Bratislava", "sid": 143496}, {"name": "\u30b9\u30ed\u30d9\u30cb\u30a2", "code": "SI", "slug": "slovenia", "tzone": "Europe/Ljubljana", "sid": 143499}, {"name": "\u30bd\u30ed\u30e2\u30f3\u8af8\u5cf6", "code": "SB", "slug": "solomon-islands", "tzone": "Pacific/Guadalcanal", "sid": 143601}, {"name": "\u5357\u30a2\u30d5\u30ea\u30ab", "code": "ZA", "slug": "south-africa", "tzone": "Africa/Johannesburg", "sid": 143472}, {"name": "\u97d3\u56fd", "code": "KR", "slug": "south-korea", "tzone": "Asia/Seoul", "sid": 143466}, {"name": "\u30b9\u30da\u30a4\u30f3", "code": "ES", "slug": "spain", "tzone": "Europe/Madrid", "sid": 143454}, {"name": "\u30b9\u30ea\u30e9\u30f3\u30ab", "code": "LK", "slug": "sri-lanka", "tzone": "Asia/Colombo", "sid": 143486}, {"name": "\u30bb\u30f3\u30c8\u30ad\u30c3\u30c4\u30fb\u30cd\u30a4\u30d3\u30b9", "code": "KN", "slug": "st-kitts-and-nevis", "tzone": "America/St_Kitts", "sid": 143548}, {"name": "\u30bb\u30f3\u30c8\u30eb\u30b7\u30a2", "code": "LC", "slug": "st-lucia", "tzone": "America/St_Lucia", "sid": 143549}, {"name": "\u30bb\u30f3\u30c8\u30d3\u30f3\u30bb\u30f3\u30c8\u30fb\u30b0\u30ec\u30ca\u30c7\u30a3\u30fc\u30f3", "code": "VC", "slug": "st-vincent-and-the-grenadines", "tzone": "America/St_Vincent", "sid": 143550}, {"name": "\u30b9\u30ea\u30ca\u30e0", "code": "SR", "slug": "suriname", "tzone": "America/Paramaribo", "sid": 143554}, {"name": "\u30b9\u30ef\u30b8\u30e9\u30f3\u30c9", "code": "SZ", "slug": "swaziland", "tzone": "Africa/Mbabane", "sid": 143602}, {"name": "\u30b9\u30a6\u30a7\u30fc\u30c7\u30f3", "code": "SE", "slug": "sweden", "tzone": "Europe/Stockholm", "sid": 143456}, {"name": "\u30b9\u30a4\u30b9", "code": "CH", "slug": "switzerland", "tzone": "Europe/Zurich", "sid": 143459}, {"name": "\u53f0\u6e7e", "code": "TW", "slug": "taiwan", "tzone": "Asia/Taipei", "sid": 143470}, {"name": "\u30bf\u30b8\u30ad\u30b9\u30bf\u30f3", "code": "TJ", "slug": "tajikistan", "tzone": "Asia/Dushanbe", "sid": 143603}, {"name": "\u30bf\u30f3\u30b6\u30cb\u30a2", "code": "TZ", "slug": "tanzania", "tzone": "Africa/Dar_es_Salaam", "sid": 143572}, {"name": "\u30bf\u30a4", "code": "TH", "slug": "thailand", "tzone": "Asia/Bangkok", "sid": 143475}, {"name": "\u30c8\u30ea\u30cb\u30c0\u30fc\u30c9\u30fb\u30c8\u30d0\u30b4", "code": "TT", "slug": "trinidad-and-tobago", "tzone": "America/Port_of_Spain", "sid": 143551}, {"name": "\u30c1\u30e5\u30cb\u30b8\u30a2", "code": "TN", "slug": "tunisia", "tzone": "Africa/Tunis", "sid": 143536}, {"name": "\u30c8\u30eb\u30b3", "code": "TR", "slug": "turkey", "tzone": "Europe/Istanbul", "sid": 143480}, {"name": "\u30c8\u30eb\u30af\u30e1\u30cb\u30b9\u30bf\u30f3", "code": "TM", "slug": "turkmenistan", "tzone": "Asia/Ashgabat", "sid": 143604}, {"name": "\u30bf\u30fc\u30af\u30b9\u30fb\u30ab\u30a4\u30b3\u30b9", "code": "TC", "slug": "turks-and-caicos", "tzone": "America/Grand_Turk", "sid": 143552}, {"name": "\u30a6\u30ac\u30f3\u30c0", "code": "UG", "slug": "uganda", "tzone": "Africa/Kampala", "sid": 143537}, {"name": "\u30a6\u30af\u30e9\u30a4\u30ca", "code": "UA", "slug": "ukraine", "tzone": "Europe/Kiev", "sid": 143492}, {"name": "\u30a2\u30e9\u30d6\u9996\u9577\u56fd\u9023\u90a6", "code": "AE", "slug": "united-arab-emirates", "tzone": "Asia/Dubai", "sid": 143481}, {"name": "\u30a4\u30ae\u30ea\u30b9", "code": "GB", "slug": "united-kingdom", "tzone": "Europe/London", "sid": 143444}, {"name": "\u7c73\u56fd", "code": "US", "slug": "united-states", "tzone": "America/Los_Angeles", "sid": 143441}, {"name": "\u30a6\u30eb\u30b0\u30a2\u30a4", "code": "UY", "slug": "uruguay", "tzone": "America/Montevideo", "sid": 143514}, {"name": "\u30a6\u30ba\u30d9\u30ad\u30b9\u30bf\u30f3", "code": "UZ", "slug": "uzbekistan", "tzone": "Asia/Tashkent", "sid": 143566}, {"name": "\u30d9\u30cd\u30ba\u30a8\u30e9", "code": "VE", "slug": "venezuela", "tzone": "America/Caracas", "sid": 143502}, {"name": "\u30d9\u30c8\u30ca\u30e0", "code": "VN", "slug": "vietnam", "tzone": "Asia/Ho_Chi_Minh", "sid": 143471}, {"name": "\u30a4\u30a8\u30e1\u30f3", "code": "YE", "slug": "yemen", "tzone": "Asia/Aden", "sid": 143571}, {"name": "\u30b8\u30f3\u30d0\u30d6\u30a8", "code": "ZW", "slug": "zimbabwe", "tzone": "Africa/Harare", "sid": 143605}];
+
+
+
+    __ng_boot_inject_module = 'item.all';
+</script>
+<script src="https://static-s.aa-cdn.net/media/javascript/_lang/ja/sea/aa.v-8a6714-2005e1.js"></script>
+<script src="https://static-s.aa-cdn.net/media/javascript/_lang/ja/sea/app.v-30487f-2005e1.js"></script>
+<script src="https://static-s.aa-cdn.net/media/javascript/prod/aa.min.v-d116a027.js"></script>
+<script src="https://static-s.aa-cdn.net/media/javascript/prod/app.min.v-6a1e3dfe.js"></script>
+<script> jQuery(function(){ require(["app/app"]); }); </script>
+
+<script>
+var pageVal = $.extend(pageVal || {}, {
+    'GA': {
+        'pageType': 'SS',
+        'vertical': '',
+        'pageName': 'Detail',
+        'label': 'SS-Detail'
+    }
+});
+</script>
+
+<script>
+    
+    $(function() { setTimeout(function() {
+    var el = document.createElement('script'); el.type = 'text/javascript'; el.async = true;
+    el.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fe162ac05cbe453';
+    document.body.appendChild(el);
+    }, 800);
+    });
+    
+    
+var pageVal = $.extend({}, pageVal);
+
+pageVal.lang =  __lang;
+
+
+
+
+
+    
+</script>
+
+
+
+<!-- www.appannie.com, https://www.appannie.com -->
+
+
+
+</body>
+</html>
