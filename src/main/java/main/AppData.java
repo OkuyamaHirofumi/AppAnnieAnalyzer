@@ -2,19 +2,28 @@ package main;
 
 import htmlParser.MapDescendingSort;
 
-import java.util.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class AppData {
 	String name;
-	
-	Map<String, Integer> totalWordCount = new HashMap<String, Integer>();
-	ArrayList<VersionInfo> versionInfos = new ArrayList<VersionInfo>();//versionごとの情報を管理
 
-	public AppData(ArrayList<VersionInfo> versionInfos) {
+	Map<String, Integer> totalWordCount = new HashMap<String, Integer>();
+	List<VersionInfo> versionInfos = new ArrayList<VersionInfo>();//versionごとの情報を管理
+
+	public AppData(List<VersionInfo> versionInfos,String name) {
 		//wordCount・versionInfosオブジェクトを作って初期化
 		this.versionInfos = versionInfos;
 		countTotalWord();
+		this.totalWordCount = MapDescendingSort.descendingSort(this.totalWordCount);
+		this.name = name;
 	};
 
 	// 各ワードの合計出現個数をカウントする
@@ -34,11 +43,13 @@ public class AppData {
 				}
 			}
 		}
+		totalWordCount = MapDescendingSort.descendingSort(totalWordCount);
 		return totalWordCount;
 	}
-	
+
 	public void showData(){
 		totalWordCount = MapDescendingSort.descendingSort(totalWordCount);
+		System.out.println("----------------- "+name+" ------------------");
 		System.out.println("[ToatalWordList]");
 		for(String key : totalWordCount.keySet()){
 			int count = totalWordCount.get(key);
@@ -50,6 +61,23 @@ public class AppData {
 			for(String key : vi.getWordCount().keySet()){
 			System.out.println(key + " : " + vi.getWordCount().get(key));
 			}
+		}
+	}
+
+	public void AppDataToCSV(String fileName,String directory){
+		try {
+			FileWriter fw = new FileWriter(directory + fileName + ".csv");
+			PrintWriter pw = new PrintWriter(new BufferedWriter(fw));
+			pw.println(name + ",Number of Word");
+			pw.print("word");
+			pw.print(",");
+			pw.println("number");
+			for(Map.Entry<String, Integer> wordCount : totalWordCount.entrySet()){
+				pw.println(wordCount.getKey() + "," + wordCount.getValue());
+			}
+			pw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 

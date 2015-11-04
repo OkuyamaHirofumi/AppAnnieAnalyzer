@@ -1,7 +1,7 @@
 package main;
 
-import java.util.*;
-import java.util.regex.Pattern;
+import java.util.ArrayList;
+import java.util.Map;
 
 
 public class VersionInfo {
@@ -13,20 +13,21 @@ public class VersionInfo {
 	private Map<String, Integer> WordCount;
 
 	public VersionInfo(String versionString, Map<String, Integer> WordCount) {
-		this.versionString = versionString;
+		//数字以外のアルファベットを消す
+		this.versionString = versionString.replaceAll("[a-z]|[A-Z]", "");
 		this.WordCount = WordCount;
-		for (String number : versionString.split(Pattern.quote("."))) {
-			versionArray.add(Integer.parseInt(number));
-		}
-		if(versionArray.size() > 0){
-			majarNumber = versionArray.get(0);
-		}
-		if (versionArray.size() >= 2) {
-			minerNumber = versionArray.get(1);
-		}
-		if (versionArray.size() >= 3) {
-			fixNumber = versionArray.get(2);
-		}
+//		for (String number : this.versionString.split(Pattern.quote("."))) {
+//			versionArray.add(Integer.parseInt(number));
+//		}
+//		if(versionArray.size() > 0){
+//			majarNumber = versionArray.get(0);
+//		}
+//		if (versionArray.size() >= 2) {
+//			minerNumber = versionArray.get(1);
+//		}
+//		if (versionArray.size() >= 3) {
+//			fixNumber = versionArray.get(2);
+//		}
 	}
 
 	public int getMajar() {

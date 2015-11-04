@@ -2,27 +2,28 @@ package htmlParser;
 
 import java.io.File;
 import java.io.IOException;
-
-import main.AppData;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.ling.CoreAnnotations.LemmaAnnotation;
-import edu.stanford.nlp.ling.CoreAnnotations.NamedEntityTagAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.PartOfSpeechAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.SentencesAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.TextAnnotation;
 import edu.stanford.nlp.ling.CoreAnnotations.TokensAnnotation;
+import edu.stanford.nlp.ling.CoreLabel;
 import edu.stanford.nlp.pipeline.Annotation;
-import edu.stanford.nlp.pipeline.POSTaggerAnnotator;
 import edu.stanford.nlp.pipeline.StanfordCoreNLP;
 import edu.stanford.nlp.util.CoreMap;
-
-import java.util.*;
 
 public class AppDetailAnalyzer {
 
@@ -32,7 +33,19 @@ public class AppDetailAnalyzer {
 	public AppDetailAnalyzer() {
 		exceptPosList = Arrays.asList(s);
 	}
+public String getAppName(File htmlFile){
+	String name = null;
+	Document doc;
+	try {
+		doc = Jsoup.parse(htmlFile,"UTF-8");
+		name = doc.getElementsByTag("h2").text();
+	} catch (IOException e) {
+		// TODO 自動生成された catch ブロック
+		e.printStackTrace();
+	}
 
+	return name;
+}
 	public Element getVersionBlock(File htmlFile) {
 		Element versionBlock = null;
 		try {
@@ -52,6 +65,11 @@ public class AppDetailAnalyzer {
 		List<String> descriptionList = new ArrayList<String>();
 		List<String> versionStringList = new ArrayList<String>();
 		Map<String, String> versionInfos = new LinkedHashMap<String, String>();// <version,description>
+		if(versionBlock == null){
+			versionInfos.put("1.0.0","");
+			System.err.println("バージョンブロックが無い");
+			return versionInfos;
+		}
 		Elements versionElements = versionBlock.select("h5");
 		Elements descriptions = versionBlock.select(".app-version-note");
 
@@ -64,7 +82,7 @@ public class AppDetailAnalyzer {
 		// version番号の取得
 		for (Element versionElement : versionElements) {
 			String tmp = versionElement.text().split(" ", 2)[1]
-					.replace("(", "").replace(")", "");
+					.replace("(", "").replace(")", "").replaceAll("年|月", "/").replace("日", "");			
 			versionStringList.add(tmp);
 		}
 
@@ -75,7 +93,7 @@ public class AppDetailAnalyzer {
 
 		}
 		for (Map.Entry<String, String> m : versionInfos.entrySet()) {
-			System.out.println(m.getKey() + " : " + m.getValue());
+//			System.out.println(m.getKey() + " : " + m.getValue());
 		}
 		return versionInfos;
 	}
@@ -98,8 +116,8 @@ public class AppDetailAnalyzer {
 				if (lemma.length() > 2
 						&& !exceptPosList.contains(pos)) {
 //					 if(pos.equals("TO"))
-					System.out.println("word :" + word + ", lemma : " + lemma
-							+ ", pos : " + pos);
+//					System.out.println("word :" + word + ", lemma : " + lemma
+//							+ ", pos : " + pos);
 					if (wordCount.containsKey(lemma)) {
 						wordCount.put(lemma, wordCount.get(lemma) + 1);
 					} else {
@@ -109,7 +127,7 @@ public class AppDetailAnalyzer {
 			}
 		}
 		for (Map.Entry<String, Integer> m : wordCount.entrySet()) {
-			System.out.println(m.getKey() + " : " + m.getValue());
+//			System.out.println(m.getKey() + " : " + m.getValue());
 		}
 		return wordCount;
 	}
