@@ -65,6 +65,7 @@ public class AppData {
 	}
 
 	public void AppDataToCSV(String fileName,String directory){
+		fileName = fileName.replace("|", "");
 		try {
 			FileWriter fw = new FileWriter(directory + fileName + ".csv");
 			PrintWriter pw = new PrintWriter(new BufferedWriter(fw));

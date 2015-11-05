@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html lang="jp" class="ie ie8" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if IE 9]><html lang="jp" class="ie ie9" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if gte IE 10]><html lang="jp" class="ie ie-edge" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if !IE]><!--> <html lang="jp" xmlns:og="http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwcPUFJXGwEBUlJSDgc="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":36,"licenseKey":"8c32ed8b53","agent":"js-agent.newrelic.com/nr-768.min.js","transactionName":"ZwdbZkpZXENVWxZbDF5Nf0dWW0ZZW1ZNRQZSA1dTVEFGWVdLTEUGUkxdV0xZW1xHAiBTEFUmXEZZUV5DYlEHRU1XB00=","applicationID":"2163096","errorBeacon":"bam.nr-data.net","applicationTime":379}</script>
+<meta name="robots" content="noarchive">
+<meta name="viewport" content="width=980"/>
+<title>
+
+CalenGoo - for Google Calendar and iCloud - iOS Store ストアトップアプリ
+
+ | App Annie</title>
+<meta name="description" content="
+
+iOS StoreのCalenGoo - for Google Calendar and iCloudなど、デイリーアプリランキング、ランク履歴、トップベストセラーアプリの特徴とレビューをご確認ください。
+
+" />
+<meta name="keywords" content="app annie analytics store stats intelligence rankings reviews statistics market data ios apple google android" />
+<meta name="google-site-verification" content="ivCYuhXzy549wGxwC7WBt3xK68o8CBxXAmt0tWt-ork" />
+
+<meta name="apple-itunes-app" content="app-id=660004961"/>
+<meta name="google-play-app" content="app-id=com.appannie.app">
+
+
+
+    
+        <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@appannie">
+<meta name="twitter:creator" content="@appannie">
+
+    <meta name="twitter:title" content="CalenGoo - for Google Calendar and iCloud">
+    <meta property="og:title" content="CalenGoo - for Google Calendar and iCloud">
+
+
+
+    <meta name="twitter:image:src" content="https://static-s.aa-cdn.net/img/ios/300370871/8db400a8b569d619a1646decaf38622f">
+    <meta property="og:image" content="https://static-s.aa-cdn.net/img/ios/300370871/8db400a8b569d619a1646decaf38622f">
+
+
+    
+
+
+<link rel="alternate" type="application/rss+xml" title="App Annie - App Tracking &amp; Analytics" href="http://feeds.feedburner.com/askannie" />
+<link rel="apple-touch-icon-precomposed" href="https://static-s.aa-cdn.net/media/pictures/favicon-60.v-ff775b28.png" />
+<link rel="icon" type="image/png" href="https://static-s.aa-cdn.net/media/pictures/favicon.v-83fca9a0.png" />
+
+<script>
+AA_MEDIA_URL = 'https://static-s.aa-cdn.net/media/';
+AA_CMS_CONTENT_URL = 'https://static-c.aa-cdn.net/wp-content/';
+AA_BLOG_CONTENT_URL = 'https://static-s.aa-cdn.net/media/blog-content/';
+</script>
+<script>
+/* quick $ step 1/3 */
+(function() {
+var fns = __aa_fns = [];
+$ = jQuery = function(fn) {
+  if (fn.call && fn.apply) { fns.push(fn); return;
+  } else if (fn === document) {
+    return { ready: function(fn) {
+        if (fn.call && fn.apply) { fns.push(fn); }
+    } };
+  }
+  throw 'dont use $ other than ready';
+};
+$.extend = function(obj) {
+  var i=1,srcs=arguments,l=srcs.length,src,key;
+  for(;i<l;++i) { src=srcs[i];
+    for (key in src) { obj[key] = src[key]; }
+  }
+  return obj;
+};
+
+window.__lang = 'ja';
+})();
+</script>
+
+
+
+
+    <link type="text/css" rel="stylesheet" href="https://static-s.aa-cdn.net/media/css/c/base.min.v-2abe22a1.css" />
+    
+        <link type="text/css" rel="stylesheet" href="https://static-s.aa-cdn.net/media/css/c/prod.min.v-061a0160.css" />
+
+        
+    
+
+
+
+
+
+<!-- TradeDoubler site verification 2289284 -->
+</head>
+<body class="customize-bs fix-for-bs lang-noop lang-jp section-storestats  body-page-app-details "
+    >
+
+
+<div id="container" class="">
+<!--[if lt IE 10]>
+<div id="no_old_ie">
+    <h3>ブラウザのバージョンが最新ではありません。</h3>
+    <p>より速くて安全なブラウジングができるよう、以下のブラウザから選んでアップグレードしてください。</p>
+    <div id="browser_upgrade">
+        <a href="http://www.google.com/chrome" title="Google Chrome"><img src="https://static-s.aa-cdn.net/media/pictures/browser/chrome.v-8f9bd35a.jpg" alt="Google Chrome" /></a>
+        <a href="http://www.mozilla.org/" title="Mozilla Firefox"><img src="https://static-s.aa-cdn.net/media/pictures/browser/firefox.v-fd4ea3bb.jpg" alt="Mozilla Firefox" /></a>
+        <a href="http://windows.microsoft.com/en-hk/internet-explorer/ie-11-worldwide-languages" title="Internet Explorer 11"><img src="https://static-s.aa-cdn.net/media/pictures/browser/ie11.v-fb7889f9.jpg" alt="Internet Explorer 11" /></a>
+    </div>
+</div>
+<![endif]-->
+    
+
+    
+<div class="header-v2-old">
+    <div class="header-v2-old-main-nav-wrap">
+        <div class="inner">
+            <div class="brand pull-left">
+                <a class="navbar-brand pull-left" href="/">
+                    <img src="https://static-s.aa-cdn.net/media/pictures/appannie-logo.v-64ae5eec.png" alt="App Annie"/>
+                </a>
+            </div>
+
+            <ul class="main-nav prod-main-nav pull-left" id="J-main-nav">
+                <li class="nav-item">
+                    <a href="#subnav-market-data" onclick="return false;" class="aa-nav-toggle">市場データ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#subnav-analytics" onclick="return false;" class="aa-nav-toggle">分析ツール</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/indexes/all-stores/report/" class="aa-nav-link">インサイト</a>
+                </li>
+            </ul>
+
+            <div class="pull-right right-nav">
+                
+                <ul class="main-nav mkt-main-nav pull-left" id="J-main-nav-r">
+                    <li class="nav-item">
+                        <a href="#subnav-tours" onclick="return false;" class="aa-nav-toggle">製品紹介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/jp/pricing/" class="aa-nav-link">価格</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#subnav-about" onclick="return false;" class="aa-nav-toggle">企業情報</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="http://jp.blog.appannie.com/" class="aa-nav-link">ブログ</a>
+                    </li>
+                    <li class="nav-item hide">
+                        <a target="_blank" href="http://support.appannie.com" class="aa-nav-link">サポート</a>
+                    </li>
+                </ul>
+                
+
+                <div class="search-box-wrap pull-left">
+                    <form action="/search/" name="search">
+                    <ul class="search-box">
+                        <li class="dropdown selector">
+                            <span class="dropdown-toggle" role="button" data-toggle="dropdown"><span data-value="apps">アプリ</span><i class="fa fa-chevron-up icon-chevron-up"></i><i class="fa fa-chevron-down icon-chevron-down"></i></span>
+                            <ul class="dropdown-menu" role="menu">
+                                <li role="presentation"
+                                    data-placeholder=""
+                                    data-value=""
+                                    data-vertical=""
+                                    data-market=""
+                                    data-label="">
+                                    <a role="menuitem" href="#">
+                                        
+                                        <i class="icon-aa-check"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="vertical" value="apps">
+                        </li>
+                        <li>
+                            <input name="q" class="search-box-input"
+                                placeholder="アプリ、 パブリッシャー"
+                                value="">
+                        </li>
+                        <li class="search-icon"><i class="icon-search fa fa-search"></i></li>
+                    </ul>
+                    </form>
+                </div>
+
+                <ul class="user-nav pull-left pull-left-space">
+
+                    <li class="nav-item dropdown nav-item-user-prefs">
+                        <a href="#" class="aa-user-prefs-toggle dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="user-display-name">奥山 博史</span>
+                            <span class="user-email">okuyama@se.cs.titech.ac.jp</span>
+                            <i class="fa fa-chevron-up icon-chevron-up"></i><i class="fa fa-chevron-down icon-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            
+
+    <li class="head head-for-analytics">
+        Analytics &amp; Advertising
+    </li>
+    
+        <li><a href="/account/list/">接続済みアカウント</a></li>
+    
+        <li><a href="/account/apps/">アプリ</a></li>
+    
+        <li><a href="/account/sharing/">データ共有</a></li>
+    
+        <li><a href="/account/export/">バックアップデータ</a></li>
+    
+
+    <li class="head head-for-account">
+        App Annieアカウント
+    </li>
+    
+        <li><a href="/account/teams/">チームシェア</a></li>
+    
+        <li><a href="/account/settings/">ユーザー設定</a></li>
+    
+        <li><a href="/account/api/key/">APIキー</a></li>
+    
+
+
+                            <li class="spacer"></li>
+                            <li class="support"><a target="_blank" href="http://support.appannie.com">サポート</a></li>
+                            <li class="logout"><a href="/account/logout/">ログアウト</a></li>
+                        </ul>
+                    </li>
+                    
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-v2-old-sub-nav-wrap"><div class="header-v2-old-sub-nav-inner">
+        <div id="subnav-analytics" class="sub-nav-drawer">
+            <div class="inner">
+                <ul class="sub-nav-item">
+                    <li class="">
+                        <a href="/comparator/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            App Analytics</a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item">
+                    <li class="">
+                        <a href="/ad_dashboard/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Advertising Analytics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="subnav-market-data" class="sub-nav-drawer">
+            <div class="inner">
+                <ul class="sub-nav-item nav-for-analytics">
+                    <li class="">
+                        <a href="/top/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Store Stats</a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item nav-for-analytics">
+                    <li class="">
+                        <a href="/indexes/all-stores/rank/overall/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Index</a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item sub-nav-item-sep nav-for-analytics">
+                    <li class="">
+                        <a href="/ssp_dashboard/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Store Stats Pro
+                        </a>
+                        <span class="sub-nav-item-label">月額$59から</span>
+                    </li>
+                </ul>
+                
+                <ul class="sub-nav-item sub-nav-item-sep nav-for-market-data">
+                    <li class="">
+                        <a href="/intelligence/dashboard/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Store Intelligence
+                        </a>
+                        <span class="sub-nav-item-label">PREMIUM</span>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item nav-for-market-data">
+                    <li class="">
+                        <a href="/intelligence/dashboard/usage/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Usage Intelligence
+                        </a>
+                    </li>
+                </ul>
+                <ul class="sub-nav-item nav-for-market-data">
+                    <li class="">
+                        <a href="/intelligence/audience/top/">
+                            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+                            Audience Intelligence
+                        </a>
+                     </li>
+                 </ul>
+            </div>
+        </div>
+        
+        <div id="subnav-tours" class="sub-nav-drawer">
+            <div class="inner">
+                
+<ul class="sub-nav-item nav-for-analytics">
+    <li class=" as-header">
+        <a href="/tours/market-data/">
+            
+            市場データ
+        </a>
+    </li><li class="">
+        <a href="/tours/store-stats/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Store Stats
+        </a>
+    </li><li class="">
+        <a href="/tours/store-stats-pro/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Store Stats Pro
+            <i class="nav-special-dot">月額$59から</i>
+        </a>
+    </li><li class="">
+        <a href="/tours/aso/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            ASO
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item nav-for-market-data">
+    <li class=" as-header">
+        <a href="/tours/enterprise-market-data/">
+            
+            法人向けアプリ市場データ
+            <i class="nav-special-dot">PREMIUM</i>
+        </a>
+    </li><li class="">
+        <a href="/tours/store-intelligence/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Store Intelligence
+        </a>
+    </li><li class="">
+        <a href="/tours/usage-intelligence/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Usage Intelligence
+        </a>
+    </li><li class="">
+        <a href="/tours/audience-intelligence/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Audience Intelligence
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item nav-for-analytics">
+    <li class=" as-header">
+        <a href="/tours/app-analytics-platform/">
+            
+            分析ツール
+        </a>
+    </li><li class="">
+        <a href="/tours/app-store-analytics/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            App Store Analytics
+        </a>
+    </li><li class="">
+        <a href="/tours/advertising-analytics/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            Advertising Analytics
+        </a>
+    </li><li class="">
+        <a href="/tours/in-app-analytics/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            In-App Analytics
+            <i class="nav-special-dot">BETA</i>
+        </a>
+    </li>
+</ul>
+
+
+            </div>
+        </div>
+        <div id="subnav-about" class="sub-nav-drawer">
+            <div class="inner">
+                
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            企業情報
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/leadership/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            経営陣
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/jobs/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            採用
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/customers/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            導入企業例
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/partnerships/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            パートナーシップ
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/press/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            メディア向け情報
+        </a>
+    </li>
+</ul>
+
+<ul class="sub-nav-item">
+    <li class="">
+        <a href="/about/contact/">
+            <span class="sub-nav-list-item-marker"> <i class="icon-aa-bullet-filled"></i> <i class="icon-aa-bullet"></i> </span>
+            連絡先・所在地
+        </a>
+    </li>
+</ul>
+
+
+            </div>
+        </div>
+        
+    </div></div>
+</div>
+
+<script>
+
+(function(){var mainNav=document.getElementById("J-main-nav");if(mainNav){proc(mainNav)}mainNav=document.getElementById("J-main-nav-r");if(mainNav){proc(mainNav)}function proc(mainNav){var navItems=mainNav.getElementsByTagName("li");var currentNavItem;var hasClass=function(element,className){var classNames=element.className.split(/\s+/);for(var i=0;i<classNames.length;i++){if(className===classNames[i]){return true}}return false};for(var i=0,len=navItems.length;i<len;i++){var nav=navItems[i];if(hasClass(nav,"current")){currentNavItem=nav}}if(!currentNavItem){return}var currentNavLink=currentNavItem.getElementsByTagName("a")[0];if(!hasClass(currentNavLink,"aa-nav-toggle")){return}currentNavItem.className+=" active";var targetSubNavId=currentNavLink.href.split("#")[1];var targetSubNav=document.getElementById(targetSubNavId);if(!targetSubNav){return}var inner=targetSubNav.getElementsByTagName("div")[0];var wrapper=targetSubNav.parentElement.parentElement;targetSubNav.className+=" aa-nav-in";targetSubNav.style.display="block";inner.style.top="0";inner.style.display="block";wrapper.style.minHeight=inner.offsetHeight+"px"}})();
+
+</script>
+
+  
+
+    <div class="main storestats_wrapper page_app-details">
+    
+    <div class="inner" 
+itemscope itemtype="http://schema.org/MobileSoftwareApplication"
+>
+      <!-- AddThis Button BEGIN -->
+      <div class="aa-widget-addthis">
+        <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+          <a class="addthis_button_preferred_1"></a>
+          <a class="addthis_button_preferred_2"></a>
+          <a class="addthis_button_preferred_3"></a>
+          <a class="addthis_button_preferred_4"></a>
+          <a class="addthis_button_compact"></a>
+        </div>
+      </div>
+      <!-- AddThis Button END -->
+      
+
+<script>
+    var pageVal = pageVal || {};
+    pageVal.app_show_mode = 'public'; 
+    pageVal.app_market = 'itc';
+    pageVal.market_langid = 'ITC';
+    pageVal.app_device = ''; 
+</script>
+
+<!-- app picker -->
+<!--  -->
+<!-- app picker end -->
+<div class="frame frame-app">
+    <div class="aa-sidebar aa-sidebar-large">
+        <div class="sidebar-inner">
+            
+            <span itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                <span itemprop="price" content="6.99 USD"></span>
+                <span itemprop="seller" itemscope itemtype="http://schema.org/Organization">
+                  <span itemprop="name" content="iOS Store"></span>
+                </span>
+            </span>
+            <span itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
+                <span itemprop="ratingValue" content=""></span>
+                <span itemprop="ratingCount" content=""></span>
+            </span>
+            
+            <div class="app_name entity-profile">
+                <div class="entity-icon">
+                    <img itemprop="image" class="itc" src="https://static-s.aa-cdn.net/img/ios/300370871/8db400a8b569d619a1646decaf38622f"  alt="CalenGoo - for Google Calendar and iCloud - iOS StoreのアプリランキングとアプリのStore Stats" />
+                </div>
+                <div class="entity-name" itemprop="name">CalenGoo - for Google Calendar and iCloud</div>
+            </div>
+            
+<ul class="menu" data-category="analytics">
+    
+    <li class="current">
+        
+        <a  href="/apps/ios/app/300370871/"  target="">
+            
+            
+            <i class="icon-info-sign fa fa-info-circle"></i><span>アプリ詳細</span>
+            
+            
+            
+        </a>
+    </li>
+    
+</ul>
+
+<ul class="menu" data-category="intelligence">
+    
+    <li class="">
+        
+            <i class="ui-icon prem-small"></i>
+        
+        <a  href="/apps/ios/app/300370871/intelligence/"  target="">
+            
+            
+            <i class="aaicon-store"></i><span>Store<br>Intelligence</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/300370871/usage/"  target="">
+            
+            
+            <i class="aaicon-usage"></i><span>Usage<br>Intelligence</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/300370871/audience/"  target="">
+            
+            
+            <i class="icon-male fa fa-male"></i><span>Audience<br>Intelligence</span>
+            
+            
+            
+        </a>
+    </li>
+    
+</ul>
+
+<ul class="menu" data-category="rank">
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/300370871/ssp/"  target="">
+            
+            
+            <i class="aaicon-sspro_icon"></i><span>Store Stats Pro</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/300370871/app-ranking/"  target="">
+            
+            
+            <i class="icon-calendar fa fa-calendar"></i><span>デイリーランク</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/300370871/rank-history/"  target="">
+            
+            
+            <i class="icon-arrow-up fa fa-arrow-up"></i><span>ランキング推移</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/300370871/keywords/"  target="">
+            
+            
+            <i class="aaicon-keywords"></i><span>キーワード/ ASO</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/300370871/features/"  target="">
+            
+            
+            <i class="aaicon-featured"></i><span>フィーチャー</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/300370871/ratings/"  target="">
+            
+            
+            <i class="icon-star-half"></i><i class="icon-star-empty"></i><i class="fa fa-star-half-o"></i><span>評価</span>
+            
+            
+            
+        </a>
+    </li>
+    
+    <li class="">
+        
+        <a  href="/apps/ios/app/300370871/reviews/"  target="">
+            
+            
+            <i class="icon-comments fa fa-comments"></i><span>レビュー</span>
+            
+            
+            
+        </a>
+    </li>
+    
+</ul>
+
+
+
+            <img class="sidebar-logo" src="https://static-s.aa-cdn.net/media/pictures/logo/sidebar_stencil.v-6b37ae6b.png" alt="AppAnnie.com" width="141" height="97"/>
+        </div>
+    </div>
+
+    <div class="content content-app app-details">
+        <div class=" content-container aa-popup-container">
+            
+
+            
+
+<div class="app-info-top aa-info-columns aa-info-columns-app">
+    
+    <div class="name">
+        <h2 class="asset-name" js-expandable >CalenGoo - for Google Calendar and iCloud</h2><label class="asset-type">[アプリ]</label>
+        
+<div class="aa-sharing-link">
+
+
+</div>
+
+    </div>
+    <div class="row-control-group clearfix summary-container">
+    <div class="left-align-controls invisible summary">
+    
+        
+
+<div class="summary-item">
+    <label  >ストア</label>
+    <div class="value">
+
+    
+
+
+    
+    
+        <a class="summary-item-text" title="iOS Store" href="https://itunes.apple.com/app/id300370871" target="_blank">iOS Store</a>
+        <i class="fa fa-external-link"></i>
+        
+    
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label  >価格</label>
+    <div class="value">
+
+    
+    6.99 USD
+    
+
+
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label  >互換性</label>
+    <div class="value">
+
+    
+    ユニバーサル
+    
+
+
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label  >パブリッシャー</label>
+    <div class="value">
+
+    
+
+
+    
+    
+        <a class="summary-item-text" title="Dominique Andr Gunia" href="/apps/ios/publisher/dominique-andr-gunia" >Dominique Andr Gunia</a>
+        
+        
+    
+    
+
+
+    
+
+
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label data-helptip="ストア全体における、あるアプリの異なるバージョンに対する一貫した名前。データはApp Annieが管理・所有するものです。"  >ユニファイド・アプリ</label>
+    <div class="value">
+
+    
+
+
+    
+
+
+    
+
+
+    
+        
+        <a class="summary-item-link" href="/apps/all-stores/app/calengoo/">
+            <span class="summary-item-text" title="CalenGoo">CalenGoo</span><span> (2 アプリ)</span>
+        </a>
+        
+        <div class="btn btn-mini click-to-show" data-type="app" ><i class="fa fa-caret-down"></i></div>
+        
+        
+    
+
+    </div>
+</div>
+
+    
+        
+
+<div class="summary-item">
+    <label data-helptip="同じ知的財産を共有するアプリのグループ。メディアミックスのようなもの。データはApp Annieが管理・所有するものです。"  >アプリフランチャイズ</label>
+    <div class="value">
+
+    
+
+
+    
+
+
+    
+
+
+    
+        
+        <label data-helptip="まだデータがありません">N/A</label>
+        
+    
+
+    </div>
+</div>
+
+    
+    </div>
+
+    <div class="right-align-controls">
+    
+    </div>
+</div>
+
+    
+    
+</div>
+
+            <div class="main-app-content">
+            
+            <div class="ss-report-note">
+                
+                データは2015年10月3日にアプリストアから収集されたものです。 
+                
+                App Annieは、アプリストアで提供されている内容について責任を負いませんのでご注意ください。</div>
+            
+
+            
+<div>
+  
+    
+    <div class="x-clear app-screenshots">
+      
+        
+          
+<div class="None">
+    
+    <div id="screenshots" class="">
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/1a5d9e1fdda2828863c8b3d52a5a285d"><img src="https://static-s.aa-cdn.net/img/ios/300370871/1a5d9e1fdda2828863c8b3d52a5a285d" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/ba334299aed69c439c5e543107dcb8de"><img src="https://static-s.aa-cdn.net/img/ios/300370871/ba334299aed69c439c5e543107dcb8de" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/ecfb836733d5e5dcc8b9c3d4778410ee"><img src="https://static-s.aa-cdn.net/img/ios/300370871/ecfb836733d5e5dcc8b9c3d4778410ee" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/93636fb255f550a0d775fc947dc1fdd9"><img src="https://static-s.aa-cdn.net/img/ios/300370871/93636fb255f550a0d775fc947dc1fdd9" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/5e88dad616e7f4ce31f74252e73be28e"><img src="https://static-s.aa-cdn.net/img/ios/300370871/5e88dad616e7f4ce31f74252e73be28e" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/4351654fb44d24b5ee3a181d81072b81"><img src="https://static-s.aa-cdn.net/img/ios/300370871/4351654fb44d24b5ee3a181d81072b81" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/c59efa5c5937ae3c7c1bf633195dcd23"><img src="https://static-s.aa-cdn.net/img/ios/300370871/c59efa5c5937ae3c7c1bf633195dcd23" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/3980077256e8983925fb66c5745364a2"><img src="https://static-s.aa-cdn.net/img/ios/300370871/3980077256e8983925fb66c5745364a2" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/02a3faa9a2c427aa1f65a09d1d2acfb1"><img src="https://static-s.aa-cdn.net/img/ios/300370871/02a3faa9a2c427aa1f65a09d1d2acfb1" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+        
+        
+        
+        <div class="img-holder">
+            <a href="https://static-s.aa-cdn.net/img/ios/300370871/83ca667ec1268348da69f2b3210c6a54"><img src="https://static-s.aa-cdn.net/img/ios/300370871/83ca667ec1268348da69f2b3210c6a54" alt=" - iPhone モバイルAnalyticsとアプリストアデータ"/></a>
+            <span></span>
+        </div>
+        
+        
+    </div>
+</div>
+
+        
+      
+    </div>
+    
+
+    <!-- ******************* contents ******************* -->
+    <div id="app_content">
+      
+      
+<div class="app_content_section">
+<h3>説明</h3>
+<div class="desc" itemprop="description">
+<p><p>CalenGoo gives you a fast and easy way to access and modify your Google Calendar with your iPhone, iPod Touch or
+iPad. It can also be used when you have no Internet connection, using the cached data. Changes are saved and uploaded
+the next time you are connected.</p>
+
+<p>The calendar view is similar to the web view of Google Calendar. Events are displayed using the same calendar colors
+that you use in your Google Calendar, even Google's event colors are supported (please see <a
+href="http://www.calengoo.com/cc">http://www.calengoo.com/cc</a> ). It also recognizes which calendars are visible and
+which are hidden. So the view should match the view of your Google Calendar as much as possible. </p>
+
+<p>CalenGoo also has a month view similar to that of Google Calendar. It can be zoomed and panned to quickly get an
+overview over the events of a month. Zooming the month is done by using the two-finger-zoom gesture that you know from
+Safari and the photo application. A double tap opens the tapped day.</p>
+
+<p>It also supports the same kinds of recurrence rules as Google Calendar and displays recurring events correctly even
+when you are offline or scroll far into the future.</p>
+
+<p>You can also use Google Calendar's feature to invite people to events and see their status (accepted, declined,
+maybe, no answer). They will get an invitation email with links to e.g. accept or decline the invitation.</p>
+
+<p>Google Calendar has an integrated task list, called Google Tasks. Tasks with a due date are displayed on the
+corresponding days of the calendar. CalenGoo can do the same, it can sync this list, display your tasks in the calendar
+views and in a list view and it even makes your tasks available offline. You can edit and add tasks and the changes will
+be synced with Google Tasks.</p>
+
+<p>You either need a (free) Google Calendar account to use this app or you can use it with your iOS calendars (just tap
+the gear icon in the login screen). However using it with Google Calendar has several advantages. If you have problems
+to log in with CalenGoo, please make sure that at least one event is in your Google calendar.</p>
+
+<p>To get more information, screenshots and a tutorial, please go to <a
+href="http://www.calengoo.com">http://www.calengoo.com</a></p>
+
+<p>If you have any problems or suggestions, please send an email to calengoo@dgunia.de! It is technically impossible to
+reply to reviews, you need to write an email or take a look at CalenGoo's support website to get help.</p>
+
+<p>If you think the font is too small and hard to read, you can increase the font size of all calendar views in the
+settings under "Settings", "Display and Use".</p>
+
+<p>Features ( <a href="http://www.calengoo.com">http://www.calengoo.com</a> ):</p>
+
+<p>- Drag&amp;drop to quickly copy and move events<br />- Templates to quickly create similar events again. They can
+even be combined, e.g. one template for the location of an event and another for the attendees<br />- Print/PDF function
+to print the day, week, month or agenda view via AirPrint or to email it as a PDF file<br />- Supports the same
+recurrence rules as Google Calendar<br />- Supports Google Calendar's event colors when syncing via OAuth2<br />- Icons
+can be assigned to Google Calendar events<br />- Date/time can be entered using the iOS wheels or by using a keypad<br
+/>- Fast search function<br />- Show/edit iOS calendars in addition to Google calendars (or instead of Google
+calendars)<br />- Sync with Google Tasks<br />- Reminders can be snoozed and they can be (optionally) repeated every
+minute<br />- Birthdays and anniversaries of your contacts can be displayed<br />- Zoomable month view, which can be
+configured to scroll horizontally (month by month) or vertically (week by week)<br />- Events can be linked to
+contacts<br />- Floating events and completable events<br />- Photos and PDF files can be created and attached to events
+(via Google Drive)<br />- Calendar selection bar to quickly show and hide single calendars<br />- The location of an
+event can be opened with Apple Maps, Google Maps, Navigon, TomTom, Skobbler, Sygic, iGo or Waze<br />- View/edit
+calendars that are shared with others via Google Calendar<br />- Many configuration options to change the way the app
+looks and works</p></p>
+</div>
+</div>
+
+      
+      
+
+<div class="app_content_section app-version-block">
+  <h3>新着情報</h3>
+  <div class="desc">
+  
+  <h5>バージョン 1.5.44 (2015年10月3日)</h5>
+  <div class="app-version-note">
+  <p><p>- iCloud (iOS8/9): Backups, attachments and the colors of task labels can now be synced via iCloud.<br />-
+Hangout: Hangout links are now displayed in CalenGoo’s detail view and can be tapped to open the Hangout app and join
+the video call.<br />- QuickSync: By using Google’s push notifications the sync time can be reduced ("Settings &gt;
+Display and Use &gt; Expert/Maintenance &gt; All &gt; QuickSync", you have to sync twice after turning it on until it
+becomes faster).<br />- When using the natural language parser the selected date (e.g. in the month view) is now used if
+the text does not contain the word "today".<br />- Added a switch to make the "Flexible row size" agenda view rows more
+compact.<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.43 (2015年9月7日)</h5>
+  <div class="app-version-note">
+  <p><p>- Google Calendar attachments can now be displayed.<br />- The task view has been improved:<br />- You can now add
+multiple labels to tasks and select which label or list should be displayed by using the new sidebar. To open the
+sidebar either use a swipe gesture or use the button in the lower left corner of the task view.<br />- Tasks can be
+edited directly in the task view by turning "Settings &gt; Display and Use &gt; Task view &gt; Inline editing" on. Then
+you can just tap on a task to edit it and tap the return button on the keyboard to create a new task.<br />- You can add
+actions to tasks e.g. to call a person or to open a location with a single tap from the task list. Just tap the button
+in the upper right corner of the task edit screen.<br />- New design for the checkboxes and icons of tasks.<br />- iOS
+reminders can be displayed in the task view ("Settings &gt; Tasks &gt; iOS reminders" and "Show in task view").<br />-
+The time zone configuration has been simplified under "Settings &gt; Time zones".<br />- New design for the agenda view
+if "Settings &gt; Display and Use &gt; Agenda view &gt; Expert &gt; Flexible size" is used.<br />- Today widget:
+completed events can be faded<br />- Today widget: multiple days can be displayed<br />- Search: When printing from the
+search view the printed time range can be restricted.<br />- Month view: an agenda pop-up has been added, i.e. by
+selecting a day with a tap a pop-up is opened that displays the events of the selected day ("Settings &gt; Display and
+Use &gt; Month view &gt; Expert &gt; Show pop-up when selecting a day").<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.42 (2015年4月9日)</h5>
+  <div class="app-version-note">
+  <p><p>- Additional configuration options for the Today Widget (to hide all-day events and free events).<br />- Bug
+fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.41 (2015年3月29日)</h5>
+  <div class="app-version-note">
+  <p><p>- A Today Widget has been added.<br />- It is now possible to sync with Evernote. I.e. Evernote reminders are
+displayed in the calendar and Evernote notes can be attached to events ("Settings", "Accounts").<br />- Single events
+can be printed (in the detail view under "Send").<br />- Actions can be applied to events that contain certain keywords
+("Settings", "Keywords").<br />- The first two snooze options are now displayed in the reminder notification.<br />- Bug
+fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.40 (2015年2月1日)</h5>
+  <div class="app-version-note">
+  <p><p>- When importing ICS files (e.g. from an email) multiple events can be imported at once.<br />- The "Send email"
+function in the detail view can now optionally attach an ICS file ("Settings", "Display and Use", "Detail view",
+"Advanced", "ICS file for send email").<br />- The event colors can be intensified by turning "Settings", "Design",
+"Intensify event colors" on.<br />- Bug fixes (including iOS 5) and small improvements.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.39 (2015年1月29日)</h5>
+  <div class="app-version-note">
+  <p><p>- When importing ICS files (e.g. from an email) multiple events can be imported at once.<br />- The "Send email"
+function in the detail view can now optionally attach an ICS file ("Settings", "Display and Use", "Detail view",
+"Advanced", "ICS file for send email").<br />- The event colors can be intensified by turning "Settings", "Design",
+"Intensify event colors" on.<br />- Bug fixes and small improvements.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.38 (2014年11月13日)</h5>
+  <div class="app-version-note">
+  <p><p>IF YOU HAVE ANY PROBLEMS (e.g. sync problems or duplicates) PLEASE CONTACT calengoo@dgunia.de BECAUSE IT ISN'T
+POSSIBLE TO RESPOND TO REVIEWS. THEN I CAN HELP YOU! So far I could help all users who contacted me to fix the problems.
+The new sync method seems to work fine, if you have problems they are usually only configuration issues. I can help you
+to fix them, please just contact me. Thank you very much!</p>
+
+<p>- The date chooser has a new option "month" to choose a date from a month view.<br />- The calendar selection list
+can now hide/show the calendars of whole accounts.<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.37 (2014年11月4日)</h5>
+  <div class="app-version-note">
+  <p><p>IF YOU HAVE ANY PROBLEMS PLEASE CONTACT calengoo@dgunia.de ! In the reviews some people seem to have problems but
+unfortunately they didn't contact me. So far I could help all users who contacted me.</p>
+
+<p>- The "Export settings" function can now also export the calendar colors.<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.36 (2014年10月28日)</h5>
+  <div class="app-version-note">
+  <p><p>- Events can be displayed as a background shade in the day view ("Settings", "Display and Use", "Day view", "All",
+"Events as background")<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.35 (2014年10月20日)</h5>
+  <div class="app-version-note">
+  <p><p>- Support for iPhone 6 and iPhone 6 Plus<br />- Support for multiple Google Calendar accounts and Google Tasks
+accounts<br />- Conversion function to switch to syncing via OAuth2 with Google<br />- A default template can be
+selected for each calendar<br />- Bug fixes</p>
+
+<p>If you have problems accessing "Settings" or "+" under iOS 7, then tap the search button once. Afterward it should
+work correctly again. It happens only under iOS 7 after the first start of the app and will be fixed with the next
+update soon.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.34 (2014年9月17日)</h5>
+  <div class="app-version-note">
+  <p><p>Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.33 (2014年8月20日)</h5>
+  <div class="app-version-note">
+  <p><p>- The "Tasks in events" can now be reordered in the edit view and you can hide completed tasks in the detail
+view.<br />- Added an option to display the start time of events in the landscape day view.<br />- Added an option to
+fade past events in the landscape day view.<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.32 (2014年8月8日)</h5>
+  <div class="app-version-note">
+  <p><p>IF YOU HAVE THE PROBLEM THAT THE SYNC STOPS (OR RUNS ENDLESS), please turn "Settings", "Display and Use",
+"General", "Advanced", "Upload before download" off. Then it should work correctly again. This will be fixed with the
+next update in a few days.</p>
+
+<p>If you have problems that duplicates occur, please read "Sync problems (Duplicates)" here: <a
+href="http://www.calengoo.com/docs/news/news.html">http://www.calengoo.com/docs/news/news.html</a></p>
+
+<p>- The month view can now optionally display the events as time bars.<br />- Option to show events that are linked to
+the same contact in the detail view.<br />- Speed improvements<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.31 (2014年7月11日)</h5>
+  <div class="app-version-note">
+  <p><p>- Tasks in events function: If "Settings", "Display and Use", "Edit view", "Advanced", "Tasks in events" and "New
+edit view" is turned on, then you can add tasks to events in the event edit screen. The tasks are saved in the
+description field and can be checked off in the detail view and the edit view. If you use this function in a recurring
+event, the single instances are checked off separately in the detail view (i.e. a recurrence exception is created before
+checking off the task).<br />- Wrapping for the month view: The month view now supports wrapping long entries over
+multiple lines: "Settings", "Display and Use", "Month view", "Expert", "Number of rows per entry".<br />- Bug
+fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.30 (2014年7月1日)</h5>
+  <div class="app-version-note">
+  <p><p>- The landscape day view can now be zoomed and scrolled vertically by using a pinch gesture.<br />- Support for
+adding events via "natural language input" has been added, i.e. you can enter or speak e.g. "Meeting with John tomorrow
+at 5pm" into the title of an event and CalenGoo will automatically recognize the date and time and offer you to create
+an event for it.<br />- The "calendar selection bar" can now be used in the search view to filter the results
+("Settings", "Display and Use", "Search view", "Show calendar selection bar").<br />- The order of the sections in the
+edit view can now be changed (turn "Settings", "Display and Use", "Edit view", "All", "New edit view" on and use
+"Reorder edit view").<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.29 (2014年4月18日)</h5>
+  <div class="app-version-note">
+  <p><p>- Calendars can be exported as ICS files now: Just tap "Settings", "Visibility/Download", tap the "i" button at
+the end of the line of the calendar that you would like to export and choose "Export as ICS attachment".<br />-
+Templates can be linked, i.e. multiple templates can be inserted at once relative to each other. Just add multiple
+events to a template folder and turn "Link all templates" in that folder on. Then insert the first template into your
+calendar to insert the following templates, too.<br />- The search view has a history now (just tap the action button in
+the upper right corner and choose "History").<br />- The history can be sorted alphabetically now, just tap the "Sort"
+button in the history view.<br />- Most of Google’s holiday calendars can now be subscribed from within CalenGoo
+("Settings", "Holidays"). Other holiday calendars can certainly still be subscribed via the Google Calendar website.<br
+/>- URL Schemes have been added to create new events or new tasks from other apps.<br />- The default calendar can now
+be changed from the calendar chooser (just tap "Sort" in the upper right corner when choosing a calendar and select a
+calendar to mark it with a blue star).<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.28 (2014年4月3日)</h5>
+  <div class="app-version-note">
+  <p><p>- Templates can now be sent as an email attachment. By opening the attachment on another iOS device with CalenGoo
+you can then import the templates. You can find this function under "Settings", "Templates". And if you would like to
+send only a single templates folder you can find the function in the details screen of that folder.<br />- Optional
+automatic search for matching contacts in the location editor. I.e. if you want to insert the address of a contact into
+the location field, just start to type the contact’s name and choose the contact from the list that appears (this
+function can be turned on under "Settings", "Display and Use", "Edit view", "Advanced", "Auto search contacts in
+location editor").<br />- Several bugs were fixed.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.27 (2014年3月23日)</h5>
+  <div class="app-version-note">
+  <p><p>- New optional time format for the week and month view (e.g. "3:30 PM" as "330p").<br />- When inserting a contact
+into an event, the notes field can also be copied.<br />- Several bugs were fixed.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.26 (2014年3月15日)</h5>
+  <div class="app-version-note">
+  <p><p>- Options to show or hide the separator lines in the week and month view were added under "Settings", "Design".<br
+/>- Several bugs were fixed.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.25 (2014年3月5日)</h5>
+  <div class="app-version-note">
+  <p><p>- New iOS 7 design. The color of the bars at the top and bottom of the screen can be changed ("Settings",
+"Design").<br />- Different designs for displaying events in the day view have been added ("Settings", "Design").<br />-
+The new detail view can show the pictures of attendees and open the linked contacts ("Settings", "Design").<br />-
+Function to automatically add a timestamp to the description of an event every time something is added to the
+description ("Settings", "Display and Use", "Edit view", "Expert", "Append timestamp to description").<br />- The most
+recent changes of each Google calendar can be displayed (in the search view by tapping the action button in the upper
+right corner and choosing "Recent changes"). The data for this function is downloaded from Google Calendar, so it might
+take a few days after installing this version until changes are displayed.</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.24 (2013年10月28日)</h5>
+  <div class="app-version-note">
+  <p><p>- iOS reminders without a due date can be displayed on the current day ("Settings", "Display and Use", "Advanced",
+"iOS reminders", "Show reminders without due date").<br />- Search function for unanswered invitations (in the upper
+right corner of the search view).<br />- Bug fixes for the agenda view</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.23 (2013年10月16日)</h5>
+  <div class="app-version-note">
+  <p><p>- Added a function to convert a task into an event (in the upper right corner of the task edit screen).<br />- A
+custom time can be chosen when snoozing an event (instead of choosing from the four configurable options).<br />- The
+agenda view can display the descriptions of the events ("Settings", "Display and Use", "Expert", "Agenda view", "Show
+description").<br />- When printing the calendar in agenda mode, a custom text can be printed at the top. You can insert
+$TIME and $DATE in that text, which will be automatically replaced by the current time and date when printing.<br />-
+The agenda view can be printed as TXT or CSV file.<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.22 (2013年9月16日)</h5>
+  <div class="app-version-note">
+  <p><p>- When editing iOS reminders, the title and notes fields now allow text over multiple lines. Additionally phone
+numbers and email addresses can be tapped to call them or to write an email. Showing iOS reminders in CalenGoo requires
+iOS 6 or newer.<br />- The agenda print function now supports adding a custom header. You can enter a text that is
+printed above the days and events. This works also when printing the search results.<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.21 (2013年9月13日)</h5>
+  <div class="app-version-note">
+  <p><p>- iOS Reminders can now be displayed and edited in the calendar views. You can enable and configure this under
+"Settings", "Display and Use", "iOS Reminders". It is also possible to choose a location for a reminder from your
+previously entered event locations or from a contact by typing the contact's name and choosing it from the list that
+appears.<br />- Audio attachments are now supported (i.e. you can record a note and attach it to an event so that it is
+uploaded to Google Drive).<br />- An improved detail view has been added, that can display the location of the event on
+a map and a weather forecast for that location and time ("Settings", "Display and Use", "Expert", "Detail view", "New
+detail view" and "Weather forecast of location").<br />- Priorities (1-5) can be assigned to tasks now. Just tap on the
+empty circle in front of the task list's name in the task edit screen.<br />- When using the search view, you can now
+print the results or send them as PDF.<br />- The week view can now optionally display the days in a single column
+instead of two columns.<br />- A simple PIN lock screen has been added ("Settings", "Display and Use", "Expert",
+"General", "Enable/disable PIN lock").<br />- A faster agenda view has been added ("Settings", "Display and Use", "All",
+"Expert/Maintenance" (at the end of the list), "Faster agenda view"), which loads the events in an optimized way and
+will be used by default in the future.<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.20 (2013年3月28日)</h5>
+  <div class="app-version-note">
+  <p><p>- Floating events have been implemented. Floating events are a combination of tasks and events. They are like a
+normal event but they have a checkbox to mark them as completed. When CalenGoo finds an uncompleted floating event in
+the past, it will automatically move it to the current day so that you don't forget to complete it. To use floating
+events you have to turn "Settings", "Display and Use", "Advanced", "General", "Enable 'Floating events'" on. Then you
+can mark individual events as floating in the edit view.<br />- You can now attach files to events and sync them via
+Google Drive. First you have to enable it under "Settings", "Attachments". Afterward there will be an additional button
+at the end of the edit view to add attachments. You can open and view attachments from the detail view and the edit
+view. Attachments can be photos from the camera or the gallery and you can create PDF files from multiple photos (e.g.
+to create a scan from a document). When you add attachments to an event, CalenGoo will create a folder in Google Drive
+for that event. But you can also attach other Google Drive folders and files.<br />- The calendars can now be reordered
+under "Settings", "Visibility/Download", "Sort calendars".<br />- A sync button can be displayed to the left of the "+"
+button in the upper right corner (only iPhone/iPod touch: "Settings", "Display and Use", "Advanced", "General", "Sync
+button to the left of the [+] button")<br />- New snap-in options for new events in the landscape day view: E.g. when
+setting "Settings", "Display and Use", "Expert", "Landscape day view (week)", "New events snap in to x minutes" to "45
+min (align to previous event)" then new events will be aligned to 45 minute steps beginning from the previous event of
+that day. This is useful if you assign events in 45 minutes slots and have e.g. a lunch break.<br />- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.19 (2012年10月20日)</h5>
+  <div class="app-version-note">
+  <p><p>- Better support for OAuth2 calendar and event colors ("Settings", "Display and Use", "All", "Expert/Maintenance",
+"Use OAuth2 font colors"<br />- Descriptions that contain HTML code (e.g. a table) can now be optionally be parsed and
+displayed like a web page ("Settings", "Display and Use", "All", "Detail view", "HTML in description"). This can be
+useful e.g. for certain sports calendars that contain score tables in the details.<br />- Bug fix for accessing contacts
+under iOS 6 (CalenGoo could crash if CalenGoo's birthdays function was turned on, but it had no access to the contacts
+because "Privacy", "Contacts", "CalenGoo" was turned off in the "Settings" app)</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.18 (2012年10月9日)</h5>
+  <div class="app-version-note">
+  <p><p>IF YOU HAVE PROBLEMS AFTER UPDATING THE APP, please start the "Settings" app, tap "Privacy", "Contacts" and turn
+"CalenGoo" on. Then you probably tried to let CalenGoo display your contact's birthdays without allowing CalenGoo to
+access your contacts. If you still have problems, please just send an email to calengoo@dgunia.de</p>
+
+<p>- Added support for the larger screen of the iPhone 5<br />- Old events can be faded in the month view ("Settings",
+"Display and Use", "Expert", "Month view", "Fade past events")<br />- iOS6 bug fixes for entering the duration of an
+event using the keypad under iOS6 and for task reminders<br />- Other bug fixes and optimizations<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.17 (2012年9月23日)</h5>
+  <div class="app-version-note">
+  <p><p>- Old events can be faded in the week view ("Settings", "Display and Use", "Expert", "Week view", "Fade past
+events")<br />- The location of an event can be displayed in the week view ("Settings", "Display and Use", "Expert",
+"Week view", "Show location"), which is especially useful when displaying events over multiple lines ("Settings",
+"Display and Use", "Expert", "Week view", "Number of rows per entry")<br />- Tasks lists can be collapsed by tapping
+their header if "Settings", "Display and Use", "Expert", "Tasks view", "[+] button in headers" is turned on. By turning
+"Hide collapsed tasks in calendar views" on you can hide these tasks that belong to collapsed lists from the calendar
+views.<br />- Bug fix for syncing icons via OAuth2<br />- Bug fix for setting reminders that affected a few devices<br
+/>- Bug fix for showing tasks in the landscape week view</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.16 (2012年9月11日)</h5>
+  <div class="app-version-note">
+  <p><p>- Syncing calendars and events directly with multiple Google Calendar accounts is now supported ("Settings",
+"Accounts").<br />- Google's event colors (in addition to calendar colors) can now be synced if the sync is performed
+via OAuth2: Tap the gear icon in the lower right corner of the login screen and choose "OAuth2 Login".<br />- High
+resolution icons are now supported (instead of only 16x16 icons)<br />- ICS email attachments can be opened with
+CalenGoo to create an event<br />- Events can be displayed over multiple lines in the week view ("Settings", "Display
+and Use", "Expert", "Week view", "Number of rows per entry")<br />- The calendar selection bar can be used to turn
+accounts on or off instead of calendars ("Settings", "Display and Use", "Expert", "General", "Show accounts instead of
+calendars")<br />- Added a "Copy into" button in the detail view for read-only events to copy them from a shared into a
+personal calendar.<br />- Support for iGo based navigation apps.<br />- The agenda view can display multiple lines per
+event ("Settings", "Display and Use", "Expert", "Agenda view", "Rows" and "Flexible row size").<br />- A reminder can
+open the detail view of the event instead of the day of the event ("Settings", "Display and Use", "All", "General",
+"Reminders open detail view of event")<br />- A "+" button can be added to the headers of the tasks lists to add a new
+task to that list. When this "+" button is activated, task lists can also be collapsed by tapping on the header
+("Settings", "Display and Use", "Advanced", "Tasks view", "Add button in headers")<br />- Old events can be faded in the
+day view ("Settings", "Display and Use", "Expert", "Day view", "Fade past events")<br />- Speed improvements<br />-
+Voice Over improvements<br />- Additional configuration options<br />- Improvements for the new iPad<br />- Bug fixes
+for iOS 6 and others<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.15 (2012年4月9日)</h5>
+  <div class="app-version-note">
+  <p><p>- The date and the all-day events can now be displayed in a separate header bar at the top of the landscape day
+view (just turn "Settings", "Display and Use", "Landscape day view (week)", "All-day events in background" off)<br />- A
+bar with buttons for your calendars can be displayed at the bottom of the screen to quickly turn calendars on or off
+("Settings", "Display and Use", "Advanced", "General", "Show calendar selection bar")<br />- The print function now
+supports selecting which calendars should be printed and if colored bars should be used for all-day events<br />- The
+numberpad now allows to enter times with 1-minute precision even if 5/15 minute precision is selected for the time
+wheels<br />- CalenGoo can now check for conflicting events when saving an event ("Settings", "Display and Use",
+"Expert", "Edit view", "Check for conflicting events")<br />- Overnight-events can be displayed as a bar in the month
+view ("Settings", "Display and Use", "All", "Month view", "Overnight events as bar")<br />- Option to improve the sync
+speed has been added ("Settings", "Display and Use", "All", "Expert/Maintenance", "Use database transactions (improves
+sync speed)" and "Sync block size")<br />- Option to trigger a sync of the internal calendars when CalenGoo is started
+("Settings", "Display and Use", "Advanced", "General", "Sync iPhone/iPad/iPod touch calendars on startup")<br />- bug
+fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.14 (2012年2月9日)</h5>
+  <div class="app-version-note">
+  <p><p>- Templates can be created, organized in folders and inserted into new or existing events<br />- Print functions
+were added. You can now print the day, week, month, agenda and tasks view or email it as a PDF file<br />- The settings
+can now be exported and imported to create a backup<br />- Anniversaries can now be displayed<br />- Optional display of
+sunrise and sunset for the current location<br />- The week number can be displayed on the badge<br />- Optional cache
+for iOS calendars, to improve the speed ("Settings", "Display and Use", "All", "Expert/Maintenance", "Cache for iOS
+calendars")<br />- Tasks can be sorted alphabetically<br />- Added support for additional navigation systems, now
+Navigon, TomTom, Sygic and Skobbler are supported<br />- When an event is linked to a contact and you use the "Send"
+function in the detail view, you can also choose an email or phone number of the contact<br />- You can now specify for
+each calendar if it should be synced during the automatic sync or only when syncing manually<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.13 (2011年9月14日)</h5>
+  <div class="app-version-note">
+  <p><p>- Birthdays of your contacts can now be displayed including their age and year of birth ("Settings", "Display and
+Use", "Advanced", "General", "Show birthdays of contacts").<br />- The drag&amp;drop snap in precision can be configured
+(15min, 30min, 60min) under "Settings", "Display and Use", "All", "Day view", "Drag&amp;drop snap in to x minutes".<br
+/>- Functions to use CalenGoo in a desk or wall installation ("Settings", "Display and Use", "All", "General", "Auto tap
+'Today' interval" and "Auto sync interval")<br />- Buttons to jump to the previous or next event in the detail view
+("Settings", "Display and Use", "Expert", "Detail view", "Prev/Next event button")<br />- Improved Navigon
+integration</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.12 (2011年8月14日)</h5>
+  <div class="app-version-note">
+  <p><p>- (Optional) vertically scrollable year view (activated by default on the iPad, can be configured under
+"Settings", "Display and Use", "Year view"). Events from your calendars can be displayed in the year view (e.g. your
+holidays, birthdays or other all-day events). You can choose which calendars should be displayed under "Settings",
+"Display and Use", "Year view", "Calendars". Double tap a month in the year view to open it in month view. Single tap a
+day to select it to either open it in day or week view (just tap the day or week button afterward) or to add a new event
+for that day (using the "+" button). The tasks can be displayed in the year view by turning "Settings", "Tasks", "Year
+view" on.<br />- Two additional copy&amp;paste functions: You can copy&amp;paste events with the action button in the
+edit view and you can copy&amp;paste events via drag&amp;drop if "Settings", "Display and Use", "Advanced", "General",
+"Drag&amp;Drop clipboard" is turned on.<br />- Additional reminder sound with increasing volume<br />- Optional Navigon
+integration: If Navigon is installed and "Settings", "Display and Use", "Expert", "Detail view", "Open with Navigon" is
+turned on, you can open the location of an event with Navigon and navigate to that address. This will only work if you
+are using a certain format for entering your addresses: The street and the city must be separated by a comma like "21
+Main Str, Denver 12345".<br />- The events in the landscape day view can be displayed side-by-side as in the portrait
+day view instead of overlapping: Just turn "Settings", "Display and Use", "Advanced", "Landscape day view (week)",
+"Overlap events" off.<br />- Configurable sound for the task reminders: "Settings", "Tasks", "Sound for reminders".<br
+/>- Bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.11 (2011年4月11日)</h5>
+  <div class="app-version-note">
+  <p><p>- Event invitations can now be accepted/declined from within the app by tapping your own name in the attendee list
+of the event's detail screen.<br />- Recurring tasks are now supported. When a recurring task is completed, it
+automatically moves the due date to the next due date according to the recurrence rule.<br />- Events can be saved into
+multiple calendars at the same time ("Settings", "Display and Use", "Expert", "Edit view", "Save into multiple
+calendars")<br />- The task synchronization now supports the new 2 step verification with application-specific passwords
+for normal accounts<br />- The events in the agenda view can be displayed without the end date ("Settings", "Display and
+Use", "Expert", "Agenda view", "Show end time")<br />- Declined events can now be faded ("Settings", "Display and Use",
+"Expert", "Day view", "Fade declined events")<br />- Fixed columns can be used for calendars in the day view if you are
+using your calendar to manage resources ("Settings", "Display and Use", "Expert", "Day view", "Fixed column for each
+calendar")<br />- The age of yearly events (e.g. birthdays) can be displayed ("Settings", "Display and Use", "Advanced",
+"General", "Show age of yearly events")<br />- An option to activate special time zone calculations has been added for
+situations with many very different time zones ("Settings", "Display and Use", "All", "Expert/Maintenance", "Advanced
+time zone support")<br />- Some bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.10 (2011年1月29日)</h5>
+  <div class="app-version-note">
+  <p><p>- Auto search function for contacts: Turn "Settings", "Display and Use", "Advanced", "Edit view", "Auto search
+contacts in title editor" on, create a new event and start typing a name from your contacts in the title editor.<br />-
+Attendees in the detail view can be tapped to start searching the email address in the contacts. If it is found, the
+contact is opened.<br />- A default availability for new events can be configured under "Settings", "Display and Use",
+"All", "Edit view", "Default availability setting".<br />- Reminders for tasks can be specified, just turn "Settings",
+"Reminders", "Task reminders" on and add reminders in the task's edit view.<br />- Past events can be faded out by
+turning "Settings", "Display and Use", "Expert", "Agenda view", "Fade past events" on.<br />- The "Today" button moves
+the current event to the top of the agenda view if "Settings", "Display and Use", "Expert", "Agenda view", "Today button
+skips past events" is turned on.<br />- The search function can now also search in the tasks ("Settings", "Display and
+Use", "Advanced", "Search view", "Search in tasks").<br />- A few bug fixes and usability improvements</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.9 (2010年11月22日)</h5>
+  <div class="app-version-note">
+  <p><p>- Color settings of the calendars can be overridden in CalenGoo<br />- Default reminders for calendars, i.e. for
+all events in a calendar<br />- Installation possible using only the iPhone/iPod/iPad's calendar as data source<br />-
+Bug fix: Weekday names were not correctly displayed in the date picker under iOS4.2</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.8 (2010年11月9日)</h5>
+  <div class="app-version-note">
+  <p><p>- Added details button in search view: Tap the row to jump to the event's date, tap the blue details button to
+open the event in detail view<br />- Badge menu (choose between events, tasks or the current day for the badge on the
+app's icon)<br />- Cancel/Save buttons in the edit view can now be swapped<br />- Option to add a new task directly from
+the calendar view when tapping the "+" button (see "Settings", "Tasks")<br />- Bug fix: The country default for the
+first day of the week was computed incorrectly in 1.5.7<br />- Bug fix for the new migration function<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.7 (2010年10月25日)</h5>
+  <div class="app-version-note">
+  <p><p>- Sync on exit, i.e. you can run the sync in the background when the application is exited (need iOS4 and
+multitasking)<br />- Shake to sync function (optional)<br />- Support for busy/free attribute of Google Calendar<br />-
+Option to display tasks in landscape day view<br />- Function to send events via SMS or email<br />- Migration tool to
+copy iPhone calendars to Google Calendar<br />- Updates to attendees can be sent when an event is moved via
+drag&amp;drop<br />- A few additional font and color configuration options</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.6 (2010年9月22日)</h5>
+  <div class="app-version-note">
+  <p><p>- the sort order of the search result list can now be reversed<br />- speed improvements when saving events<br />-
+bug fix for all-day recurring events in the iPhone's calendar<br />- bug fix for events with attendees in the iPhone's
+calendar<br />- bug fix for scrolling in the landscape day view (week)<br />- several smaller bug fixes</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.5 (2010年9月1日)</h5>
+  <div class="app-version-note">
+  <p><p>- reminders for local events<br />- increased speed for displaying events of the iPhone's calendar in the day
+view<br />- automatic update of calendar views when changes in the iPhone's calendars occur<br />- the auto sync can be
+restricted to only start if the last sync has been a certain time ago ("Settings", "Display and Use", "Advanced",
+"General", "Min. time between auto syncs")<br />- configurable snooze times<br />- "View after start" bug fixed, set
+"Settings", "Display and Use", "General", "View after start" to "Last used" if you want to stay in the last used view
+when using multitasking<br />- option to jump to today on startup<br />- small bug fix for tasks sync</p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.4 (2010年8月9日)</h5>
+  <div class="app-version-note">
+  <p><p>- support for "drag and drop" to move and copy events and tasks<br />- bug fix for low memory bug<br />- bug fix
+for local notifications<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.3 (2010年8月1日)</h5>
+  <div class="app-version-note">
+  <p><p>- Time zone bug fix<br />- Login screen bug fix<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.2 (2010年7月28日)</h5>
+  <div class="app-version-note">
+  <p><p>IMPORTANT: If you have problems with the time wheels, please turn "Settings", "Display and Use", "General",
+"Ignore iPhone time zone" on. If you see the login screen after updating, please turn "Settings", "Display and Use",
+"All", "General", "Login Offline Button" off. </p>
+
+<p>- iOS4: Support for fast app switching<br />- iOS4: Local notifications for fast and reliable reminders<br />- iOS4:
+Snooze and repeat function for reminders<br />- iOS4: Events of the iPhone/iPod calendar can be displayed and edited in
+addition to the calendars of your Google account<br />- the visibility of the tasks can now be configured for all
+calendar views individually<br />- the location can now be displayed in the agenda view<br />- the badge can now display
+all-day events and uncompleted tasks<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.1 (2010年6月25日)</h5>
+  <div class="app-version-note">
+  <p><p>- Added management functions for task lists (add, remove, rename)<br />- Tasks can be sorted by due date<br />-
+New kind of month view that scrolls vertically. It is turned on by default on the iPad. On the iPhone/iPod Touch you can
+turn it on under "Settings", "Colors etc.", "Month view", "Vertical scrolling".<br />- Several bug fixes especially for
+the iPad version<br />- Small graphical bug fix for iOS 4<br />- Some small visual improvements (shadows and gradients,
+can be turned off)<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.5.0 (2010年6月5日)</h5>
+  <div class="app-version-note">
+  <p><p>- iPad support, native resolution, use of special iPad user interface elements (therefore iPhone OS 3.0 or better
+is needed for this update)<br />- Icons can now be added to events and are also visible in Google Calendar ("Settings",
+"Icons" in CalenGoo)<br />- Google Tasks: sync bugfixes and support for a larger notes field<br />- The "Clear" button
+in the tasks view moves the completed tasks to the "completed" list instead of deleting them.<br />- The search function
+orders the results by future and past events and displays occurrences of recurring events two months into the past and
+the future.<br />- When using "Jump to date" you can use the numberpad to enter the date.<br />- When deleting events
+with attendees, the attendees can be informed that the event has been canceled.<br />- several smaller usability
+improvements and bug fixes<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.4.0 (2010年4月7日)</h5>
+  <div class="app-version-note">
+  <p><p>- task functions added, synchronization with Google Tasks<br />- bug fix for crash in landscape day view<br
+/></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3.2 (2010年4月5日)</h5>
+  <div class="app-version-note">
+  <p><p>- some bug fixes, especially to make it compatible to iPhone OS 2.2.1 again<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3.1 (2010年3月18日)</h5>
+  <div class="app-version-note">
+  <p><p>- Icons in the day view to indicate that an event has alarms, attendees or a description or that the event is a
+recurring event.<br />- Function to mark single events as public or private.</p>
+
+<p>- bug fixes including a fix for the Snap-in mode<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3.0 (2010年3月5日)</h5>
+  <div class="app-version-note">
+  <p><p>- optional badge counter that shows the remaining number of events for the current day with push updates<br />-
+optional push pop-up notifications</p>
+
+<p>- several bug fixes including a fix for the duplicates<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.2.12 (2010年2月10日)</h5>
+  <div class="app-version-note">
+  <p><p>- Filterable display of all-day events in the landscape day view<br />- Numberpad added to enter dates and times
+as alternative to the still usable wheels<br />- Settings can be filtered by importance/experience<br />- Day view can
+be configured to snap in on full days<br />- Attendees and reminders can now be removed by using the swipe gesture<br
+/>- The days in the week view can now be scrolled vertically when there are too many events<br />- Support for ISO week
+numbers<br />- Optional local calendars that are not synced with Google<br />- Some in-application hints</p>
+
+<p>- several bug fixes and additional configuration options<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.4.0 (iPhone OS 3.0 Tested)</h5>
+  <div class="app-version-note">
+  <p><p>- task functions added, synchronization with Google Tasks<br />- bug fix for crash in landscape day view<br
+/></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3.2 (iPhone OS 3.0 Tested)</h5>
+  <div class="app-version-note">
+  <p><p>- some bug fixes, especially to make it compatible to iPhone OS 2.2.1 again<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3.1 (iPhone OS 3.0 Tested)</h5>
+  <div class="app-version-note">
+  <p><p>- Icons in the day view to indicate that an event has alarms, attendees or a description or that the event is a
+recurring event.<br />- Function to mark single events as public or private.</p>
+
+<p>- bug fixes including a fix for the Snap-in mode<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.3.0 (iPhone OS 3.0 Tested)</h5>
+  <div class="app-version-note">
+  <p><p>- optional badge counter that shows the remaining number of events for the current day with push updates<br />-
+optional push pop-up notifications</p>
+
+<p>- several bug fixes including a fix for the duplicates<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.2.12 (iPhone OS 3.0 Tested)</h5>
+  <div class="app-version-note">
+  <p><p>- Filterable display of all-day events in the landscape day view<br />- Numberpad added to enter dates and times
+as alternative to the still usable wheels<br />- Settings can be filtered by importance/experience<br />- Day view can
+be configured to snap in on full days<br />- Attendees and reminders can now be removed by using the swipe gesture<br
+/>- The days in the week view can now be scrolled vertically when there are too many events<br />- Support for ISO week
+numbers<br />- Optional local calendars that are not synced with Google<br />- Some in-application hints</p>
+
+<p>- several bug fixes and additional configuration options<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  <h5>バージョン 1.2.11 (iPhone OS 3.0 Tested)</h5>
+  <div class="app-version-note">
+  <p><p>- New landscape mode for day view added that shows a whole week (5 or 7 days) at a glance in the style of the day
+view.<br />- The week view can now display the current day at the top and the next six days below.<br />- When editing
+recurring events you can now choose to only change the current and future events.<br />- The search function can now be
+configured to also search in the description and location fields.<br />- Landscape-mode can be disabled<br />- New
+(optional) button to move events ("Settings", "Colors etc.", "Detail view", "Move event button") in the detail view.<br
+/>- several bugfixes (Lotus Notes events, travelling to other time zones, speed of agenda view, ...)<br /></p></p>
+  <div class="show-all-box"><b><i class="fa fa-chevron-down"></i> メモを広げる</b></div>
+  </div>
+  
+  </div>
+</div>
+
+      
+    </div>
+
+    <!-- ******************* sidebar ******************* -->
+    <div id="app_sidebar">
+      
+      <div class="app-box chart-lock-container">
+    
+    
+        <div class="app-box-content">
+<h3>収益の推計値</h3>
+<div class="chart-lock">
+    <div class="chart-lock-image">
+        <img src="/media/pictures/ui/chart_lock.png" />
+    </div>
+    <div class="lock-info">
+        Intelligenceのプレミアム購読で、このアプリのダウンロード数と収益の推計値を入手しましょう。
+    </div>
+    <div class="request-demo">
+        <a href="/intelligence/" target="_blank" ga-tracking data-ga-category="MKT-INT Demo Promotion" data-ga-action="Click" data-ga-label="App_Details_Estimate_Box">詳細</a>
+    </div>
+</div></div>
+    
+</div>
+      
+      <div class="app-box-links links">
+    
+    
+        <div class="app-box-content"><ul>
+<li><a href="http://www.calengoo.com" target="_blank">Dominique Andr Gunia ウェブサイト <i class="fa fa-external-link"></i> </a></li><li><a href="http://www.calengoo.com" target="_blank">Dominique Andr Gunia サポート <i class="fa fa-external-link"></i> </a></li>
+</ul>
+</div>
+    
+</div>
+      
+      <div class="app-box-links summary">
+    
+        <h3>フィーチャー <span class="more-info">(2014年6月11日)</span></h3>
+    
+    
+        <div class="app-box-content">
+
+<div class="app_slide_container app_slide_container-show-all">
+
+<div class="app_slide" id="app_feature_iphone_content">
+<div class="app_slide_header" id="app_feature_iphone">
+<i class="icon-caret-down"></i><i class="icon-caret-right"></i>iPhone マーケット
+</div>
+<div class="app_slide_content"><ul>
+
+<li><span class="ui-icon featured_gold"></span>
+フィーチャー掲載なし
+
+iTunesホームページ
+</li>
+
+<li><span class="ui-icon featured_silver"></span>
+<strong><a title="地域についての詳細はクリックしてください" href="/apps/ios/app/calengoo-for-google-calendar/features/#device=iphone
+">7回</a></strong>
+
+iTunes
+</li>
+
+</ul></div>
+</div>
+
+<div class="app_slide" id="app_feature_ipad_content">
+<div class="app_slide_header" id="app_feature_ipad">
+<i class="icon-caret-down"></i><i class="icon-caret-right"></i>iPad マーケット
+</div>
+<div class="app_slide_content"><ul>
+
+<li><span class="ui-icon featured_gold"></span>
+フィーチャー掲載なし
+
+iTunesホームページ
+</li>
+
+<li><span class="ui-icon featured_silver"></span>
+<strong><a title="地域についての詳細はクリックしてください" href="/apps/ios/app/calengoo-for-google-calendar/features/#device=ipad
+">10回</a></strong>
+
+iTunes
+</li>
+
+</ul></div>
+</div>
+
+</div>
+</div>
+    
+</div>
+      
+      <div class="app-box app-info-version">
+    
+        <h3>バージョン</h3>
+    
+    
+        <div class="app-box-content">
+
+<table id="app_versions" cellspacing="0" cellpadding="0" class="fold-on">
+<colgroup><col width="22"/><col width="70"/><col width="95"/><col width="100%"/></colgroup>
+
+<tbody>
+<tr class=" first">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.44">1.5.44</span></td><td class="date">2015年10月3日</td><td class="note">現行リリース</td>
+</tr>
+
+<tr class="">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.43">1.5.43</span></td><td class="date">2015年9月7日</td><td class="note"></td>
+</tr>
+
+<tr class="">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.42">1.5.42</span></td><td class="date">2015年4月9日</td><td class="note"></td>
+</tr>
+</tbody>
+<tbody class="fold-block">
+<tr class="fold-open"><td colspan="4" class="dot"><b>...</b></td></tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.41">1.5.41</span></td><td class="date">2015年3月29日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.40">1.5.40</span></td><td class="date">2015年2月1日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.39">1.5.39</span></td><td class="date">2015年1月29日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.38">1.5.38</span></td><td class="date">2014年11月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.37">1.5.37</span></td><td class="date">2014年11月4日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.36">1.5.36</span></td><td class="date">2014年10月28日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.35">1.5.35</span></td><td class="date">2014年10月20日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.34">1.5.34</span></td><td class="date">2014年9月17日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.33">1.5.33</span></td><td class="date">2014年8月20日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.32">1.5.32</span></td><td class="date">2014年8月8日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.31">1.5.31</span></td><td class="date">2014年7月11日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.30">1.5.30</span></td><td class="date">2014年7月1日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.29">1.5.29</span></td><td class="date">2014年4月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.28">1.5.28</span></td><td class="date">2014年4月3日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.27">1.5.27</span></td><td class="date">2014年3月23日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.26">1.5.26</span></td><td class="date">2014年3月15日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.25">1.5.25</span></td><td class="date">2014年3月5日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.24">1.5.24</span></td><td class="date">2013年10月28日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.23">1.5.23</span></td><td class="date">2013年10月16日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.22">1.5.22</span></td><td class="date">2013年9月16日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.21">1.5.21</span></td><td class="date">2013年9月13日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.20">1.5.20</span></td><td class="date">2013年3月28日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.19">1.5.19</span></td><td class="date">2012年10月20日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.18">1.5.18</span></td><td class="date">2012年10月9日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.17">1.5.17</span></td><td class="date">2012年9月23日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.16">1.5.16</span></td><td class="date">2012年9月11日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.15">1.5.15</span></td><td class="date">2012年4月9日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.14">1.5.14</span></td><td class="date">2012年2月9日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.13">1.5.13</span></td><td class="date">2011年9月14日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.12">1.5.12</span></td><td class="date">2011年8月14日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.11">1.5.11</span></td><td class="date">2011年4月11日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.10">1.5.10</span></td><td class="date">2011年1月29日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.9">1.5.9</span></td><td class="date">2010年11月22日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.8">1.5.8</span></td><td class="date">2010年11月9日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.7">1.5.7</span></td><td class="date">2010年10月25日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.6">1.5.6</span></td><td class="date">2010年9月22日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.5">1.5.5</span></td><td class="date">2010年9月1日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.4">1.5.4</span></td><td class="date">2010年8月9日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.3">1.5.3</span></td><td class="date">2010年8月1日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.2">1.5.2</span></td><td class="date">2010年7月28日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.1">1.5.1</span></td><td class="date">2010年6月25日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.5.0">1.5.0</span></td><td class="date">2010年6月5日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.4.0">1.4.0</span></td><td class="date">2010年4月7日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.2">1.3.2</span></td><td class="date">2010年4月5日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.1">1.3.1</span></td><td class="date">2010年3月18日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.0">1.3.0</span></td><td class="date">2010年3月5日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2.12">1.2.12</span></td><td class="date">2010年2月10日</td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.4.0 (iPhone OS 3.0 Tested)">1.4.0 (iPhone OS 3.0 Tested)</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.2 (iPhone OS 3.0 Tested)">1.3.2 (iPhone OS 3.0 Tested)</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.1 (iPhone OS 3.0 Tested)">1.3.1 (iPhone OS 3.0 Tested)</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr>
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.3.0 (iPhone OS 3.0 Tested)">1.3.0 (iPhone OS 3.0 Tested)</span></td><td class="date"></td><td class="note"></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2.12 (iPhone OS 3.0 Tested)">1.2.12 (iPhone OS 3.0 Tested)</span></td><td class="date"></td><td class="note"></td>
+</tr>
+
+<tr class=" last">
+<td class="dot"><i></i></td><td class="version"><span class="version-text" title="1.2.11 (iPhone OS 3.0 Tested)">1.2.11 (iPhone OS 3.0 Tested)</span></td><td class="date"></td><td class="note">初回リリース</td>
+</tr>
+
+<tr class="fold-close"><td colspan="4" class="dot"><b><span class="icon-chevron-up"></span> バージョンをたたむ</b></td></tr>
+</tbody>
+
+</table>
+</div>
+    
+</div>
+      
+      
+
+
+<div  class="app-box app-info-rating">
+<h3 class="rating_head">評価平均 <span>(</span><span title="United States" class="country">United States</span><span>)</span><span class="more"><a href="/apps/ios/app/calengoo-for-google-calendar/ratings/" class="more_link">その他の国 </a></span></h3>
+<div class="app-box-content"><div class="app_slide_container">
+  
+  <div class="app_slide" id="r_current_content">
+    <div class="app_slide_header" id="r_current">
+      <i class="fa fa-caret-down"></i><i class="fa fa-caret-right"></i>現行バージョン -  <strong>4.9</strong> - <strong>10</strong> 評価
+    </div>
+    <div class="app_slide_content">
+      <table class="rating_table" cellspacing="0" cellpadding="0">
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 90.0%;"></div></div></td>
+      <td class="count">(9)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 10.0%;"></div></div></td>
+      <td class="count">(1)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 0.0%;"></div></div></td>
+      <td class="count">(0)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 0.0%;"></div></div></td>
+      <td class="count">(0)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 0.0%;"></div></div></td>
+      <td class="count">(0)</td>
+      </tr>
+      
+      </table>
+    </div>
+  <div class="rating_date">更新日 2015年11月2日</div>
+  </div>
+  
+  <div class="app_slide" id="r_all_content">
+    <div class="app_slide_header" id="r_all">
+      <i class="fa fa-caret-down"></i><i class="fa fa-caret-right"></i>すべてのバージョン -  <strong>3.5</strong> - <strong>3800</strong> 評価
+    </div>
+    <div class="app_slide_content">
+      <table class="rating_table" cellspacing="0" cellpadding="0">
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 38.9473684211%;"></div></div></td>
+      <td class="count">(1480)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 16.0263157895%;"></div></div></td>
+      <td class="count">(609)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 14.3684210526%;"></div></div></td>
+      <td class="count">(546)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i><i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 12.3947368421%;"></div></div></td>
+      <td class="count">(471)</td>
+      </tr>
+      
+      <tr>
+      <td class="stars">                          
+       <i class="fa fa-star"></i> 
+      </td>
+      <td class="bar"><div><div style="width: 18.2631578947%;"></div></div></td>
+      <td class="count">(694)</td>
+      </tr>
+      
+      </table>
+    </div>
+  <div class="rating_date">更新日 2015年11月2日</div>
+  </div>
+  
+</div></div>
+</div>
+
+      
+      <div class="app-box-itemlist about_app">
+    
+        <h3>概要</h3>
+    
+    
+        <div class="app-box-content"><p><b>互換性:</b> ユニバーサル</p><p><b>カテゴリー:</b> Productivity</p><p><b>最終更新日:</b> 2015年10月3日</p><p><b>バージョン:</b> 1.5.44</p><p><b>サイズ:</b> 11.6 MB</p><p><b>言語:</b> English, French, German</p><p><b>販売元:</b> Dominique Andr Gunia</p><p><b>評価: </b>Rated 4+</p><p><b>ファミリーシェアリング:</b> Yes</p><p><b>要件:</b> Requires iOS 6.0 or later. Compatible with iPhone, iPad, and iPod touch.</p><p><b>バンドル ID:</b> de.dgunia.calengoo</p><p><b>Apple Watchのサポート:</b> No</p></div>
+    
+</div>
+      
+    </div><!--app_sidebar-->
+
+    <!-- ******************* more sections ******************* -->
+    
+      <div class="app-content-more-sections">
+        
+          <div class="x-clear more-related-box">
+            
+              
+                
+                  <div class="app_content_section">
+  <h3>このようなアプリも購入されています</h3>
+  <ul>
+  
+    <li><a href="/apps/ios/app/calenmob-pro-for-google-calendar-and-icloud/" title="CalenMob Pro - sync with Google Calendar"><img src="https://static-s.aa-cdn.net/img/ios/455210120/63373d968817fbed600c11698a261ca1" class="app_icon">
+    <span class="app_name">CalenMob Pro - sync with Google Calendar</span>
+    <span class="category">Productivity</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/gtasks-tasks-manager-for-google-tasks-gmail-todo-list-reminders/" title="gTasks - Tasks Manager for Google Tasks, GMail, Todo list &amp; Reminders"><img src="https://static-s.aa-cdn.net/img/ios/428249408/c0a933f3fa5d6d918a0fe4b10091f88f" class="app_icon">
+    <span class="app_name">gTasks - Tasks Manager for Google Tasks, GMail, Todo list &amp; Reminders</span>
+    <span class="category">Productivity</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/awesome-note-to-docalendarremindermemo/" title="Awesome Note 2 (To-do/Calendar/Reminder/Organizer)"><img src="https://static-s.aa-cdn.net/img/ios/320203391/861cda9a3a9f94cc52f6b626a884a77b" class="app_icon">
+    <span class="app_name">Awesome Note 2 (To-do/Calendar/Reminder/Organizer)</span>
+    <span class="category">Productivity</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/toodledo-todo-lists-notes/" title="Toodledo"><img src="https://static-s.aa-cdn.net/img/ios/292755387/c0c89c12a6df5d187ead7e67b3c43514" class="app_icon">
+    <span class="app_name">Toodledo</span>
+    <span class="category">Productivity</span>
+    </a></li>
+  
+    <li><a href="/apps/ios/app/saisuke/" title="SaiSuke"><img src="https://static-s.aa-cdn.net/img/ios/289228987/4b91f9b9da4a0ae652790b9da970d90c" class="app_icon">
+    <span class="app_name">SaiSuke</span>
+    <span class="category">Productivity</span>
+    </a></li>
+  
+  </ul>
+</div>
+
+                
+              
+            
+          </div>
+        
+      </div>
+    
+  
+</div><!--app_details-->
+
+            </div>
+
+            
+<div>
+    
+    
+
+    
+
+</div>
+
+            
+<div class="aa-copy-item-id">
+    App&nbsp;ID:&nbsp; 300370871 
+    &nbsp;<a id="item-id-text" href="javascript:void(0)" data-clipboard-text="300370871">[コピー]</a>
+    </div>
+
+        </div>
+    </div>
+    <div class="left-sidebar-bg"></div>
+</div>
+
+    </div><!-- .inner -->
+    
+
+    
+
+</div><!-- .main -->
+
+    
+
+<div class="footer-v2"><div class="inner">
+    <div class="ft-navs">
+        
+<ul class="ft-links">
+    
+        <li><a href="/">ホーム</a></li>
+    
+        <li><a href="/tours/market-data/">市場データ</a></li>
+    
+        <li><a href="/tours/enterprise-market-data/">法人向けアプリ市場データ</a></li>
+    
+        <li><a href="/tours/app-analytics-platform/">分析ツール</a></li>
+    
+        <li><a href="/pricing/">価格</a></li>
+    
+        <li><a href="/about/">企業情報</a></li>
+    
+        <li><a href="/about/leadership/">経営陣</a></li>
+    
+        <li><a href="/about/jobs/">採用</a></li>
+    
+        <li><a href="/about/partnerships/">パートナーシップ</a></li>
+    
+        <li><a href="/about/press/">メディア向け情報</a></li>
+    
+        <li><a href="/about/contact/">連絡先・所在地</a></li>
+    
+        <li><a href="http://blog.appannie.com" target="_blank">ブログ</a></li>
+    
+</ul><ul class="ft-links">
+    
+        <li><a href="http://support.appannie.com" target="_blank">サポート</a></li>
+    
+        <li><a href="http://support.appannie.com/categories/20083210" target="_blank">Analytics API</a></li>
+    
+        <li><a href="/legal/security/">セキュリティポリシー</a></li>
+    
+        <li><a href="/legal/data-usage-policy/">データ使用ポリシー</a></li>
+    
+        <li><a href="/legal/copyright/">著作権ポリシー</a></li>
+    
+</ul>
+
+
+        <ul class="ft-links ft-lang-switch">
+        
+            <li data-lang="en">
+                <a>English</a>
+            </li>
+        
+            <li data-lang="jp" class="current">
+                <a>日本語</a>
+            </li>
+        
+            <li data-lang="kr">
+                <a>한국어</a>
+            </li>
+        
+            <li data-lang="cn">
+                <a>中文(简体)</a>
+            </li>
+        
+            <li data-lang="ru">
+                <a>Русский</a>
+            </li>
+        
+            <li data-lang="fr">
+                <a>Français</a>
+            </li>
+        
+            <li data-lang="de">
+                <a>Deutsch</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="ft-misc clearfix">
+        <div class="pull-left">
+            <ul class="ft-links">
+                <li>© 2015 App Annie</li>
+                <li><a href="/help/terms/">サービス利用規約</a></li>
+                <li><a href="/help/privacy/">プライバシーポリシー</a></li>
+                <li id="edd8bedb-dfb9-45e4-9bc6-a547890d2b4d">
+                    <a href="//privacy.truste.com/privacy-seal/App-Annie/validation?rid=d5ca94fe-face-4cbc-97c9-5cad37668d4d"
+                       title="TRUSTe European Safe Harbor certification" target="_blank">
+                        <img style="border: none; vertical-align: middle;" src="//privacy-policy.truste.com/privacy-seal/App-Annie/seal?rid=d5ca94fe-face-4cbc-97c9-5cad37668d4d" alt="TRUSTe European Safe Harbor certification" height="26" />
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="pull-right">
+            <div class="ft-socials">
+                <a href="http://www.linkedin.com/company/app-annie" target="_blank"><i class="sprite-aa-linkedin"></i></a>
+                <a href="http://www.facebook.com/AppAnnie" target="_blank"><i class="sprite-aa-facebook"></i></a>
+                <a href="http://www.twitter.com/appannie/" target="_blank"><i class="sprite-aa-twitter"></i></a>
+                <a href="http://google.com/+appannie" target="_blank"><i class="sprite-aa-gplus"></i></a>
+                <a href="http://www.slideshare.net/AppAnnie" target="_blank"><i class="sprite-aa-slideshare"></i></a>
+                <a href="http://www.youtube.com/appannietv" target="_blank"><i class="sprite-aa-youtube"></i></a>
+                <a href="http://e.weibo.com/appannie" target="_blank"><i class="sprite-aa-weibo"></i></a>
+                <a href="http://blog.appannie.com/feed/" target="_blank"><i class="sprite-aa-rss"></i></a>
+            </div>
+        </div>
+    </div>
+</div></div>
+
+
+
+<div id="overlay"></div>
+
+<script>
+aaTrack=function(){var e={},f=[],k=0,h=function(){if(arguments[0]){var a=arguments[0],g=[].slice.call(arguments,1);500>k?(f.push([a,g]),k++):(f.shift(),f.push([a,g]));if(e[a])for(var a=e[a],b=a.length,c=0;c<b;c++)a[c].apply(null,g)}};h.register=function(a,g){a:if("object"==typeof a)for(var b in a){var c=a[b];if(e[b])for(var d=e[b],k=d.length,l=0;l<k;l++){if(d[l]==c)break a}else e[b]=[];e[b].push(c)}if(g)for(var h in a)for(b=a[h],c=f.length,d=0;d<c;d++)f[d][0]==h&&b.apply(null,f[d][1])};return h}();
+</script>
+<script type="text/javascript" data-tk="pre_install" >
+  var _kmq = _kmq || [];
+  var _mkto = _mkto || [];
+
+  aaTrack('set', {
+      'env': 'production',
+      'pageType': 'product'
+  });
+
+  (function() {
+    var _tracker = [];
+    tracker = function(item) { _tracker.push(item); }; tracker.pool = _tracker;
+  })();
+</script>
+
+
+    <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-D44H" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>
+!function(w,d,l,i){function go(){!function(w,d,s,l,i){w[l]=w[l]||[],w[l].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl="dataLayer"!=l?"&l="+l:"";j.async=!0,j.src="//www.googletagmanager.com/gtm.js?id="+i+dl,f.parentNode.insertBefore(j,f)}(window,document,"script",l,i)}l="dataLayer_"+i.replace("GTM-",""),lo=w[l]||(w[l]=[]),aaTrack.register({set:function(obj){lo.push(obj)}},!0),w.addEventListener?w.addEventListener("load",go,!1):w.attachEvent?w.attachEvent("onload",go):setTimeout(go,100)}(window,document,"","GTM-D44H");
+</script>
+
+    
+    
+
+<script type="text/javascript" data-tk="track_on_every_page" data-tk-com="gp">
+    aaTrack('set', {
+        'Interface Language': 'jp',
+        'Page Type': 'Web Prod'
+    });
+
+    
+        aaTrack('set', {
+            'eid': 'b11c4a9df33b212c40c2f3df0cc19f98',
+            'uid': '588128'
+        });
+    
+
+    
+        try {
+            tracker(['identify', 588128, {
+                email: 'okuyama@se.cs.titech.ac.jp',
+                $mktoHash: '5c311be456c9b06752068081475037397873dd00'
+            }]);
+        } catch (ex) {
+        }
+        
+    
+    // set all logs to ga
+    
+    try {
+        tracker(['page']);
+    } catch (ex) {
+    }
+
+    
+</script>
+
+
+</div>
+
+<script>
+/* quick $ step 2/3 */
+window.$ = window.jQuery = undefined;
+</script>
+<script src="https://static-s.aa-cdn.net/media/javascript/_lang/ja/django/all.v-004165-2005e1.js"></script>
+
+
+    
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="https://static-s.aa-cdn.net/media/javascript/lib/browser-support/excanvas.canvas.text.js"></script>
+        <![endif]-->
+        <script src="https://static-s.aa-cdn.net/media/javascript/c/prod.min.v-4966027c.js"></script>
+<script src="https://static-s.aa-cdn.net/media/lib/ng-v1.2.1/i18n/angular-locale_ja.v-71f2306c.js"></script>
+        
+    
+
+
+
+<script>
+/* quick $ step 3/3 */
+(function(fns, $) {
+  if (!fns || fns.length < 1) { return; }
+  var i = 0, l = fns.length;
+  for (; i < l; ++i) {
+    $(fns[i]);
+  }
+  fns.length = 0;
+})(__aa_fns, jQuery);
+
+
+    var pageVal = pageVal || {};
+    pageVal.page = 'Detail';
+
+</script>
+
+<script>/* JIRA:XP-793 */
+(function(a,e,n,r){try{if(!a||!e)return;n=e.host;if(n.match(/localhost|\.appannie\.(dev|com)/))return;r=n.replace(/www\./,"blog.");if(n===r)return;a('a[href*="blog.appannie.com"]').each(function(e,n){var o=a(n).attr("href").replace(/blog\.appannie\.com($|[?\/])/,r+"$1");a(n).attr("href",o)})}catch(o){}})(window.jQuery,window.location);
+</script>
+
+
+<script>
+$(function() {
+  var clip = new ZeroClipboard( document.getElementById("item-id-text"), {
+    moviePath: "https://static-s.aa-cdn.net/media/swf/ZeroClipboard.swf", trustedDomains: ['*'], allowScriptAccess: "always"
+  });
+});
+</script>
+
+
+<script>
+    var pageVal = pageVal || {};
+    pageVal.detailPanelOpened = true;
+    pageVal.account_id = '';
+    pageVal.app_id =  '300370871' 
+    pageVal.is_shared = true;
+    pageVal.vertical = 'apps';
+    pageVal.is_demo = false;
+
+pageVal.user_prefer_country = "US";
+pageVal.user_prefer_tzone = "PST8PDT";
+
+
+ pageVal.countries = [{"name": "\u30a2\u30eb\u30d0\u30cb\u30a2", "code": "AL", "slug": "albania", "tzone": "Europe/Tirane", "sid": 143575}, {"name": "\u30a2\u30eb\u30b8\u30a7\u30ea\u30a2", "code": "DZ", "slug": "algeria", "tzone": "Africa/Algiers", "sid": 143563}, {"name": "\u30a2\u30f3\u30b4\u30e9", "code": "AO", "slug": "angola", "tzone": "Africa/Luanda", "sid": 143564}, {"name": "\u30a2\u30f3\u30ae\u30e9", "code": "AI", "slug": "anguilla", "tzone": "America/Anguilla", "sid": 143538}, {"name": "\u30a2\u30f3\u30c6\u30a3\u30b0\u30a2\u30fb\u30d0\u30fc\u30d6\u30fc\u30c0", "code": "AG", "slug": "antigua-and-barbuda", "tzone": "America/Antigua", "sid": 143540}, {"name": "\u30a2\u30eb\u30bc\u30f3\u30c1\u30f3", "code": "AR", "slug": "argentina", "tzone": "America/Argentina/Buenos_Aires", "sid": 143505}, {"name": "\u30a2\u30eb\u30e1\u30cb\u30a2", "code": "AM", "slug": "armenia", "tzone": "Asia/Yerevan", "sid": 143524}, {"name": "\u30aa\u30fc\u30b9\u30c8\u30e9\u30ea\u30a2", "code": "AU", "slug": "australia", "tzone": "Australia/Sydney", "sid": 143460}, {"name": "\u30aa\u30fc\u30b9\u30c8\u30ea\u30a2", "code": "AT", "slug": "austria", "tzone": "Europe/Vienna", "sid": 143445}, {"name": "\u30a2\u30bc\u30eb\u30d0\u30a4\u30b8\u30e3\u30f3", "code": "AZ", "slug": "azerbaijan", "tzone": "Asia/Baku", "sid": 143568}, {"name": "\u30d0\u30cf\u30de", "code": "BS", "slug": "bahamas", "tzone": "America/Nassau", "sid": 143539}, {"name": "\u30d0\u30fc\u30ec\u30fc\u30f3", "code": "BH", "slug": "bahrain", "tzone": "Asia/Bahrain", "sid": 143559}, {"name": "\u30d0\u30eb\u30d0\u30c9\u30b9", "code": "BB", "slug": "barbados", "tzone": "America/Barbados", "sid": 143541}, {"name": "\u30d9\u30e9\u30eb\u30fc\u30b7", "code": "BY", "slug": "belarus", "tzone": "Europe/Minsk", "sid": 143565}, {"name": "\u30d9\u30eb\u30ae\u30fc", "code": "BE", "slug": "belgium", "tzone": "Europe/Brussels", "sid": 143446}, {"name": "\u30d9\u30ea\u30fc\u30ba", "code": "BZ", "slug": "belize", "tzone": "America/Belize", "sid": 143555}, {"name": "\u30d9\u30cb\u30f3", "code": "BJ", "slug": "benin", "tzone": "Africa/Porto-Novo", "sid": 143576}, {"name": "\u30d0\u30df\u30e5\u30fc\u30c0", "code": "BM", "slug": "bermuda", "tzone": "Atlantic/Bermuda", "sid": 143542}, {"name": "\u30d6\u30fc\u30bf\u30f3", "code": "BT", "slug": "Bhutan", "tzone": "Asia/Thimphu", "sid": 143577}, {"name": "\u30dc\u30ea\u30d3\u30a2", "code": "BO", "slug": "bolivia", "tzone": "America/La_Paz", "sid": 143556}, {"name": "\u30dc\u30c4\u30ef\u30ca", "code": "BW", "slug": "botswana", "tzone": "Africa/Gaborone", "sid": 143525}, {"name": "\u30d6\u30e9\u30b8\u30eb", "code": "BR", "slug": "brazil", "tzone": "America/Sao_Paulo", "sid": 143503}, {"name": "\u82f1\u9818\u30f4\u30a1\u30fc\u30b8\u30f3\u8af8\u5cf6", "code": "VG", "slug": "british-virgin-islands", "tzone": "America/Tortola", "sid": 143543}, {"name": "\u30d6\u30eb\u30cd\u30a4", "code": "BN", "slug": "brunei", "tzone": "Asia/Brunei", "sid": 143560}, {"name": "\u30d6\u30eb\u30ac\u30ea\u30a2", "code": "BG", "slug": "bulgaria", "tzone": "Europe/Sofia", "sid": 143526}, {"name": "\u30d6\u30eb\u30ad\u30ca\u30d5\u30a1\u30bd", "code": "BF", "slug": "burkina-faso", "tzone": "Africa/Ouagadougou", "sid": 143578}, {"name": "\u30ab\u30f3\u30dc\u30b8\u30a2", "code": "KH", "slug": "cambodia", "tzone": "Asia/Phnom_Penh", "sid": 143579}, {"name": "\u30ab\u30ca\u30c0", "code": "CA", "slug": "canada", "tzone": "America/Toronto", "sid": 143455}, {"name": "\u30ab\u30fc\u30dc\u30d9\u30eb\u30c7", "code": "CV", "slug": "cape-verde", "tzone": "Atlantic/Cape_Verde", "sid": 143580}, {"name": "\u30b1\u30a4\u30de\u30f3\u8af8\u5cf6", "code": "KY", "slug": "cayman-islands", "tzone": "America/Cayman", "sid": 143544}, {"name": "\u30c1\u30e3\u30c9", "code": "TD", "slug": "chad", "tzone": "Africa/Ndjamena", "sid": 143581}, {"name": "\u30c1\u30ea", "code": "CL", "slug": "chile", "tzone": "America/Santiago", "sid": 143483}, {"name": "\u4e2d\u56fd", "code": "CN", "slug": "china", "tzone": "Asia/Shanghai", "sid": 143465}, {"name": "\u30b3\u30ed\u30f3\u30d3\u30a2", "code": "CO", "slug": "colombia", "tzone": "America/Bogota", "sid": 143501}, {"name": "\u30b3\u30f3\u30b4", "code": "CG", "slug": "congo", "tzone": "Africa/Brazzaville", "sid": 143582}, {"name": "\u30b3\u30b9\u30bf\u30ea\u30ab", "code": "CR", "slug": "costa-rica", "tzone": "America/Costa_Rica", "sid": 143495}, {"name": "\u30af\u30ed\u30a2\u30c1\u30a2", "code": "HR", "slug": "croatia", "tzone": "Europe/Zagreb", "sid": 143494}, {"name": "\u30ad\u30d7\u30ed\u30b9", "code": "CY", "slug": "cyprus", "tzone": "Asia/Nicosia", "sid": 143557}, {"name": "\u30c1\u30a7\u30b3\u5171\u548c\u56fd", "code": "CZ", "slug": "czech-republic", "tzone": "Europe/Prague", "sid": 143489}, {"name": "\u30c7\u30f3\u30de\u30fc\u30af", "code": "DK", "slug": "denmark", "tzone": "Europe/Copenhagen", "sid": 143458}, {"name": "\u30c9\u30df\u30cb\u30ab", "code": "DM", "slug": "dominica", "tzone": "America/Dominica", "sid": 143545}, {"name": "\u30c9\u30df\u30cb\u30ab\u5171\u548c\u56fd", "code": "DO", "slug": "dominican-republic", "tzone": "America/Santo_Domingo", "sid": 143508}, {"name": "\u30a8\u30af\u30a2\u30c9\u30eb", "code": "EC", "slug": "ecuador", "tzone": "America/Guayaquil", "sid": 143509}, {"name": "\u30a8\u30b8\u30d7\u30c8", "code": "EG", "slug": "egypt", "tzone": "Africa/Cairo", "sid": 143516}, {"name": "\u30a8\u30eb\u30b5\u30eb\u30d0\u30c9\u30eb", "code": "SV", "slug": "el-salvador", "tzone": "America/El_Salvador", "sid": 143506}, {"name": "\u30a8\u30b9\u30c8\u30cb\u30a2", "code": "EE", "slug": "estonia", "tzone": "Europe/Tallinn", "sid": 143518}, {"name": "\u30d5\u30a3\u30b8\u30fc", "code": "FJ", "slug": "fiji", "tzone": "Pacific/Fiji", "sid": 143583}, {"name": "\u30d5\u30a3\u30f3\u30e9\u30f3\u30c9", "code": "FI", "slug": "finland", "tzone": "Europe/Helsinki", "sid": 143447}, {"name": "\u30d5\u30e9\u30f3\u30b9", "code": "FR", "slug": "france", "tzone": "Europe/Paris", "sid": 143442}, {"name": "\u30ac\u30f3\u30d3\u30a2", "code": "GM", "slug": "gambia", "tzone": "Africa/Banjul", "sid": 143584}, {"name": "\u30c9\u30a4\u30c4", "code": "DE", "slug": "germany", "tzone": "Europe/Berlin", "sid": 143443}, {"name": "\u30ac\u30fc\u30ca", "code": "GH", "slug": "ghana", "tzone": "Africa/Accra", "sid": 143573}, {"name": "\u30ae\u30ea\u30b7\u30e3", "code": "GR", "slug": "greece", "tzone": "Europe/Athens", "sid": 143448}, {"name": "\u30b0\u30ec\u30ca\u30c0", "code": "GD", "slug": "grenada", "tzone": "America/Grenada", "sid": 143546}, {"name": "\u30b0\u30a2\u30c6\u30de\u30e9", "code": "GT", "slug": "guatemala", "tzone": "America/Guatemala", "sid": 143504}, {"name": "\u30ae\u30cb\u30a2\u30d3\u30b5\u30a6", "code": "GW", "slug": "guinea-bissau", "tzone": "Africa/Bissau", "sid": 143585}, {"name": "\u30ac\u30a4\u30a2\u30ca", "code": "GY", "slug": "guyana", "tzone": "America/Guyana", "sid": 143553}, {"name": "\u30db\u30f3\u30b8\u30e5\u30e9\u30b9", "code": "HN", "slug": "honduras", "tzone": "America/Tegucigalpa", "sid": 143510}, {"name": "\u9999\u6e2f", "code": "HK", "slug": "hong-kong", "tzone": "Asia/Hong_Kong", "sid": 143463}, {"name": "\u30cf\u30f3\u30ac\u30ea\u30fc", "code": "HU", "slug": "hungary", "tzone": "Europe/Budapest", "sid": 143482}, {"name": "\u30a2\u30a4\u30b9\u30e9\u30f3\u30c9", "code": "IS", "slug": "iceland", "tzone": "Atlantic/Reykjavik", "sid": 143558}, {"name": "\u30a4\u30f3\u30c9", "code": "IN", "slug": "india", "tzone": "Asia/Kolkata", "sid": 143467}, {"name": "\u30a4\u30f3\u30c9\u30cd\u30b7\u30a2", "code": "ID", "slug": "indonesia", "tzone": "Asia/Jakarta", "sid": 143476}, {"name": "\u30a2\u30a4\u30eb\u30e9\u30f3\u30c9", "code": "IE", "slug": "ireland", "tzone": "Europe/Dublin", "sid": 143449}, {"name": "\u30a4\u30b9\u30e9\u30a8\u30eb", "code": "IL", "slug": "israel", "tzone": "Asia/Jerusalem", "sid": 143491}, {"name": "\u30a4\u30bf\u30ea\u30a2", "code": "IT", "slug": "italy", "tzone": "Europe/Rome", "sid": 143450}, {"name": "\u30b8\u30e3\u30de\u30a4\u30ab", "code": "JM", "slug": "jamaica", "tzone": "America/Jamaica", "sid": 143511}, {"name": "\u65e5\u672c", "code": "JP", "slug": "japan", "tzone": "Asia/Tokyo", "sid": 143462}, {"name": "\u30e8\u30eb\u30c0\u30f3", "code": "JO", "slug": "jordan", "tzone": "Asia/Amman", "sid": 143528}, {"name": "\u30ab\u30b6\u30d5\u30b9\u30bf\u30f3", "code": "KZ", "slug": "kazakhstan", "tzone": "Asia/Almaty", "sid": 143517}, {"name": "\u30b1\u30cb\u30a2", "code": "KE", "slug": "kenya", "tzone": "Africa/Nairobi", "sid": 143529}, {"name": "\u30af\u30a6\u30a7\u30fc\u30c8", "code": "KW", "slug": "kuwait", "tzone": "Asia/Kuwait", "sid": 143493}, {"name": "\u30ad\u30eb\u30ae\u30b9\u30bf\u30f3", "code": "KG", "slug": "kyrgyzstan", "tzone": "Asia/Bishkek", "sid": 143586}, {"name": "\u30e9\u30aa\u30b9", "code": "LA", "slug": "laos", "tzone": "Asia/Vientiane", "sid": 143587}, {"name": "\u30e9\u30c8\u30d3\u30a2", "code": "LV", "slug": "latvia", "tzone": "Europe/Riga", "sid": 143519}, {"name": "\u30ec\u30d0\u30ce\u30f3", "code": "LB", "slug": "lebanon", "tzone": "Asia/Beirut", "sid": 143497}, {"name": "\u30ea\u30d9\u30ea\u30a2", "code": "LR", "slug": "liberia", "tzone": "Africa/Monrovia", "sid": 143588}, {"name": "\u30ea\u30c8\u30a2\u30cb\u30a2", "code": "LT", "slug": "lithuania", "tzone": "Europe/Vilnius", "sid": 143520}, {"name": "\u30eb\u30af\u30bb\u30f3\u30d6\u30eb\u30af", "code": "LU", "slug": "luxembourg", "tzone": "Europe/Luxembourg", "sid": 143451}, {"name": "\u30de\u30ab\u30aa", "code": "MO", "slug": "macau", "tzone": "Asia/Macau", "sid": 143515}, {"name": "\u30de\u30b1\u30c9\u30cb\u30a2", "code": "MK", "slug": "macedonia", "tzone": "Europe/Skopje", "sid": 143530}, {"name": "\u30de\u30c0\u30ac\u30b9\u30ab\u30eb", "code": "MG", "slug": "madagascar", "tzone": "Indian/Antananarivo", "sid": 143531}, {"name": "\u30de\u30e9\u30a6\u30a4", "code": "MW", "slug": "malawi", "tzone": "Africa/Blantyre", "sid": 143589}, {"name": "\u30de\u30ec\u30fc\u30b7\u30a2", "code": "MY", "slug": "malaysia", "tzone": "Asia/Kuala_Lumpur", "sid": 143473}, {"name": "\u30de\u30ea", "code": "ML", "slug": "mali", "tzone": "Africa/Bamako", "sid": 143532}, {"name": "\u30de\u30eb\u30bf", "code": "MT", "slug": "malta", "tzone": "Europe/Malta", "sid": 143521}, {"name": "\u30e2\u30fc\u30ea\u30bf\u30cb\u30a2", "code": "MR", "slug": "mauritania", "tzone": "Africa/Nouakchott", "sid": 143590}, {"name": "\u30e2\u30fc\u30ea\u30b7\u30e3\u30b9", "code": "MU", "slug": "mauritius", "tzone": "Indian/Mauritius", "sid": 143533}, {"name": "\u30e1\u30ad\u30b7\u30b3", "code": "MX", "slug": "mexico", "tzone": "America/Mexico_City", "sid": 143468}, {"name": "\u30df\u30af\u30ed\u30cd\u30b7\u30a2", "code": "FM", "slug": "micronesia", "tzone": "Pacific/Chuuk", "sid": 143591}, {"name": "\u30e2\u30eb\u30c9\u30d0", "code": "MD", "slug": "moldova", "tzone": "Europe/Chisinau", "sid": 143523}, {"name": "\u30e2\u30f3\u30b4\u30eb", "code": "MN", "slug": "mongolia", "tzone": "Asia/Ulaanbaatar", "sid": 143592}, {"name": "\u30e2\u30f3\u30c8\u30bb\u30e9\u30c8", "code": "MS", "slug": "montserrat", "tzone": "America/Montserrat", "sid": 143547}, {"name": "\u30e2\u30b6\u30f3\u30d3\u30fc\u30af", "code": "MZ", "slug": "mozambique", "tzone": "Africa/Maputo", "sid": 143593}, {"name": "\u30ca\u30df\u30d3\u30a2", "code": "NA", "slug": "namibia", "tzone": "Africa/Windhoek", "sid": 143594}, {"name": "\u30cd\u30d1\u30fc\u30eb", "code": "NP", "slug": "nepal", "tzone": "Asia/Kathmandu", "sid": 143484}, {"name": "\u30aa\u30e9\u30f3\u30c0", "code": "NL", "slug": "netherlands", "tzone": "Europe/Amsterdam", "sid": 143452}, {"name": "\u30cb\u30e5\u30fc\u30b8\u30fc\u30e9\u30f3\u30c9", "code": "NZ", "slug": "new-zealand", "tzone": "Pacific/Auckland", "sid": 143461}, {"name": "\u30cb\u30ab\u30e9\u30b0\u30a2", "code": "NI", "slug": "nicaragua", "tzone": "America/Managua", "sid": 143512}, {"name": "\u30cb\u30b8\u30a7\u30fc\u30eb", "code": "NE", "slug": "niger", "tzone": "Africa/Niamey", "sid": 143534}, {"name": "\u30ca\u30a4\u30b8\u30a7\u30ea\u30a2", "code": "NG", "slug": "nigeria", "tzone": "Africa/Lagos", "sid": 143561}, {"name": "\u30ce\u30eb\u30a6\u30a7\u30fc", "code": "NO", "slug": "norway", "tzone": "Europe/Oslo", "sid": 143457}, {"name": "\u30aa\u30de\u30fc\u30f3", "code": "OM", "slug": "oman", "tzone": "Asia/Muscat", "sid": 143562}, {"name": "\u30d1\u30ad\u30b9\u30bf\u30f3", "code": "PK", "slug": "pakistan", "tzone": "Asia/Karachi", "sid": 143477}, {"name": "\u30d1\u30e9\u30aa", "code": "PW", "slug": "palau", "tzone": "Pacific/Palau", "sid": 143595}, {"name": "\u30d1\u30ca\u30de", "code": "PA", "slug": "panama", "tzone": "America/Panama", "sid": 143485}, {"name": "\u30d1\u30d7\u30a2\u30cb\u30e5\u30fc\u30ae\u30cb\u30a2", "code": "PG", "slug": "papua-new-guinea", "tzone": "Pacific/Port_Moresby", "sid": 143597}, {"name": "\u30d1\u30e9\u30b0\u30a2\u30a4", "code": "PY", "slug": "paraguay", "tzone": "America/Asuncion", "sid": 143513}, {"name": "\u30da\u30eb\u30fc", "code": "PE", "slug": "peru", "tzone": "America/Lima", "sid": 143507}, {"name": "\u30d5\u30a3\u30ea\u30d4\u30f3", "code": "PH", "slug": "philipines", "tzone": "Asia/Manila", "sid": 143474}, {"name": "\u30dd\u30fc\u30e9\u30f3\u30c9", "code": "PL", "slug": "poland", "tzone": "Europe/Warsaw", "sid": 143478}, {"name": "\u30dd\u30eb\u30c8\u30ac\u30eb", "code": "PT", "slug": "portugal", "tzone": "Europe/Lisbon", "sid": 143453}, {"name": "\u30ab\u30bf\u30fc\u30eb", "code": "QA", "slug": "qatar", "tzone": "Asia/Qatar", "sid": 143498}, {"name": "\u30eb\u30fc\u30de\u30cb\u30a2", "code": "RO", "slug": "romania", "tzone": "Europe/Bucharest", "sid": 143487}, {"name": "\u30ed\u30b7\u30a2", "code": "RU", "slug": "russia", "tzone": "Europe/Moscow", "sid": 143469}, {"name": "\u30b5\u30f3\u30c8\u30e1\u30fb\u30d7\u30ea\u30f3\u30b7\u30da", "code": "ST", "slug": "sao-tome-and-principe", "tzone": "Africa/Sao_Tome", "sid": 143598}, {"name": "\u30b5\u30a6\u30b8\u30a2\u30e9\u30d3\u30a2", "code": "SA", "slug": "saudi-arabia", "tzone": "Asia/Riyadh", "sid": 143479}, {"name": "\u30bb\u30cd\u30ac\u30eb", "code": "SN", "slug": "senegal", "tzone": "Africa/Dakar", "sid": 143535}, {"name": "\u30bb\u30a4\u30b7\u30a7\u30eb", "code": "SC", "slug": "seychelles", "tzone": "Indian/Mahe", "sid": 143599}, {"name": "\u30b7\u30a8\u30e9\u30ec\u30aa\u30cd", "code": "SL", "slug": "sierra-leone", "tzone": "Africa/Freetown", "sid": 143600}, {"name": "\u30b7\u30f3\u30ac\u30dd\u30fc\u30eb", "code": "SG", "slug": "singapore", "tzone": "Asia/Singapore", "sid": 143464}, {"name": "\u30b9\u30ed\u30d0\u30ad\u30a2", "code": "SK", "slug": "slovakia", "tzone": "Europe/Bratislava", "sid": 143496}, {"name": "\u30b9\u30ed\u30d9\u30cb\u30a2", "code": "SI", "slug": "slovenia", "tzone": "Europe/Ljubljana", "sid": 143499}, {"name": "\u30bd\u30ed\u30e2\u30f3\u8af8\u5cf6", "code": "SB", "slug": "solomon-islands", "tzone": "Pacific/Guadalcanal", "sid": 143601}, {"name": "\u5357\u30a2\u30d5\u30ea\u30ab", "code": "ZA", "slug": "south-africa", "tzone": "Africa/Johannesburg", "sid": 143472}, {"name": "\u97d3\u56fd", "code": "KR", "slug": "south-korea", "tzone": "Asia/Seoul", "sid": 143466}, {"name": "\u30b9\u30da\u30a4\u30f3", "code": "ES", "slug": "spain", "tzone": "Europe/Madrid", "sid": 143454}, {"name": "\u30b9\u30ea\u30e9\u30f3\u30ab", "code": "LK", "slug": "sri-lanka", "tzone": "Asia/Colombo", "sid": 143486}, {"name": "\u30bb\u30f3\u30c8\u30ad\u30c3\u30c4\u30fb\u30cd\u30a4\u30d3\u30b9", "code": "KN", "slug": "st-kitts-and-nevis", "tzone": "America/St_Kitts", "sid": 143548}, {"name": "\u30bb\u30f3\u30c8\u30eb\u30b7\u30a2", "code": "LC", "slug": "st-lucia", "tzone": "America/St_Lucia", "sid": 143549}, {"name": "\u30bb\u30f3\u30c8\u30d3\u30f3\u30bb\u30f3\u30c8\u30fb\u30b0\u30ec\u30ca\u30c7\u30a3\u30fc\u30f3", "code": "VC", "slug": "st-vincent-and-the-grenadines", "tzone": "America/St_Vincent", "sid": 143550}, {"name": "\u30b9\u30ea\u30ca\u30e0", "code": "SR", "slug": "suriname", "tzone": "America/Paramaribo", "sid": 143554}, {"name": "\u30b9\u30ef\u30b8\u30e9\u30f3\u30c9", "code": "SZ", "slug": "swaziland", "tzone": "Africa/Mbabane", "sid": 143602}, {"name": "\u30b9\u30a6\u30a7\u30fc\u30c7\u30f3", "code": "SE", "slug": "sweden", "tzone": "Europe/Stockholm", "sid": 143456}, {"name": "\u30b9\u30a4\u30b9", "code": "CH", "slug": "switzerland", "tzone": "Europe/Zurich", "sid": 143459}, {"name": "\u53f0\u6e7e", "code": "TW", "slug": "taiwan", "tzone": "Asia/Taipei", "sid": 143470}, {"name": "\u30bf\u30b8\u30ad\u30b9\u30bf\u30f3", "code": "TJ", "slug": "tajikistan", "tzone": "Asia/Dushanbe", "sid": 143603}, {"name": "\u30bf\u30f3\u30b6\u30cb\u30a2", "code": "TZ", "slug": "tanzania", "tzone": "Africa/Dar_es_Salaam", "sid": 143572}, {"name": "\u30bf\u30a4", "code": "TH", "slug": "thailand", "tzone": "Asia/Bangkok", "sid": 143475}, {"name": "\u30c8\u30ea\u30cb\u30c0\u30fc\u30c9\u30fb\u30c8\u30d0\u30b4", "code": "TT", "slug": "trinidad-and-tobago", "tzone": "America/Port_of_Spain", "sid": 143551}, {"name": "\u30c1\u30e5\u30cb\u30b8\u30a2", "code": "TN", "slug": "tunisia", "tzone": "Africa/Tunis", "sid": 143536}, {"name": "\u30c8\u30eb\u30b3", "code": "TR", "slug": "turkey", "tzone": "Europe/Istanbul", "sid": 143480}, {"name": "\u30c8\u30eb\u30af\u30e1\u30cb\u30b9\u30bf\u30f3", "code": "TM", "slug": "turkmenistan", "tzone": "Asia/Ashgabat", "sid": 143604}, {"name": "\u30bf\u30fc\u30af\u30b9\u30fb\u30ab\u30a4\u30b3\u30b9", "code": "TC", "slug": "turks-and-caicos", "tzone": "America/Grand_Turk", "sid": 143552}, {"name": "\u30a6\u30ac\u30f3\u30c0", "code": "UG", "slug": "uganda", "tzone": "Africa/Kampala", "sid": 143537}, {"name": "\u30a6\u30af\u30e9\u30a4\u30ca", "code": "UA", "slug": "ukraine", "tzone": "Europe/Kiev", "sid": 143492}, {"name": "\u30a2\u30e9\u30d6\u9996\u9577\u56fd\u9023\u90a6", "code": "AE", "slug": "united-arab-emirates", "tzone": "Asia/Dubai", "sid": 143481}, {"name": "\u30a4\u30ae\u30ea\u30b9", "code": "GB", "slug": "united-kingdom", "tzone": "Europe/London", "sid": 143444}, {"name": "\u7c73\u56fd", "code": "US", "slug": "united-states", "tzone": "America/Los_Angeles", "sid": 143441}, {"name": "\u30a6\u30eb\u30b0\u30a2\u30a4", "code": "UY", "slug": "uruguay", "tzone": "America/Montevideo", "sid": 143514}, {"name": "\u30a6\u30ba\u30d9\u30ad\u30b9\u30bf\u30f3", "code": "UZ", "slug": "uzbekistan", "tzone": "Asia/Tashkent", "sid": 143566}, {"name": "\u30d9\u30cd\u30ba\u30a8\u30e9", "code": "VE", "slug": "venezuela", "tzone": "America/Caracas", "sid": 143502}, {"name": "\u30d9\u30c8\u30ca\u30e0", "code": "VN", "slug": "vietnam", "tzone": "Asia/Ho_Chi_Minh", "sid": 143471}, {"name": "\u30a4\u30a8\u30e1\u30f3", "code": "YE", "slug": "yemen", "tzone": "Asia/Aden", "sid": 143571}, {"name": "\u30b8\u30f3\u30d0\u30d6\u30a8", "code": "ZW", "slug": "zimbabwe", "tzone": "Africa/Harare", "sid": 143605}];
+
+
+
+    __ng_boot_inject_module = 'item.all';
+</script>
+<script src="https://static-s.aa-cdn.net/media/javascript/_lang/ja/sea/aa.v-8a6714-2005e1.js"></script>
+<script src="https://static-s.aa-cdn.net/media/javascript/_lang/ja/sea/app.v-30487f-2005e1.js"></script>
+<script src="https://static-s.aa-cdn.net/media/javascript/prod/aa.min.v-d116a027.js"></script>
+<script src="https://static-s.aa-cdn.net/media/javascript/prod/app.min.v-6a1e3dfe.js"></script>
+<script> jQuery(function(){ require(["app/app"]); }); </script>
+
+<script>
+var pageVal = $.extend(pageVal || {}, {
+    'GA': {
+        'pageType': 'SS',
+        'vertical': '',
+        'pageName': 'Detail',
+        'label': 'SS-Detail'
+    }
+});
+</script>
+
+<script>
+    
+    $(function() { setTimeout(function() {
+    var el = document.createElement('script'); el.type = 'text/javascript'; el.async = true;
+    el.src = '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4fe162ac05cbe453';
+    document.body.appendChild(el);
+    }, 800);
+    });
+    
+    
+var pageVal = $.extend({}, pageVal);
+
+pageVal.lang =  __lang;
+
+
+
+
+
+    
+</script>
+
+
+
+<!-- www.appannie.com, https://www.appannie.com -->
+
+
+
+</body>
+</html>
