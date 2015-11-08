@@ -85,8 +85,8 @@ public class Test {
 //		} catch (IOException e) {
 //			e.printStackTrace();
 //		}
-		
-		
+
+
 		//全カテゴリ単語数合計
 	sumAllCategoryWordCountToCSV();
 	}
@@ -117,7 +117,6 @@ public class Test {
 			for (int j = 0; j < 2; j++) {
 				if(categorys[i].equals("productivity") && j == 1)
 					continue;
-				System.out.println("j : "+ j);
 				// １回のループで一つのカテゴリ内の総単語数をallCategoryWordCountに合計する
 				Map<String, Integer> categoryWordCount = new HashMap<>();
 				directory = "csv/" + categorys[i]+ "/" + feeType[j] + "/"
